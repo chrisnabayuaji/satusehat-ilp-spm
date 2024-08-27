@@ -1,0 +1,134 @@
+{
+  "resourceType": "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "Laboratory"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "5804-0",
+              "display": "Protein [mass/volume] in urine by test strip"
+          },
+          {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B9.DE114",
+              "display": "Urine test conducted"
+          }
+      ]
+  },
+  "specimen": {
+      "reference": "Specimen/{{Specimen_Urine_ANC_uuid}}"
+  },
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Lab_ANC_uuid}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}"
+  },
+  "effectiveDateTime": "2015-06-20T05:15:00+00:00",
+  "issued": "2015-06-20T05:20:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "valueQuantity": {
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/dL",
+      "value": 0
+  }
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/3d2c4f6d-ac9a-42e4-840f-96dd4915fbef"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "laboratory",
+                  "display": "Laboratory",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "5804-0",
+              "display": "Protein [mass/volume] in urine by test strip",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "ANC.B9.DE114",
+              "display": "Urine test conducted",
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-06-20T05:15:00+00:00",
+  "encounter": {
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "e9136f19-eb90-4448-9aaa-87a28ae3812f",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2015-06-20T05:20:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-27T11:02:45.368032+00:00",
+      "versionId": "MTcyNDc1NjU2NTM2ODAzMjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10006926841"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "specimen": {
+      "reference": "Specimen/4eab0f20-5cec-4b5a-b1cc-70f33c57dca0"
+  },
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029552358"
+  },
+  "valueQuantity": {
+      "code": "mg/dL",
+      "system": "http://unitsofmeasure.org",
+      "value": 0
+  }
+}
