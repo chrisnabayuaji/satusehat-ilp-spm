@@ -1,0 +1,132 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+          "use": "official",
+          "value": "5234342"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                  "code": "MB",
+                  "display": "Microbiology"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "75410-1",
+              "display": "Hepatitis B virus surface Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+          }
+      ],
+      "text": "Skrining PPIA Hepatitis B"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}"
+  },
+  "effectiveDateTime": "2015-06-20T05:20:00+00:00",
+  "issued": "2015-06-20T05:25:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/{{Observation_HepatitisB_ANC_uuid}}"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/{{Specimen_Darah_ANC_uuid}}"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Lab_ANC_uuid}}"
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/3d2c4f6d-ac9a-42e4-840f-96dd4915fbef"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "MB",
+                  "display": "Microbiology",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "75410-1",
+              "display": "Hepatitis B virus surface Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
+              "system": "http://loinc.org"
+          }
+      ],
+      "text": "Skrining PPIA Hepatitis B"
+  },
+  "effectiveDateTime": "2015-06-20T05:20:00+00:00",
+  "encounter": {
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "9434efe2-fa75-4551-a575-da76da6b1ef1",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/lab",
+          "use": "official",
+          "value": "5234342"
+      }
+  ],
+  "issued": "2015-06-20T05:25:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-27T11:08:32.651452+00:00",
+      "versionId": "MTcyNDc1NjkxMjY1MTQ1MjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10006926841"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/acbc4920-373d-4e09-b457-a2a74421cdbf"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/33f3815b-78f1-41b6-9dea-33d7d380ae8b"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029552358"
+  }
+}
