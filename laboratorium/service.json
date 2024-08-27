@@ -1,0 +1,179 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "00001"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "108252007",
+                  "display": "Laboratory procedure"
+              }
+          ]
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "68961-2",
+              "display": "HIV 1 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "20508-8",
+              "display": "Reagin Ab [Units/volume] in Serum or Plasma by RPR"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "14904-7",
+              "display": "Reagin Ab [Presence] in Specimen by VDRL"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "75410-1",
+              "display": "Hepatitis B virus surface Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "74774-1",
+              "display": "Glucose [Mass/volume] in Serum, Plasma or Blood"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "5804-0",
+              "display": "Protein [mass/volume] in urine by test strip"
+          }
+      ],
+      "text": "Pemeriksaan 10T"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}",
+      "display": "Permintaan pemeriksaan 10T Ny. Diana Rose di hari Sabtu, 20 Juni 2015 pukul 12:05 WIB"
+  },
+  "occurrenceDateTime": "2015-06-20T05:05:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "text": "Periksa skrining 10T"
+      }
+  ]
+}
+
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "108252007",
+                  "display": "Laboratory procedure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "68961-2",
+              "display": "HIV 1 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "20508-8",
+              "display": "Reagin Ab [Units/volume] in Serum or Plasma by RPR",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "14904-7",
+              "display": "Reagin Ab [Presence] in Specimen by VDRL",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "75410-1",
+              "display": "Hepatitis B virus surface Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "74774-1",
+              "display": "Glucose [Mass/volume] in Serum, Plasma or Blood",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "5804-0",
+              "display": "Protein [mass/volume] in urine by test strip",
+              "system": "http://loinc.org"
+          }
+      ],
+      "text": "Pemeriksaan 10T"
+  },
+  "encounter": {
+      "display": "Permintaan pemeriksaan 10T Ny. Diana Rose di hari Sabtu, 20 Juni 2015 pukul 12:05 WIB",
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "3d2c4f6d-ac9a-42e4-840f-96dd4915fbef",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-27T10:52:37.844535+00:00",
+      "versionId": "MTcyNDc1NTk1Nzg0NDUzNTAwMA"
+  },
+  "occurrenceDateTime": "2015-06-20T05:05:00+00:00",
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "text": "Periksa skrining 10T"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029552358"
+  }
+}

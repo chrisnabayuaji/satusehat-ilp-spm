@@ -1,0 +1,148 @@
+{
+  "resourceType": "Specimen",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+          "value": "00001",
+          "assigner": {
+              "reference": "Organization/{{Org_id}}"
+          }
+      }
+  ],
+  "status": "available",
+  "type": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "122555007",
+              "display": "Venous blood specimen"
+          }
+      ]
+  },
+  "collection": {
+      "method": {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory"
+              }
+          ]
+      },
+      "bodySite": {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "128553008",
+                  "display": "Structure of antecubital vein"
+              }
+          ]
+      },
+      "collectedDateTime": "2015-06-20T05:05:00+00:00"
+  },
+  "container": [
+      {
+          "type": {
+              "coding": [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "702296009",
+                      "display": "Non-evacuated blood collection tube, sodium citrate"
+                  },
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "702298005",
+                      "display": "Non-evacuated blood collection tube, K3EDTA"
+                  }
+              ]
+          }
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "request": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Lab_ANC_uuid}}"
+      }
+  ],
+  "receivedTime": "2015-06-20T05:10:00+00:00"
+}
+
+{
+  "collection": {
+      "bodySite": {
+          "coding": [
+              {
+                  "code": "128553008",
+                  "display": "Structure of antecubital vein",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      },
+      "collectedDateTime": "2015-06-20T05:05:00+00:00",
+      "method": {
+          "coding": [
+              {
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  },
+  "container": [
+      {
+          "type": {
+              "coding": [
+                  {
+                      "code": "702296009",
+                      "display": "Non-evacuated blood collection tube, sodium citrate",
+                      "system": "http://snomed.info/sct"
+                  },
+                  {
+                      "code": "702298005",
+                      "display": "Non-evacuated blood collection tube, K3EDTA",
+                      "system": "http://snomed.info/sct"
+                  }
+              ]
+          }
+      }
+  ],
+  "id": "33f3815b-78f1-41b6-9dea-33d7d380ae8b",
+  "identifier": [
+      {
+          "assigner": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "system": "http://sys-ids.kemkes.go.id/specimen/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-27T10:54:20.863218+00:00",
+      "versionId": "MTcyNDc1NjA2MDg2MzIxODAwMA"
+  },
+  "receivedTime": "2015-06-20T05:10:00+00:00",
+  "request": [
+      {
+          "reference": "ServiceRequest/3d2c4f6d-ac9a-42e4-840f-96dd4915fbef"
+      }
+  ],
+  "resourceType": "Specimen",
+  "status": "available",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "type": {
+      "coding": [
+          {
+              "code": "122555007",
+              "display": "Venous blood specimen",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
