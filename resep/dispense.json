@@ -1,0 +1,452 @@
+{
+    "resourceType": "MedicationDispense",
+    "contained": [
+        {
+            "resourceType": "Medication",
+            "meta": {
+                "profile": [
+                    "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+                ]
+            },
+            "identifier": [
+                {
+                    "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+                    "use": "official",
+                    "value": "123456789"
+                }
+            ],
+            "id": "123456789",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://sys-ids.kemkes.go.id/kfa",
+                        "code": "93000937",
+                        "display": "Ferrous Fumarate 60 mg / Folic Acid 0,4 mg Tablet Salut Gula (PHAPROS)"
+                    }
+                ]
+            },
+            "status": "active",
+            "manufacturer": {
+                "reference": "Organization/{{Org_id}}"
+            },
+            "form": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                        "code": "BS077",
+                        "display": "Tablet Salut Selaput"
+                    }
+                ]
+            },
+            "ingredient": [
+                {
+                    "itemCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://sys-ids.kemkes.go.id/kfa",
+                                "code": "91000205",
+                                "display": "FERROUS FUMARATE"
+                            }
+                        ]
+                    },
+                    "isActive": true,
+                    "strength": {
+                        "numerator": {
+                            "value": 60,
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mg"
+                        },
+                        "denominator": {
+                            "value": 1,
+                            "unit": "TAB",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                            "code": "TAB"
+                        }
+                    }
+                },
+                {
+                    "itemCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://sys-ids.kemkes.go.id/kfa",
+                                "code": "91000289",
+                                "display": "FOLIC ACID"
+                            }
+                        ]
+                    },
+                    "isActive": true,
+                    "strength": {
+                        "numerator": {
+                            "value": 0.4,
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mg"
+                        },
+                        "denominator": {
+                            "value": 1,
+                            "unit": "TAB",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                            "code": "TAB"
+                        }
+                    }
+                }
+            ],
+            "batch": {
+                "lotNumber": "1625042A",
+                "expirationDate": "2016-07-28"
+            },
+            "extension": [
+                {
+                    "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                                "code": "NC",
+                                "display": "Non-compound"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+            "use": "official",
+            "value": "123456788"
+        },
+        {
+            "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+            "use": "official",
+            "value": "123456788-1"
+        }
+    ],
+    "status": "completed",
+    "category": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+                "code": "community",
+                "display": "Community"
+            }
+        ]
+    },
+    "medicationReference": {
+        "reference": "#123456789",
+        "display": "Ferrous Fumarate 60 mg / Folic Acid 0,4 mg Tablet Salut Gula (PHAPROS)"
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_Ibu_ID}}",
+        "display": "{{Patient_Ibu_name}}"
+    },
+    "context": {
+        "reference": "Encounter/{{Encounter_ANC_uuid}}"
+    },
+    "performer": [
+        {
+            "actor": {
+                "reference": "Practitioner/{{Practitioner_ID}}",
+                "display": "{{Practitioner_name}}"
+            }
+        }
+    ],
+    "location": {
+        "reference": "Location/7ffd75c8-1c70-4728-a083-5167be2aef8d",
+        "display": "Apotek Sentral"
+    },
+    "authorizingPrescription": [
+        {
+            "reference": "MedicationRequest/fbb38d38-3c0d-415e-abda-db3a40c5bf40"
+        }
+    ],
+    "quantity": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+        "code": "TAB",
+        "value": 90
+    },
+    "daysSupply": {
+        "value": 90,
+        "unit": "Day",
+        "system": "http://unitsofmeasure.org",
+        "code": "d"
+    },
+    "whenPrepared": "2015-06-20T05:25:00+00:00",
+    "whenHandedOver": "2015-06-20T05:25:00+00:00",
+    "dosageInstruction": [
+        {
+            "sequence": 1,
+            "text": "1 tablet per hari",
+            "additionalInstruction": [
+                {
+                    "text": "Diminum setiap hari"
+                }
+            ],
+            "patientInstruction": "1 tablet perhari, diminum setiap hari tanpa jeda selama 3 bulan",
+            "timing": {
+                "repeat": {
+                    "frequency": 1,
+                    "period": 1,
+                    "periodUnit": "d"
+                }
+            },
+            "route": {
+                "coding": [
+                    {
+                        "system": "http://www.whocc.no/atc",
+                        "code": "O",
+                        "display": "Oral"
+                    }
+                ]
+            },
+            "doseAndRate": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                "code": "ordered",
+                                "display": "Ordered"
+                            }
+                        ]
+                    },
+                    "doseQuantity": {
+                        "value": 1,
+                        "unit": "TAB",
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                        "code": "TAB"
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+{
+  "authorizingPrescription": [
+      {
+          "reference": "MedicationRequest/fbb38d38-3c0d-415e-abda-db3a40c5bf40"
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "community",
+              "display": "Community",
+              "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
+          }
+      ]
+  },
+  "contained": [
+      {
+          "batch": {
+              "expirationDate": "2016-07-28",
+              "lotNumber": "1625042A"
+          },
+          "code": {
+              "coding": [
+                  {
+                      "code": "93000937",
+                      "display": "Ferrous Fumarate 60 mg / Folic Acid 0,4 mg Tablet Salut Gula (PHAPROS)",
+                      "system": "http://sys-ids.kemkes.go.id/kfa"
+                  }
+              ]
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "NC",
+                              "display": "Non-compound",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "form": {
+              "coding": [
+                  {
+                      "code": "BS077",
+                      "display": "Tablet Salut Selaput",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form"
+                  }
+              ]
+          },
+          "id": "123456789",
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/8529d474-30e0-4fee-81a4-7a5234003a1b",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "ingredient": [
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000205",
+                              "display": "FERROUS FUMARATE",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "TAB",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "unit": "TAB",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "mg",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 60
+                      }
+                  }
+              },
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000289",
+                              "display": "FOLIC ACID",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "TAB",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "unit": "TAB",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "mg",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 0.4
+                      }
+                  }
+              }
+          ],
+          "manufacturer": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "resourceType": "Medication",
+          "status": "active"
+      }
+  ],
+  "context": {
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "daysSupply": {
+      "code": "d",
+      "system": "http://unitsofmeasure.org",
+      "unit": "Day",
+      "value": 90
+  },
+  "dosageInstruction": [
+      {
+          "additionalInstruction": [
+              {
+                  "text": "Diminum setiap hari"
+              }
+          ],
+          "doseAndRate": [
+              {
+                  "doseQuantity": {
+                      "code": "TAB",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "unit": "TAB",
+                      "value": 1
+                  },
+                  "type": {
+                      "coding": [
+                          {
+                              "code": "ordered",
+                              "display": "Ordered",
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "patientInstruction": "1 tablet perhari, diminum setiap hari tanpa jeda selama 3 bulan",
+          "route": {
+              "coding": [
+                  {
+                      "code": "O",
+                      "display": "Oral",
+                      "system": "http://www.whocc.no/atc"
+                  }
+              ]
+          },
+          "sequence": 1,
+          "text": "1 tablet per hari",
+          "timing": {
+              "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+              }
+          }
+      }
+  ],
+  "id": "37dc07f5-6104-43fd-b533-66dcbc009779",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "location": {
+      "display": "Apotek Sentral",
+      "reference": "Location/7ffd75c8-1c70-4728-a083-5167be2aef8d"
+  },
+  "medicationReference": {
+      "display": "Ferrous Fumarate 60 mg / Folic Acid 0,4 mg Tablet Salut Gula (PHAPROS)",
+      "reference": "#123456789"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-27T12:40:27.350737+00:00",
+      "versionId": "MTcyNDc2MjQyNzM1MDczNzAwMA"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "quantity": {
+      "code": "TAB",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "value": 90
+  },
+  "resourceType": "MedicationDispense",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "whenHandedOver": "2015-06-20T05:25:00+00:00",
+  "whenPrepared": "2015-06-20T05:25:00+00:00"
+}
