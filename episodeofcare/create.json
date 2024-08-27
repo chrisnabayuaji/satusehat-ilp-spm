@@ -1,0 +1,86 @@
+RESPONSE
+{
+  "resourceType": "EpisodeOfCare",
+  "identifier": [
+    {
+      "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+      "value": "EOC001"
+    }
+  ],
+  "status": "active",
+  "statusHistory": [
+    {
+      "status": "active",
+      "period": {
+        "start": "2015-01-02T00:00:00+00:00"
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+          "code": "ANC",
+          "display": "Antenatal Care"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/{{Patient_Ibu_ID}}",
+    "display": "{{Patient_Ibu_name}}"
+  },
+  "managingOrganization": {
+    "reference": "Organization/{{Org_id}}"
+  },
+  "period": {
+    "start": "2015-01-02T00:00:00+00:00"
+  }
+}
+
+REQUEST
+{
+  "id": "324fe97c-fc58-45f6-9660-6a18526267be",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "EOC001"
+      }
+  ],
+  "managingOrganization": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-27T10:08:00.075525+00:00",
+      "versionId": "MTcyNDc1MzI4MDA3NTUyNTAwMA"
+  },
+  "patient": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "period": {
+      "start": "2015-01-02T00:00:00+00:00"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "active",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2015-01-02T00:00:00+00:00"
+          },
+          "status": "active"
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "code": "ANC",
+                  "display": "Antenatal Care",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type"
+              }
+          ]
+      }
+  ]
+}

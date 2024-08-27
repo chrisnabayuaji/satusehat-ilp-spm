@@ -1,0 +1,120 @@
+REQUEST
+{
+   "resourceType": "Patient",
+   "identifier": [
+      {
+         "use": "official",
+         "system": "https://fhir.kemkes.go.id/id/nik",
+         "value": "2408272408270002"
+      }
+   ],
+   "active": true,
+   "name": [
+      {
+         "use": "official",
+         "text": "Diana Rose"
+      }
+   ],
+   "telecom": [
+      {
+         "system": "phone",
+         "value": "08123456789",
+         "use": "mobile"
+      }
+   ],
+   "gender": "female",
+   "birthDate": "1990-01-01",
+   "deceasedBoolean": false,
+   "maritalStatus": {
+      "coding": [
+         {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+            "code": "M",
+            "display": "Married"
+         }
+      ],
+      "text": "Married"
+   },
+   "multipleBirthInteger": 0,
+   "communication": [
+      {
+         "language": {
+            "coding": [
+               {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "id-ID",
+                  "display": "Indonesian"
+               }
+            ],
+            "text": "Indonesian"
+         },
+         "preferred": true
+      }
+   ],
+   "extension": [
+      {
+         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/birthPlace",
+         "valueAddress": {
+            "city": "Bandung",
+            "country": "ID"
+         }
+      },
+      {
+         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenshipStatus",
+         "valueCode": "WNI"
+      }
+   ]
+}
+
+RESPONSE
+{
+   "entry": [
+       {
+           "fullUrl": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Patient/P02029552358",
+           "resource": {
+               "active": true,
+               "id": "P02029552358",
+               "identifier": [
+                   {
+                       "system": "https://fhir.kemkes.go.id/id/nik",
+                       "use": "official",
+                       "value": "################"
+                   },
+                   {
+                       "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                       "use": "official",
+                       "value": "P02029552358"
+                   }
+               ],
+               "meta": {
+                   "lastUpdated": "2024-08-27T10:02:01.455934+00:00",
+                   "versionId": "MTcyNDc1MjkyMTQ1NTkzNDAwMA"
+               },
+               "name": [
+                   {
+                       "text": "Dia***",
+                       "use": "official"
+                   }
+               ],
+               "resourceType": "Patient"
+           }
+       }
+   ],
+   "link": [
+       {
+           "relation": "search",
+           "url": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Patient/?identifier=https%3A%2F%2Ffhir.kemkes.go.id%2Fid%2Fnik%7C2408272408270002"
+       },
+       {
+           "relation": "first",
+           "url": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Patient/?identifier=https%3A%2F%2Ffhir.kemkes.go.id%2Fid%2Fnik%7C2408272408270002"
+       },
+       {
+           "relation": "self",
+           "url": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Patient/?identifier=https%3A%2F%2Ffhir.kemkes.go.id%2Fid%2Fnik%7C2408272408270002"
+       }
+   ],
+   "resourceType": "Bundle",
+   "total": 1,
+   "type": "searchset"
+}
