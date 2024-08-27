@@ -1,0 +1,89 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "409073007",
+              "display": "Education"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "61310001",
+              "display": "Nutrition education"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}"
+  },
+  "performedPeriod": {
+      "start": "2015-06-20T04:50:00+00:00",
+      "end": "2015-06-20T05:05:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "409073007",
+              "display": "Education",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "61310001",
+              "display": "Nutrition education",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "ee90140d-5e91-436c-9d91-8f324d1ba883",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-27T12:46:34.770152+00:00",
+      "versionId": "MTcyNDc2Mjc5NDc3MDE1MjAwMA"
+  },
+  "performedPeriod": {
+      "end": "2015-06-20T05:05:00+00:00",
+      "start": "2015-06-20T04:50:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
