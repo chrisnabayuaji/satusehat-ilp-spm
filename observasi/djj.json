@@ -1,0 +1,105 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "exam",
+                  "display": "Exam"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "55283-6",
+              "display": "Fetal Heart rate"
+          },
+          {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B8.DE107",
+              "display": "Fetal heart rate"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}"
+  },
+  "effectiveDateTime": "2015-06-20T04:20:00+00:00",
+  "issued": "2015-06-20T04:20:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueQuantity": {
+      "value": 143,
+      "unit": "{beats}/min",
+      "system": "http://unitsofmeasure.org",
+      "code": "{beats}/min"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "exam",
+                  "display": "Exam",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "55283-6",
+              "display": "Fetal Heart rate",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "ANC.B8.DE107",
+              "display": "Fetal heart rate",
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-06-20T04:20:00+00:00",
+  "encounter": {
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "eac482bc-16f0-4e92-a8c9-f4d63f523501",
+  "identifier": [],
+  "issued": "2015-06-20T04:20:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-27T10:48:25.415934+00:00",
+      "versionId": "MTcyNDc1NTcwNTQxNTkzNDAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "valueQuantity": {
+      "code": "{beats}/min",
+      "system": "http://unitsofmeasure.org",
+      "unit": "{beats}/min",
+      "value": 143
+  }
+}
