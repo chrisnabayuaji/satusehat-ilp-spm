@@ -1,0 +1,95 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "8665-2",
+              "display": "Last menstrual period start date"
+          },
+          {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B6.DE14",
+              "display": "Last menstrual period (LMP) date"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}"
+  },
+  "effectiveDateTime": "2015-06-20T04:20:00+00:00",
+  "issued": "2015-06-20T04:20:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueDateTime": "2015-01-02T00:00:00+00:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "8665-2",
+              "display": "Last menstrual period start date",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "ANC.B6.DE14",
+              "display": "Last menstrual period (LMP) date",
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-06-20T04:20:00+00:00",
+  "encounter": {
+      "reference": "Encounter/97ba3235-35a1-49f7-97bb-5674db9c1a2a"
+  },
+  "id": "4c3be012-e3e9-4c52-b891-96b7d888bb50",
+  "identifier": [],
+  "issued": "2015-06-20T04:20:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-27T10:40:45.441392+00:00",
+      "versionId": "MTcyNDc1NTI0NTQ0MTM5MjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "valueDateTime": "2015-01-02T00:00:00+00:00"
+}
