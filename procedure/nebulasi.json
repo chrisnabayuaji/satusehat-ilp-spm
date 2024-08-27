@@ -1,0 +1,147 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "277132007",
+              "display": "Therapeutic procedure"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "93.94",
+              "display": "Respiratory medication administered by nebulizer"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}",
+      "display": "Tindakan Nebulisasi {{Patient_Ibu_name}} pada Selasa tanggal 31 Agustus 2023"
+  },
+  "performedPeriod": {
+      "start": "2015-06-20T06:25:00+00:00",
+      "end": "2015-06-20T06:55:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+              }
+          ]
+      }
+  ],
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "74101002",
+                  "display": "Both lungs"
+              }
+          ]
+      }
+  ],
+  "note": [
+      {
+          "text": "Nebulisasi untuk melegakan sesak napas"
+      }
+  ]
+}
+
+{
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "code": "74101002",
+                  "display": "Both lungs",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "277132007",
+              "display": "Therapeutic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "93.94",
+              "display": "Respiratory medication administered by nebulizer",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Tindakan Nebulisasi Diana Rose pada Selasa tanggal 31 Agustus 2023",
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "9a45639c-3910-4e61-b51b-75a50a092396",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-27T12:29:52.193654+00:00",
+      "versionId": "MTcyNDc2MTc5MjE5MzY1NDAwMA"
+  },
+  "note": [
+      {
+          "text": "Nebulisasi untuk melegakan sesak napas"
+      }
+  ],
+  "performedPeriod": {
+      "end": "2015-06-20T06:55:00+00:00",
+      "start": "2015-06-20T06:25:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
