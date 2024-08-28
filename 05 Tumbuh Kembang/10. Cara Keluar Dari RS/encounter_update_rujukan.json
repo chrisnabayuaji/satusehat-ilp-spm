@@ -1,0 +1,251 @@
+{
+  "resourceType": "Encounter",
+  "id": "{{Encounter_TumbuhKembang_uuid}}",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P000100036"
+      }
+  ],
+  "status": "finished",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2017-09-15T03:00:00+00:00",
+      "end": "2017-09-15T04:00:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "reference": "Location/{{Poli_tumbang_id}}",
+              "display": "{{Poli_tumbang_name}}"
+          }
+      }
+  ],
+  "diagnosis": [
+      {
+          "condition": {
+              "reference": "Condition/8d0fe22a-5f56-476d-a425-bb406737f0a6",
+              "display": "Lack of expected normal physiologic development unspecified"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 1
+      },
+      {
+          "condition": {
+              "reference": "Condition/370d0e9e-5c53-408d-bcc1-ab8b96462642",
+              "display": "Primary respiratory tuberculosis, confirmed bacteriologically and histologically"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 2
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2017-09-15T03:00:00+00:00",
+              "end": "2017-09-15T03:09:59+00:00"
+          }
+      },
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2017-09-15T03:10:00+00:00",
+              "end": "2017-09-15T04:00:00+00:00"
+          }
+      },
+      {
+          "status": "finished",
+          "period": {
+              "start": "2017-09-15T04:00:00+00:00",
+              "end": "2017-09-15T04:00:00+00:00"
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                  "code": "oth",
+                  "display": "other-hcf"
+              }
+          ],
+          "text": "Rujukan ke RSUP Fatmawati dengan nomor rujukan 17896543"
+      }
+  },
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "diagnosis": [
+      {
+          "condition": {
+              "display": "Lack of expected normal physiologic development unspecified",
+              "reference": "Condition/8d0fe22a-5f56-476d-a425-bb406737f0a6"
+          },
+          "rank": 1,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      },
+      {
+          "condition": {
+              "display": "Primary respiratory tuberculosis, confirmed bacteriologically and histologically",
+              "reference": "Condition/370d0e9e-5c53-408d-bcc1-ab8b96462642"
+          },
+          "rank": 2,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "code": "oth",
+                  "display": "other-hcf",
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+              }
+          ],
+          "text": "Rujukan ke RSUP Fatmawati dengan nomor rujukan 17896543"
+      }
+  },
+  "id": "0cf2b255-98f1-438f-9d0a-74af7adbbc80",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P000100036"
+      }
+  ],
+  "location": [
+      {
+          "location": {
+              "display": "Poli Tumbuh Kembang",
+              "reference": "Location/eba4e3fa-064f-4910-9ce9-90e376c65582"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:59:37.458364+00:00",
+      "versionId": "MTcyNDgzMTk3NzQ1ODM2NDAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "end": "2017-09-15T04:00:00+00:00",
+      "start": "2017-09-15T03:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2017-09-15T03:09:59+00:00",
+              "start": "2017-09-15T03:00:00+00:00"
+          },
+          "status": "arrived"
+      },
+      {
+          "period": {
+              "end": "2017-09-15T04:00:00+00:00",
+              "start": "2017-09-15T03:10:00+00:00"
+          },
+          "status": "in-progress"
+      },
+      {
+          "period": {
+              "end": "2017-09-15T04:00:00+00:00",
+              "start": "2017-09-15T04:00:00+00:00"
+          },
+          "status": "finished"
+      }
+  ],
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "00001"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "3457005",
+                  "display": "Patient referral"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "185389009",
+              "display": "Follow-up visit"
+          }
+      ],
+      "text": "Kontrol rutin regimen TB bulan ke-2"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_TumbuhKembang_uuid}}",
+      "display": "Kunjungan {{Patient_Anak_name}} pada tangga; 31 Agustus 2023"
+  },
+  "occurrenceDateTime": "2017-10-15T03:30:00+00:00",
+  "authoredOn": "2017-09-15T03:30:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+              }
+          ],
+          "text": "Kontrol rutin bulanan"
+      }
+  ],
+  "locationCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                  "code": "OF",
+                  "display": "Outpatient Facility"
+              }
+          ]
+      }
+  ],
+  "locationReference": [
+      {
+          "reference": "Location/{{Poli_tumbang_id}}"
+      }
+  ],
+  "patientInstruction": "Kontrol setelah 1 bulan minum obat anti tuberkulosis. Dalam keadaan darurat dapat menghubungi hotlineFasyankesdi nomor 14045"
+}
+
+{
+  "authoredOn": "2017-09-15T03:30:00+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "3457005",
+                  "display": "Patient referral",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "185389009",
+              "display": "Follow-up visit",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Kontrol rutin regimen TB bulan ke-2"
+  },
+  "encounter": {
+      "display": "Kunjungan Abele Rose pada tangga; 31 Agustus 2023",
+      "reference": "Encounter/0cf2b255-98f1-438f-9d0a-74af7adbbc80"
+  },
+  "id": "0e184c74-0bfa-400f-9f08-cf0d0e38060e",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/referral-number",
+          "value": "2000000964"
+      }
+  ],
+  "intent": "original-order",
+  "locationCode": [
+      {
+          "coding": [
+              {
+                  "code": "OF",
+                  "display": "Outpatient Facility",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+              }
+          ]
+      }
+  ],
+  "locationReference": [
+      {
+          "reference": "Location/eba4e3fa-064f-4910-9ce9-90e376c65582"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:56:28.474232+00:00",
+      "versionId": "MTcyNDgzMTc4ODQ3NDIzMjAwMA"
+  },
+  "occurrenceDateTime": "2017-10-15T03:30:00+00:00",
+  "patientInstruction": "Kontrol setelah 1 bulan minum obat anti tuberkulosis. Dalam keadaan darurat dapat menghubungi hotlineFasyankesdi nomor 14045",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ],
+          "text": "Kontrol rutin bulanan"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029553997"
+  }
+}
