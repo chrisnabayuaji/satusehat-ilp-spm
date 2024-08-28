@@ -1,0 +1,182 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "676767"
+      },
+      {
+          "use": "usual",
+          "type": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                      "code": "ACSN"
+                  }
+              ]
+          },
+          "system": "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}",
+          "value": "676767"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "363679005",
+                  "display": "Imaging"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "11525-3",
+              "display": "US for pregnancy"
+          }
+      ],
+      "text": "Pemeriksaan USG"
+  },
+  "orderDetail": [
+      {
+          "coding": [
+              {
+                  "system": "http://dicom.nema.org/resources/ontology/DCM",
+                  "code": "US"
+              }
+          ],
+          "text": "Modality Code: US"
+      },
+      {
+          "coding": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/ae-title",
+                  "display": "US0001"
+              }
+          ]
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}",
+      "display": "Permintaan pemeriksaan USG untuk kehamilan"
+  },
+  "occurrenceDateTime": "2015-06-20T04:10:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "text": "Periksa rutin"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "363679005",
+                  "display": "Imaging",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "11525-3",
+              "display": "US for pregnancy",
+              "system": "http://loinc.org"
+          }
+      ],
+      "text": "Pemeriksaan USG"
+  },
+  "encounter": {
+      "display": "Permintaan pemeriksaan USG untuk kehamilan",
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "4f026bc1-06e0-4846-8616-2c22ba74f898",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "676767"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/acsn/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "type": {
+              "coding": [
+                  {
+                      "code": "ACSN",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                  }
+              ]
+          },
+          "use": "usual",
+          "value": "676767"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-27T14:23:27.942635+00:00",
+      "versionId": "MTcyNDc2ODYwNzk0MjYzNTAwMA"
+  },
+  "occurrenceDateTime": "2015-06-20T04:10:00+00:00",
+  "orderDetail": [
+      {
+          "coding": [
+              {
+                  "code": "US",
+                  "system": "http://dicom.nema.org/resources/ontology/DCM"
+              }
+          ],
+          "text": "Modality Code: US"
+      },
+      {
+          "coding": [
+              {
+                  "display": "US0001",
+                  "system": "http://sys-ids.kemkes.go.id/ae-title"
+              }
+          ]
+      }
+  ],
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "text": "Periksa rutin"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029552358"
+  }
+}

@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  dicom:
+    image: registry.dto.kemkes.go.id/pub/dicom-router:latest
+    container_name: dicom-router
+    restart: always
+    ports:
+      - "11112:11112"
+      - "8080:8080"
+    environment:
+      - ORG_ID=8529d474-30e0-4fee-81a4-7a5234003a1b
+      - CLIENT=Afb6NRbdATmGcXFLisA5p2eEVAu8ZWMhMqOly3A66ZDIWhGK
+      - SECRET=KL2oQTVatsKGAQMSloeyPGJALoGIAVY6TDspj3PH9Iqh34Xh8p5H3GB18OZUamqV
+      - URL=https://api-satusehat-stg.dto.kemkes.go.id
+    networks:
+      - dicom-network
+networks:
+  dicom-network:
+    driver: bridge
