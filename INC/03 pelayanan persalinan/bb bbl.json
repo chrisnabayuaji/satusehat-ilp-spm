@@ -1,0 +1,120 @@
+
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "8339-4",
+              "display": "Birth weight Measured"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add"
+  },
+  "effectiveDateTime": "2015-10-02T03:04:00+00:00",
+  "issued": "2015-10-02T03:04:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueQuantity": {
+      "value": 4510,
+      "unit": "g",
+      "system": "http://unitsofmeasure.org",
+      "code": "g"
+  },
+  "interpretation": [
+      {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "276613009",
+              "display": "High birth weight"
+          }
+       ],
+          "text": "BBLB (Bayi Berat Lahir Besar)"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "8339-4",
+              "display": "Birth weight Measured",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-10-02T03:04:00+00:00",
+  "encounter": {
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add"
+  },
+  "id": "e0f7591b-5039-403b-87f9-7b93df0435a6",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "276613009",
+                  "display": "High birth weight",
+                  "system": "http://snomed.info/sct"
+              }
+          ],
+          "text": "BBLB (Bayi Berat Lahir Besar)"
+      }
+  ],
+  "issued": "2015-10-02T03:04:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T03:37:28.648487+00:00",
+      "versionId": "MTcyNDgxNjI0ODY0ODQ4NzAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "valueQuantity": {
+      "code": "g",
+      "system": "http://unitsofmeasure.org",
+      "unit": "g",
+      "value": 4510
+  }
+}

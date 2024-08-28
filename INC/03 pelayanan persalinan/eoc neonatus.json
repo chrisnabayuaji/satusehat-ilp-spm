@@ -1,0 +1,84 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+          "value": "EOC998800"
+      }
+  ],
+  "status": "active",
+  "statusHistory": [
+      {
+          "status": "active",
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00"
+          }
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+                  "code": "Neonate",
+                  "display": "Neonate"
+              }
+          ]
+      }
+  ],
+  "patient": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "managingOrganization": {
+      "reference": "Organization/{{Org_id}}"
+  },
+  "period": {
+      "start": "2015-10-02T03:04:00+00:00"
+  }
+}
+
+{
+  "id": "80f74ac1-b6e7-4a5f-9fb1-68761cf7ba95",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "EOC998800"
+      }
+  ],
+  "managingOrganization": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-28T03:18:09.233749+00:00",
+      "versionId": "MTcyNDgxNTA4OTIzMzc0OTAwMA"
+  },
+  "patient": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "period": {
+      "start": "2015-10-02T03:04:00+00:00"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "active",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00"
+          },
+          "status": "active"
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "code": "Neonate",
+                  "display": "Neonate",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type"
+              }
+          ]
+      }
+  ]
+}
