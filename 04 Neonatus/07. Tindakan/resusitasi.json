@@ -1,0 +1,157 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "373110003",
+              "display": "Emergency procedure"
+          }
+      ],
+      "text": "Emergency procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "93.93",
+              "display": "Nonmechanical methods of resuscitation"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}",
+      "display": "Tindakan Resusitasi Alexa Rose pada tanggal 12 Oktober 2015"
+  },
+  "performedPeriod": {
+      "start": "2015-10-12T03:35:00+00:00",
+      "end": "2015-10-12T04:00:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia"
+              }
+          ]
+      }
+  ],
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "123851003",
+                  "display": "Mouth region structure"
+              },
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "45206002",
+                  "display": "Nasal structure"
+              }
+          ]
+      }
+  ],
+  "note": [
+      {
+          "text": "Pemberian resusitasi neonatus melalui mulut dan hidung."
+      }
+  ]
+}
+
+{
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "code": "123851003",
+                  "display": "Mouth region structure",
+                  "system": "http://snomed.info/sct"
+              },
+              {
+                  "code": "45206002",
+                  "display": "Nasal structure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "373110003",
+              "display": "Emergency procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Emergency procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "93.93",
+              "display": "Nonmechanical methods of resuscitation",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Tindakan Resusitasi Alexa Rose pada tanggal 12 Oktober 2015",
+      "reference": "Encounter/d40205a9-edc2-4ac8-82b6-0a86df3f509a"
+  },
+  "id": "e5bc629e-978d-49c9-a051-ff0fcba0ebeb",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:21:51.107527+00:00",
+      "versionId": "MTcyNDgyOTcxMTEwNzUyNzAwMA"
+  },
+  "note": [
+      {
+          "text": "Pemberian resusitasi neonatus melalui mulut dan hidung."
+      }
+  ],
+  "performedPeriod": {
+      "end": "2015-10-12T04:00:00+00:00",
+      "start": "2015-10-12T03:35:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "resourceType": "Encounter",
+  "id": "{{Encounter_Neonatus_uuid}}",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P20240002"
+      }
+  ],
+  "status": "finished",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+  },
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/{{EpisodeOfCare_Neonatus_uuid}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2015-10-12T03:30:00+00:00",
+      "end": "2015-10-12T04:20:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "reference": "Location/{{Poli_anak_id}}",
+              "display": "{{Poli_anak_name}}"
+          }
+      }
+  ],
+  "diagnosis": [
+      {
+          "condition": {
+              "reference": "Condition/f1bd0112-e08b-4190-878e-8545e1a5178b",
+              "display": "Mild and moderate birth asphyxia"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 1
+      },
+      {
+          "condition": {
+              "reference": "Condition/efcc6ccb-57cd-4152-b700-5e130d015591",
+              "display": "Respiratory  failure of newborn"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 2
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2015-10-12T03:30:00+00:00",
+              "end": "2015-10-12T03:34:59+00:00"
+          }
+      },
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2015-10-12T03:35:00+00:00",
+              "end": "2015-10-12T04:20:00+00:00"
+          }
+      },
+      {
+          "status": "finished",
+          "period": {
+              "start": "2015-10-12T04:20:00+00:00",
+              "end": "2015-10-12T04:20:00+00:00"
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                  "code": "home",
+                  "display": "Home"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali 3 hari setelah Kelahiran"
+      }
+  },
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "diagnosis": [
+      {
+          "condition": {
+              "display": "Mild and moderate birth asphyxia",
+              "reference": "Condition/f1bd0112-e08b-4190-878e-8545e1a5178b"
+          },
+          "rank": 1,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      },
+      {
+          "condition": {
+              "display": "Respiratory  failure of newborn",
+              "reference": "Condition/efcc6ccb-57cd-4152-b700-5e130d015591"
+          },
+          "rank": 2,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      }
+  ],
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/80f74ac1-b6e7-4a5f-9fb1-68761cf7ba95"
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "code": "home",
+                  "display": "Home",
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali 3 hari setelah Kelahiran"
+      }
+  },
+  "id": "d40205a9-edc2-4ac8-82b6-0a86df3f509a",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P20240002"
+      }
+  ],
+  "location": [
+      {
+          "location": {
+              "display": "Poli Anak",
+              "reference": "Location/a3519842-dbf1-4f69-96a9-e40ec01cdbf4"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:24:34.982567+00:00",
+      "versionId": "MTcyNDgyOTg3NDk4MjU2NzAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "end": "2015-10-12T04:20:00+00:00",
+      "start": "2015-10-12T03:30:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2015-10-12T03:34:59+00:00",
+              "start": "2015-10-12T03:30:00+00:00"
+          },
+          "status": "arrived"
+      },
+      {
+          "period": {
+              "end": "2015-10-12T04:20:00+00:00",
+              "start": "2015-10-12T03:35:00+00:00"
+          },
+          "status": "in-progress"
+      },
+      {
+          "period": {
+              "end": "2015-10-12T04:20:00+00:00",
+              "start": "2015-10-12T04:20:00+00:00"
+          },
+          "status": "finished"
+      }
+  ],
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

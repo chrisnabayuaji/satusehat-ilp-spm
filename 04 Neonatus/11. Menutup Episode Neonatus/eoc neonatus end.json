@@ -1,0 +1,54 @@
+[
+  {
+      "op": "replace",
+      "path": "/status",
+      "value": "finished"
+  },
+  {
+      "op": "add",
+      "path": "/statusHistory/0/period/end",
+      "value": "2015-10-30T03:04:00+00:00"
+  },
+  {
+      "op": "add",
+      "path": "/statusHistory/1",
+      "value": {
+          "status": "finished",
+          "period": {
+              "start": "2015-10-30T03:04:00+00:00",
+              "end": "2015-10-30T03:04:00+00:00"
+          }
+      }
+  },
+  {
+      "op": "add",
+      "path": "/period/end",
+      "value": "2015-10-30T03:04:00+00:00"
+  }
+]
+
+{
+  "id": "80f74ac1-b6e7-4a5f-9fb1-68761cf7ba95",
+  "meta": {
+      "lastUpdated": "2024-08-28T07:24:58.826269+00:00",
+      "versionId": "MTcyNDgyOTg5ODgyNjI2OTAwMA"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2015-10-30T03:04:00+00:00",
+              "start": "2015-10-02T03:04:00+00:00"
+          },
+          "status": "active"
+      },
+      {
+          "period": {
+              "end": "2015-10-30T03:04:00+00:00",
+              "start": "2015-10-30T03:04:00+00:00"
+          },
+          "status": "finished"
+      }
+  ]
+}
