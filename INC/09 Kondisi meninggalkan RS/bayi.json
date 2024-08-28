@@ -1,0 +1,87 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "problem-list-item",
+                  "display": "Problem List Item"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "359746009",
+              "display": "Patient's condition stable"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add",
+      "display": "Kunjungan Alexa Rose pada tanggal 2 Oktober 2015"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "problem-list-item",
+                  "display": "Problem List Item",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "359746009",
+              "display": "Patient's condition stable",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan Alexa Rose pada tanggal 2 Oktober 2015",
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add"
+  },
+  "id": "47d0eff5-a403-4798-948a-2169b3bb8d62",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T04:00:43.418343+00:00",
+      "versionId": "MTcyNDgxNzY0MzQxODM0MzAwMA"
+  },
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

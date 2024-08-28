@@ -1,0 +1,87 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "problem-list-item",
+                  "display": "Problem List Item"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "359746009",
+              "display": "Patient's condition stable"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_INC_uuid}}",
+      "display": "Kunjungan Diana Rose pada 1 Oktober 2015"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "problem-list-item",
+                  "display": "Problem List Item",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "359746009",
+              "display": "Patient's condition stable",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan Diana Rose pada 1 Oktober 2015",
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "fdff6183-56ba-46fc-ab9b-b89fcad6710f",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T04:00:26.186074+00:00",
+      "versionId": "MTcyNDgxNzYyNjE4NjA3NDAwMA"
+  },
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
