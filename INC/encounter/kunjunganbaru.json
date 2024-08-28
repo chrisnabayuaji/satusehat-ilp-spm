@@ -1,0 +1,146 @@
+{
+  "resourceType": "Encounter",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P20240004"
+      }
+  ],
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/{{EpisodeOfCare_ANC_uuid}}"
+      }
+  ],
+  "status": "in-progress",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "IMP",
+      "display": "inpatient encounter"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2015-10-01T15:00:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "reference": "Location/{{Bed_location_id}}",
+              "display": "{{Bed_location_name}}"
+          }
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2015-10-01T15:00:00+00:00"
+          }
+      }
+  ],
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  },
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_PraRanap}}"
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/b85f030b-e46a-44fa-983e-ad3b34f1c412"
+      }
+  ],
+  "class": {
+      "code": "IMP",
+      "display": "inpatient encounter",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/324fe97c-fc58-45f6-9660-6a18526267be"
+      }
+  ],
+  "id": "6ba6b212-884b-4079-bc96-490b78f9b51a",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P20240004"
+      }
+  ],
+  "location": [
+      {
+          "location": {
+              "display": "Kepodang",
+              "reference": "Location/5ed089dc-4c45-4641-9f33-24afdf1f7b7a"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T02:46:35.093842+00:00",
+      "versionId": "MTcyNDgxMzE5NTA5Mzg0MjAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "start": "2015-10-01T15:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "in-progress",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2015-10-01T15:00:00+00:00"
+          },
+          "status": "in-progress"
+      }
+  ],
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
