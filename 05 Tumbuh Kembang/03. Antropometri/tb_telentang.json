@@ -1,0 +1,110 @@
+{
+  "resourceType": "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "202403A0009719"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "8306-3",
+              "display": "Body height --lying"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_TumbuhKembang_uuid}}",
+      "display": "Kunjungan {{Patient_Anak_name}} pada tanggal 17 Nov 2017"
+  },
+  "effectiveDateTime": "2017-09-15T03:10:00+00:00",
+  "issued": "2017-09-15T03:10:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "valueQuantity": {
+      "value": 80,
+      "unit": "cm",
+      "code": "cm",
+      "system": "http://unitsofmeasure.org"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "8306-3",
+              "display": "Body height --lying",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2017-09-15T03:10:00+00:00",
+  "encounter": {
+      "display": "Kunjungan Abele Rose pada tanggal 17 Nov 2017",
+      "reference": "Encounter/0cf2b255-98f1-438f-9d0a-74af7adbbc80"
+  },
+  "id": "03175d5b-76bd-4cf5-bccc-498b7e4351b2",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "202403A0009719"
+      }
+  ],
+  "issued": "2017-09-15T03:10:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T07:42:16.837505+00:00",
+      "versionId": "MTcyNDgzMDkzNjgzNzUwNTAwMA"
+  },
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "valueQuantity": {
+      "code": "cm",
+      "system": "http://unitsofmeasure.org",
+      "unit": "cm",
+      "value": 80
+  }
+}
