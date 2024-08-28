@@ -1,0 +1,85 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "1145307003",
+              "display": "Exclusively breastfed"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}",
+      "display": "Pemeriksaan {{Patient_Anak_name}} di tanggal 12 Oktober 2015"
+  },
+  "effectiveDateTime": "2015-10-12T03:35:00+00:00",
+  "issued": "2015-10-12T03:35:00+00:00",
+  "valueBoolean": true
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "1145307003",
+              "display": "Exclusively breastfed",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-10-12T03:35:00+00:00",
+  "encounter": {
+      "display": "Pemeriksaan Abele Rose di tanggal 12 Oktober 2015",
+      "reference": "Encounter/d40205a9-edc2-4ac8-82b6-0a86df3f509a"
+  },
+  "id": "660a9eaf-b739-4164-a3e8-713a1b4f8ff1",
+  "identifier": [],
+  "issued": "2015-10-12T03:35:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T07:19:33.593742+00:00",
+      "versionId": "MTcyNDgyOTU3MzU5Mzc0MjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029553997"
+  },
+  "valueBoolean": true
+}

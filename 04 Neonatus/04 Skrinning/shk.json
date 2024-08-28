@@ -1,0 +1,91 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "103693007",
+              "display": "Diagnostic procedure"
+          }
+      ],
+      "text": "Diagnostic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "400984005",
+              "display": "Congenital hypothyroidism screening test"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}"
+  },
+  "performedPeriod": {
+      "start": "2015-10-12T03:35:00+00:00",
+      "end": "2015-10-12T03:55:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "103693007",
+              "display": "Diagnostic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Diagnostic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "400984005",
+              "display": "Congenital hypothyroidism screening test",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/d40205a9-edc2-4ac8-82b6-0a86df3f509a"
+  },
+  "id": "d51eac33-a18d-4ed9-ae7e-bebefe7b2497",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:19:08.741910+00:00",
+      "versionId": "MTcyNDgyOTU0ODc0MTkxMDAwMA"
+  },
+  "performedPeriod": {
+      "end": "2015-10-12T03:55:00+00:00",
+      "start": "2015-10-12T03:35:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "57715-5",
+              "display": "Birth time",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}"
+  },
+  "effectiveDateTime": "2015-10-12T03:35:00+00:00",
+  "issued": "2015-10-12T03:35:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueTime": "10:04:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "57715-5",
+              "display": "Birth time",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-10-12T03:35:00+00:00",
+  "encounter": {
+      "reference": "Encounter/d40205a9-edc2-4ac8-82b6-0a86df3f509a"
+  },
+  "id": "18acb430-a3ba-4e14-bc25-3e9cfbf1ef45",
+  "identifier": [],
+  "issued": "2015-10-12T03:35:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T07:18:27.965412+00:00",
+      "versionId": "MTcyNDgyOTUwNzk2NTQxMjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "valueTime": "10:04:00"
+}
