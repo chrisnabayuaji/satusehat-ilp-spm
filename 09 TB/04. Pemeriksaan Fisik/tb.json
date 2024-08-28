@@ -1,0 +1,95 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "effectiveDateTime": "2023-03-01T02:15:00+00:00",
+  "issued": "2023-03-01T02:15:00+00:00",
+  "valueQuantity": {
+      "value": 165,
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org",
+      "code": "cm"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "8302-2",
+              "display": "Body height",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-03-01T02:15:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "e6e94f25-9b83-40e8-8eab-a905408f4b7c",
+  "identifier": [],
+  "issued": "2023-03-01T02:15:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T12:50:49.770668+00:00",
+      "versionId": "MTcyNDg0OTQ0OTc3MDY2ODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "cm",
+      "system": "http://unitsofmeasure.org",
+      "unit": "cm",
+      "value": 165
+  }
+}
