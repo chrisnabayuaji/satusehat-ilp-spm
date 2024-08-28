@@ -1,0 +1,91 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "103693007",
+              "display": "Diagnostic procedure"
+          }
+      ],
+      "text": "Diagnostic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "72.31",
+              "display": "Routine gynecological examination"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_PNC_uuid}}"
+  },
+  "performedPeriod": {
+      "start": "2015-10-12T03:30:00+00:00",
+      "end": "2015-10-12T04:35:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "103693007",
+              "display": "Diagnostic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Diagnostic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "72.31",
+              "display": "Routine gynecological examination",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "81dc4a15-b93b-4233-89a7-6e4c46a76c2b",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T04:58:09.839070+00:00",
+      "versionId": "MTcyNDgyMTA4OTgzOTA3MDAwMA"
+  },
+  "performedPeriod": {
+      "end": "2015-10-12T04:35:00+00:00",
+      "start": "2015-10-12T03:30:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}

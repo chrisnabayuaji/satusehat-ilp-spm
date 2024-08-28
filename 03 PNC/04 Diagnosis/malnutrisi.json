@@ -1,0 +1,89 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "E44.1",
+              "display": "Mild protein-calorie malnutrition"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_PNC_uuid}}"
+  },
+  "onsetDateTime": "2015-10-12T03:30:00+00:00",
+  "recordedDate": "2015-10-12T03:30:00+00:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "E44.1",
+              "display": "Mild protein-calorie malnutrition",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "6e5e8485-8f67-47e8-a504-cf334279373f",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T04:57:47.925286+00:00",
+      "versionId": "MTcyNDgyMTA2NzkyNTI4NjAwMA"
+  },
+  "onsetDateTime": "2015-10-12T03:30:00+00:00",
+  "recordedDate": "2015-10-12T03:30:00+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
