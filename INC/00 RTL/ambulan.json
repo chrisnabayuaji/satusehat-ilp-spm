@@ -1,0 +1,166 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "000012350"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "3457005",
+                  "display": "Patient referral"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "737481003",
+              "display": "Inpatient care management"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ANC_uuid}}",
+      "display": "Kunjungan {{Patient_Ibu_name}} Pada 20 Juni 2015"
+  },
+  "occurrenceDateTime": "2015-06-20T07:00:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "Fatma"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+              }
+          ]
+      }
+  ],
+  "locationCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                  "code": "HOSP",
+                  "display": "Hospital"
+              },
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                  "code": "AMB",
+                  "display": "Ambulance"
+              }
+          ]
+      }
+  ],
+  "patientInstruction": "Rujukan ke Rawat Inap RSUP Fatmawati. Dalam keadaan darurat dapat menghubungi hotline Fasyankes di nomor 14045"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "3457005",
+                  "display": "Patient referral",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "737481003",
+              "display": "Inpatient care management",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan Diana Rose Pada 20 Juni 2015",
+      "reference": "Encounter/91d80ec6-b848-4580-873b-3d2b3dc01ce1"
+  },
+  "id": "0e7a4e0a-d63b-419a-b365-92169dae4125",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "000012350"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/referral-number",
+          "value": "2000000869"
+      }
+  ],
+  "intent": "original-order",
+  "locationCode": [
+      {
+          "coding": [
+              {
+                  "code": "HOSP",
+                  "display": "Hospital",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+              },
+              {
+                  "code": "AMB",
+                  "display": "Ambulance",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+              }
+          ]
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:05:29.696057+00:00",
+      "versionId": "MTcyNDgxNDMyOTY5NjA1NzAwMA"
+  },
+  "occurrenceDateTime": "2015-06-20T07:00:00+00:00",
+  "patientInstruction": "Rujukan ke Rawat Inap RSUP Fatmawati. Dalam keadaan darurat dapat menghubungi hotline Fasyankes di nomor 14045",
+  "performer": [
+      {
+          "display": "Fatma",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "A15.0",
+                  "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029552358"
+  }
+}

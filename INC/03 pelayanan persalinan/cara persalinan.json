@@ -1,0 +1,53 @@
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "57071-3",
+              "display": "Obstetric delivery method",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-10-02T03:04:00+00:00",
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "7600f924-1189-44c2-91ad-f46d35f847a5",
+  "identifier": [],
+  "issued": "2015-10-02T03:04:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T03:11:49.282854+00:00",
+      "versionId": "MTcyNDgxNDcwOTI4Mjg1NDAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "48782003",
+              "display": "Delivery normal",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
