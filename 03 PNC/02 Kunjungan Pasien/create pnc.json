@@ -1,0 +1,84 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+          "value": "EOC998800"
+      }
+  ],
+  "status": "active",
+  "statusHistory": [
+      {
+          "status": "active",
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00"
+          }
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+                  "code": "PNC",
+                  "display": "Postnatal Care"
+              }
+          ]
+      }
+  ],
+  "patient": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "managingOrganization": {
+      "reference": "Organization/{{Org_id}}"
+  },
+  "period": {
+      "start": "2015-10-02T03:04:00+00:00"
+  }
+}
+
+{
+  "id": "5ed12ce0-7c37-483d-bc49-cc79b576d2da",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "EOC998800"
+      }
+  ],
+  "managingOrganization": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-28T03:11:31.736054+00:00",
+      "versionId": "MTcyNDgxNDY5MTczNjA1NDAwMA"
+  },
+  "patient": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  },
+  "period": {
+      "start": "2015-10-02T03:04:00+00:00"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "active",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00"
+          },
+          "status": "active"
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "code": "PNC",
+                  "display": "Postnatal Care",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type"
+              }
+          ]
+      }
+  ]
+}
