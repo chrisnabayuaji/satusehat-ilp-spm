@@ -1,0 +1,99 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "O14.0",
+              "display": "Moderate Pre-Eclampsia"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_INC_uuid}}"
+  },
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00",
+  "note": [
+      {
+          "text": "Pasien mengalami Pre-Eklampsia Sedang"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "O14.0",
+              "display": "Moderate Pre-Eclampsia",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "bf05b789-8619-41b4-9301-c31c60d81ef7",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:41:34.498756+00:00",
+      "versionId": "MTcyNDgxNjQ5NDQ5ODc1NjAwMA"
+  },
+  "note": [
+      {
+          "text": "Pasien mengalami Pre-Eklampsia Sedang"
+      }
+  ],
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}

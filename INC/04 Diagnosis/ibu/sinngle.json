@@ -1,0 +1,89 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "O83.9",
+              "display": "Assisted single delivery, unspecified"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_INC_uuid}}"
+  },
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "O83.9",
+              "display": "Assisted single delivery, unspecified",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "82ae60e0-a721-4c2a-b11e-c8aa0fc5a077",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:41:52.140184+00:00",
+      "versionId": "MTcyNDgxNjUxMjE0MDE4NDAwMA"
+  },
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
