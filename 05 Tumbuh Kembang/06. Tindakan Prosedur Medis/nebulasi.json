@@ -1,0 +1,125 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "277132007",
+              "display": "Therapeutic procedure"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "93.74",
+              "display": "Speech defect training"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_TumbuhKembang_uuid}}",
+      "display": "Tindakan terapi wicara {{Patient_Anak_name}} pada tanggal 15 September 2015"
+  },
+  "performedPeriod": {
+      "start": "2017-09-15T03:15:00+00:00",
+      "end": "2017-09-15T03:45:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "R62.9",
+                  "display": "Lack of expected normal physiologic development"
+              }
+          ]
+      }
+  ],
+  "note": [
+      {
+          "text": "Terapi wicara untuk masalah tumbuh kembang anak"
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "277132007",
+              "display": "Therapeutic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "93.74",
+              "display": "Speech defect training",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Tindakan terapi wicara Abele Rose pada tanggal 15 September 2015",
+      "reference": "Encounter/0cf2b255-98f1-438f-9d0a-74af7adbbc80"
+  },
+  "id": "523e8b91-91bc-4621-9863-e1770a14eaa9",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T07:53:05.353849+00:00",
+      "versionId": "MTcyNDgzMTU4NTM1Mzg0OTAwMA"
+  },
+  "note": [
+      {
+          "text": "Terapi wicara untuk masalah tumbuh kembang anak"
+      }
+  ],
+  "performedPeriod": {
+      "end": "2017-09-15T03:45:00+00:00",
+      "start": "2017-09-15T03:15:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "R62.9",
+                  "display": "Lack of expected normal physiologic development",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}
