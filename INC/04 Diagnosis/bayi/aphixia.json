@@ -1,0 +1,99 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "P21.1",
+              "display": "Mild and moderate birth asphyxia"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}"
+  },
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00",
+  "note": [
+      {
+          "text": "Bayi Ny. Diana mengalami Asfiksia Sedang"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "P21.1",
+              "display": "Mild and moderate birth asphyxia",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/d40205a9-edc2-4ac8-82b6-0a86df3f509a"
+  },
+  "id": "bfe76e7d-3b8b-41ea-952d-6e72be8b893d",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:45:18.029227+00:00",
+      "versionId": "MTcyNDgxNjcxODAyOTIyNzAwMA"
+  },
+  "note": [
+      {
+          "text": "Bayi Ny. Diana mengalami Asfiksia Sedang"
+      }
+  ],
+  "onsetDateTime": "2015-10-02T03:20:00+00:00",
+  "recordedDate": "2015-10-02T03:20:00+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}
