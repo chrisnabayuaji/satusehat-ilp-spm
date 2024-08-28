@@ -1,0 +1,140 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "00001"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "3457005",
+                  "display": "Patient referral"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "185389009",
+              "display": "Follow-up visit"
+          }
+      ],
+      "text": "Pemeriksaan lanjutan pasaca lahir"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add",
+      "display": "Kunjungan Alexa Rose 2 Oktober 2015"
+  },
+  "occurrenceDateTime": "2015-10-09T15:00:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia"
+              }
+          ],
+          "text": "Pemeriksaan lanjutan Mild and moderate birth asphyxia pasaca lahir"
+      }
+  ],
+  "patientInstruction": "Pemeriksaan lanjutan Mild and moderate birth asphyxia pasca lahir"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "3457005",
+                  "display": "Patient referral",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "185389009",
+              "display": "Follow-up visit",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Pemeriksaan lanjutan pasaca lahir"
+  },
+  "encounter": {
+      "display": "Kunjungan Alexa Rose 2 Oktober 2015",
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add"
+  },
+  "id": "c88031dc-e43c-4117-9145-3a3908b09cb2",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/referral-number",
+          "value": "2000000884"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-28T03:58:36.734472+00:00",
+      "versionId": "MTcyNDgxNzUxNjczNDQ3MjAwMA"
+  },
+  "occurrenceDateTime": "2015-10-09T15:00:00+00:00",
+  "patientInstruction": "Pemeriksaan lanjutan Mild and moderate birth asphyxia pasca lahir",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ],
+          "text": "Pemeriksaan lanjutan Mild and moderate birth asphyxia pasaca lahir"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}
