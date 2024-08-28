@@ -1,0 +1,227 @@
+{
+  "resourceType": "Encounter",
+  "id": "{{Encounter_PKPR_uuid}}",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P0034000078"
+      }
+  ],
+  "status": "finished",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "Ambulatory"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2024-02-05T02:00:00+00:00",
+      "end": "2024-02-05T02:50:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "reference": "Location/{{Poli_pkpr_id}}",
+              "display": "{{Poli_pkpr_name}}"
+          },
+          "period": {
+              "start": "2024-02-05T02:20:00+00:00",
+              "end": "2024-02-05T02:50:00+00:00"
+          }
+      }
+  ],
+  "diagnosis": [
+      {
+          "condition": {
+              "reference": "Condition/a2a0acd5-49bc-487f-af8d-a8630ffb930c",
+              "display": "Examination for adolescent development state"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 1
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2024-02-05T02:00:00+00:00",
+              "end": "2024-02-05T02:19:59+00:00"
+          }
+      },
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2024-02-05T02:20:00+00:00",
+              "end": "2024-02-05T02:50:00+00:00"
+          }
+      },
+      {
+          "status": "finished",
+          "period": {
+              "start": "2024-02-05T02:50:00+00:00",
+              "end": "2024-02-05T02:50:00+00:00"
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                  "code": "home",
+                  "display": "Home"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali"
+      }
+  },
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "Ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "diagnosis": [
+      {
+          "condition": {
+              "display": "Examination for adolescent development state",
+              "reference": "Condition/a2a0acd5-49bc-487f-af8d-a8630ffb930c"
+          },
+          "rank": 1,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "code": "home",
+                  "display": "Home",
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali"
+      }
+  },
+  "id": "03f07419-3590-4bd6-b37b-20c322b62f97",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P0034000078"
+      }
+  ],
+  "location": [
+      {
+          "location": {
+              "display": "Poli PKPR",
+              "reference": "Location/771424ca-6b24-4733-9bca-a418584559d8"
+          },
+          "period": {
+              "end": "2024-02-05T02:50:00+00:00",
+              "start": "2024-02-05T02:20:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T09:39:35.775084+00:00",
+      "versionId": "MTcyNDgzNzk3NTc3NTA4NDAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "end": "2024-02-05T02:50:00+00:00",
+      "start": "2024-02-05T02:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2024-02-05T02:19:59+00:00",
+              "start": "2024-02-05T02:00:00+00:00"
+          },
+          "status": "arrived"
+      },
+      {
+          "period": {
+              "end": "2024-02-05T02:50:00+00:00",
+              "start": "2024-02-05T02:20:00+00:00"
+          },
+          "status": "in-progress"
+      },
+      {
+          "period": {
+              "end": "2024-02-05T02:50:00+00:00",
+              "start": "2024-02-05T02:50:00+00:00"
+          },
+          "status": "finished"
+      }
+  ],
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

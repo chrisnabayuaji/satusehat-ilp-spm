@@ -1,0 +1,91 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "171201007",
+              "display": "Anemia screening"
+          }
+      ],
+      "text": "Anemia screening"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+              "code": "PC000015",
+              "display": "Point of Care Testing HB Meter"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_PKPR_uuid}}"
+  },
+  "performedPeriod": {
+      "start": "2024-02-05T02:20:00+00:00",
+      "end": "2024-02-05T02:25:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "171201007",
+              "display": "Anemia screening",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Anemia screening"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "PC000015",
+              "display": "Point of Care Testing HB Meter",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/03f07419-3590-4bd6-b37b-20c322b62f97"
+  },
+  "id": "3cc73a52-f4fe-4704-8fa6-c1a0c42839cb",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T09:35:09.021451+00:00",
+      "versionId": "MTcyNDgzNzcwOTAyMTQ1MTAwMA"
+  },
+  "performedPeriod": {
+      "end": "2024-02-05T02:25:00+00:00",
+      "start": "2024-02-05T02:20:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}
