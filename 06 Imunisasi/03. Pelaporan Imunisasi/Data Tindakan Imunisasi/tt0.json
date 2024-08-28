@@ -1,0 +1,143 @@
+{
+  "resourceType": "Immunization",
+  "status": "not-done",
+  "primarySource": false,
+  "vaccineCode": {
+      "coding": [
+          {
+              "system": "http://sys-ids.kemkes.go.id/kfa",
+              "code": "VG139",
+              "display": "Td"
+          }
+      ]
+  },
+  "patient": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Imunisasi_uuid}}"
+  },
+  "occurrenceDateTime": "2016-09-30T04:20:00+00:00",
+  "recorded": "2016-09-30T04:20:00+00:00",
+  "reportOrigin": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/immunization-origin",
+              "code": "recall",
+              "display": "Parent/Guardian/Patient Recall"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "function": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                      "code": "EP",
+                      "display": "Entering Provider"
+                  }
+              ]
+          },
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}"
+          }
+      }
+  ],
+  "statusReason": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "171257003",
+              "display": "No consent - Tetanus/low dose diphtheria vaccine"
+          }
+      ]
+  },
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason",
+                  "code": "IM-WUS",
+                  "display": "Imunisasi Program Rutin Lanjutan Wanita Usia Subur"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "encounter": {
+      "reference": "Encounter/dd585399-1423-4d19-8dc5-6cc87c7f38af"
+  },
+  "id": "4174a4ff-164f-4b0e-bdc7-2f0929b0a146",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T08:29:16.905230+00:00",
+      "versionId": "MTcyNDgzMzc1NjkwNTIzMDAwMA"
+  },
+  "occurrenceDateTime": "2016-09-30T04:20:00+00:00",
+  "patient": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/10009880728"
+          },
+          "function": {
+              "coding": [
+                  {
+                      "code": "EP",
+                      "display": "Entering Provider",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0443"
+                  }
+              ]
+          }
+      }
+  ],
+  "primarySource": false,
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "IM-WUS",
+                  "display": "Imunisasi Program Rutin Lanjutan Wanita Usia Subur",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason"
+              }
+          ]
+      }
+  ],
+  "recorded": "2016-09-30T04:20:00+00:00",
+  "reportOrigin": {
+      "coding": [
+          {
+              "code": "recall",
+              "display": "Parent/Guardian/Patient Recall",
+              "system": "http://terminology.hl7.org/CodeSystem/immunization-origin"
+          }
+      ]
+  },
+  "resourceType": "Immunization",
+  "status": "not-done",
+  "statusReason": {
+      "coding": [
+          {
+              "code": "171257003",
+              "display": "No consent - Tetanus/low dose diphtheria vaccine",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "vaccineCode": {
+      "coding": [
+          {
+              "code": "VG139",
+              "display": "Td",
+              "system": "http://sys-ids.kemkes.go.id/kfa"
+          }
+      ]
+  }
+}

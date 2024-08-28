@@ -1,0 +1,159 @@
+{
+  "resourceType": "Immunization",
+  "status": "completed",
+  "primarySource": false,
+  "vaccineCode": {
+      "coding": [
+          {
+              "system": "http://sys-ids.kemkes.go.id/kfa",
+              "code": "93006992",
+              "display": "Vaksin Tetanus Toxoid 10 Lf 0.5 mL (BIO FARMA)"
+          },
+          {
+              "system": "http://sys-ids.kemkes.go.id/kfa",
+              "code": "VG139",
+              "display": "Td"
+          },
+          {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "35",
+              "display": "tetanus toxoid, adsorbed"
+          }
+      ]
+  },
+  "patient": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Imunisasi_uuid}}"
+  },
+  "occurrenceDateTime": "2016-09-30T04:20:00+00:00",
+  "recorded": "2016-09-30T04:20:00+00:00",
+  "reportOrigin": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/immunization-origin",
+              "code": "record",
+              "display": "Written Record"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "function": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                      "code": "EP",
+                      "display": "Entering Provider"
+                  }
+              ]
+          },
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason",
+                  "code": "IM-WUS",
+                  "display": "Imunisasi Program Rutin Lanjutan Wanita Usia Subur"
+              }
+          ]
+      }
+  ],
+  "protocolApplied": [
+      {
+          "doseNumberPositiveInt": 1
+      }
+  ],
+  "lotNumber": "AB0092",
+  "expirationDate": "2017-12-01"
+}
+
+{
+  "encounter": {
+      "reference": "Encounter/dd585399-1423-4d19-8dc5-6cc87c7f38af"
+  },
+  "expirationDate": "2017-12-01",
+  "id": "30597902-bfd1-478c-83d4-06fbf161c08a",
+  "identifier": [],
+  "lotNumber": "AB0092",
+  "meta": {
+      "lastUpdated": "2024-08-28T08:30:00.645539+00:00",
+      "versionId": "MTcyNDgzMzgwMDY0NTUzOTAwMA"
+  },
+  "occurrenceDateTime": "2016-09-30T04:20:00+00:00",
+  "patient": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/10009880728"
+          },
+          "function": {
+              "coding": [
+                  {
+                      "code": "EP",
+                      "display": "Entering Provider",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0443"
+                  }
+              ]
+          }
+      }
+  ],
+  "primarySource": false,
+  "protocolApplied": [
+      {
+          "doseNumberPositiveInt": 1
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "IM-WUS",
+                  "display": "Imunisasi Program Rutin Lanjutan Wanita Usia Subur",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason"
+              }
+          ]
+      }
+  ],
+  "recorded": "2016-09-30T04:20:00+00:00",
+  "reportOrigin": {
+      "coding": [
+          {
+              "code": "record",
+              "display": "Written Record",
+              "system": "http://terminology.hl7.org/CodeSystem/immunization-origin"
+          }
+      ]
+  },
+  "resourceType": "Immunization",
+  "status": "completed",
+  "vaccineCode": {
+      "coding": [
+          {
+              "code": "93006992",
+              "display": "Vaksin Tetanus Toxoid 10 Lf 0.5 mL (BIO FARMA)",
+              "system": "http://sys-ids.kemkes.go.id/kfa"
+          },
+          {
+              "code": "VG139",
+              "display": "Td",
+              "system": "http://sys-ids.kemkes.go.id/kfa"
+          },
+          {
+              "code": "35",
+              "display": "tetanus toxoid, adsorbed",
+              "system": "http://hl7.org/fhir/sid/cvx"
+          }
+      ]
+  }
+}
