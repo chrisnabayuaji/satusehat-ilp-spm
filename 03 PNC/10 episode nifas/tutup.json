@@ -1,0 +1,63 @@
+[
+  {
+      "op": "replace",
+      "path": "/status",
+      "value": "finished"
+  },
+  {
+      "op": "replace",
+      "path": "/period",
+      "value": {
+          "start": "2015-11-13T03:04:00+00:00",
+          "end": "2015-11-13T03:04:00+00:00"
+      }
+  },
+  {
+      "op": "replace",
+      "path": "/statusHistory/0",
+      "value": {
+          "status": "active",
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00",
+              "end": "2015-11-13T03:04:00+00:00"
+          }
+      }
+  },
+  {
+      "op": "add",
+      "path": "/statusHistory/1",
+      "value": {
+          "status": "finished",
+          "period": {
+              "start": "2015-11-13T03:04:00+00:00",
+              "end": "2015-11-13T03:04:00+00:00"
+          }
+      }
+  }
+]
+
+{
+  "id": "5ed12ce0-7c37-483d-bc49-cc79b576d2da",
+  "meta": {
+      "lastUpdated": "2024-08-28T06:39:02.424702+00:00",
+      "versionId": "MTcyNDgyNzE0MjQyNDcwMjAwMA"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2015-11-13T03:04:00+00:00",
+              "start": "2015-10-02T03:04:00+00:00"
+          },
+          "status": "active"
+      },
+      {
+          "period": {
+              "end": "2015-11-13T03:04:00+00:00",
+              "start": "2015-11-13T03:04:00+00:00"
+          },
+          "status": "finished"
+      }
+  ]
+}

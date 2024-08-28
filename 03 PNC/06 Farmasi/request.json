@@ -1,0 +1,408 @@
+{
+  "resourceType": "MedicationRequest",
+  "contained": [
+      {
+          "resourceType": "Medication",
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "id": "123456789",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://sys-ids.kemkes.go.id/kfa",
+                      "code": "93001118",
+                      "display": "Retinol Palmitate 100.000 IU Kapsul Lunak (KIMIA FARMA)"
+                  }
+              ]
+          },
+          "status": "active",
+          "manufacturer": {
+              "reference": "Organization/{{Org_id}}"
+          },
+          "form": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                      "code": "BS020",
+                      "display": "Kapsul Lunak"
+                  }
+              ]
+          },
+          "ingredient": [
+              {
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://sys-ids.kemkes.go.id/kfa",
+                              "code": "91000355",
+                              "display": "RETINOL"
+                          }
+                      ]
+                  },
+                  "isActive": true,
+                  "strength": {
+                      "numerator": {
+                          "value": 100000,
+                          "system": "http://unitsofmeasure.org",
+                          "code": "[IU]"
+                      },
+                      "denominator": {
+                          "value": 1,
+                          "unit": "CAP",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "code": "CAP"
+                      }
+                  }
+              }
+          ],
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                              "code": "NC",
+                              "display": "Non-compound"
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "status": "completed",
+  "intent": "order",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                  "code": "community",
+                  "display": "Community"
+              }
+          ]
+      }
+  ],
+  "priority": "routine",
+  "medicationReference": {
+      "reference": "#123456789",
+      "display": "Retinol Palmitate 100.000 IU Kapsul Lunak (KIMIA FARMA)"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_PNC_uuid}}"
+  },
+  "authoredOn": "2015-10-12T03:40:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "dosageInstruction": [
+      {
+          "sequence": 1,
+          "text": "Kapsul Vitamin A 200.000 IU dosis tunggal",
+          "additionalInstruction": [
+              {
+                  "text": "Diminum setiap hari"
+              }
+          ],
+          "patientInstruction": "",
+          "timing": {
+              "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+              }
+          },
+          "route": {
+              "coding": [
+                  {
+                      "system": "http://www.whocc.no/atc",
+                      "code": "O",
+                      "display": "Oral"
+                  }
+              ]
+          },
+          "doseAndRate": [
+              {
+                  "type": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                              "code": "ordered",
+                              "display": "Ordered"
+                          }
+                      ]
+                  },
+                  "doseQuantity": {
+                      "value": 2,
+                      "unit": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "code": "CAP"
+                  }
+              }
+          ]
+      }
+  ],
+  "dispenseRequest": {
+      "dispenseInterval": {
+          "value": 1,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+      },
+      "validityPeriod": {
+          "start": "2015-10-12T03:40:00+00:00",
+          "end": "2015-10-12T03:40:00+00:00"
+      },
+      "numberOfRepeatsAllowed": 0,
+      "quantity": {
+          "value": 2,
+          "unit": "CAP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "code": "CAP"
+      },
+      "expectedSupplyDuration": {
+          "value": 2,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+      },
+      "performer": {
+          "reference": "Organization/{{Org_id}}"
+      }
+  }
+}
+
+{
+  "authoredOn": "2015-10-12T03:40:00+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "community",
+                  "display": "Community",
+                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+              }
+          ]
+      }
+  ],
+  "contained": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "93001118",
+                      "display": "Retinol Palmitate 100.000 IU Kapsul Lunak (KIMIA FARMA)",
+                      "system": "http://sys-ids.kemkes.go.id/kfa"
+                  }
+              ]
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "NC",
+                              "display": "Non-compound",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "form": {
+              "coding": [
+                  {
+                      "code": "BS020",
+                      "display": "Kapsul Lunak",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form"
+                  }
+              ]
+          },
+          "id": "123456789",
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/8529d474-30e0-4fee-81a4-7a5234003a1b",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "ingredient": [
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000355",
+                              "display": "RETINOL",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "CAP",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "unit": "CAP",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "[IU]",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 100000
+                      }
+                  }
+              }
+          ],
+          "manufacturer": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "resourceType": "Medication",
+          "status": "active"
+      }
+  ],
+  "dispenseRequest": {
+      "dispenseInterval": {
+          "code": "d",
+          "system": "http://unitsofmeasure.org",
+          "unit": "days",
+          "value": 1
+      },
+      "expectedSupplyDuration": {
+          "code": "d",
+          "system": "http://unitsofmeasure.org",
+          "unit": "days",
+          "value": 2
+      },
+      "numberOfRepeatsAllowed": 0,
+      "performer": {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      },
+      "quantity": {
+          "code": "CAP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "unit": "CAP",
+          "value": 2
+      },
+      "validityPeriod": {
+          "end": "2015-10-12T03:40:00+00:00",
+          "start": "2015-10-12T03:40:00+00:00"
+      }
+  },
+  "dosageInstruction": [
+      {
+          "additionalInstruction": [
+              {
+                  "text": "Diminum setiap hari"
+              }
+          ],
+          "doseAndRate": [
+              {
+                  "doseQuantity": {
+                      "code": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "unit": "CAP",
+                      "value": 2
+                  },
+                  "type": {
+                      "coding": [
+                          {
+                              "code": "ordered",
+                              "display": "Ordered",
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "patientInstruction": "",
+          "route": {
+              "coding": [
+                  {
+                      "code": "O",
+                      "display": "Oral",
+                      "system": "http://www.whocc.no/atc"
+                  }
+              ]
+          },
+          "sequence": 1,
+          "text": "Kapsul Vitamin A 200.000 IU dosis tunggal",
+          "timing": {
+              "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+              }
+          }
+      }
+  ],
+  "encounter": {
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "4e6f92f9-7808-45a6-8fc4-b0f91d9fb7df",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "intent": "order",
+  "medicationReference": {
+      "display": "Retinol Palmitate 100.000 IU Kapsul Lunak (KIMIA FARMA)",
+      "reference": "#123456789"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-28T04:58:58.692668+00:00",
+      "versionId": "MTcyNDgyMTEzODY5MjY2ODAwMA"
+  },
+  "priority": "routine",
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "MedicationRequest",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
