@@ -1,0 +1,103 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "55277-8",
+              "display": "HIV status"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "effectiveDateTime": "2022-10-14T07:00:00+00:00",
+  "valueCodeableConcept":{
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "55277-8",
+              "display": "HIV status",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2022-10-14T07:00:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "e0515a59-dbab-4067-9281-e976c76a95a1",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T13:00:01.342843+00:00",
+      "versionId": "MTcyNDg1MDAwMTM0Mjg0MzAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "260385009",
+              "display": "Negative",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
