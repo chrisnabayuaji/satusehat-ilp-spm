@@ -1,0 +1,135 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "73211009",
+              "display": "Diabetes mellitus"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "effectiveDateTime": "2023-07-14T02:10:00+00:00",
+  "issued": "2023-07-14T02:10:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueBoolean": true,
+  "component": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "715047008",
+                      "display": "Does obtain medication"
+                  }
+              ]
+          },
+          "valueBoolean": true
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "31509003",
+                      "display": "Controlled"
+                  }
+              ]
+          },
+          "valueBoolean": true
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "73211009",
+              "display": "Diabetes mellitus",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "component": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "715047008",
+                      "display": "Does obtain medication",
+                      "system": "http://snomed.info/sct"
+                  }
+              ]
+          },
+          "valueBoolean": true
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "31509003",
+                      "display": "Controlled",
+                      "system": "http://snomed.info/sct"
+                  }
+              ]
+          },
+          "valueBoolean": true
+      }
+  ],
+  "effectiveDateTime": "2023-07-14T02:10:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "8a47f252-0d40-4535-83e3-9742041c2eb2",
+  "identifier": [],
+  "issued": "2023-07-14T02:10:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-28T12:46:33.696180+00:00",
+      "versionId": "MTcyNDg0OTE5MzY5NjE4MDAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  },
+  "valueBoolean": true
+}

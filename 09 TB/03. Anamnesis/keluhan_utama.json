@@ -1,0 +1,100 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "problem-list-item",
+                  "display": "Problem List Item"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "20022000",
+              "display": "Weakness of one side of body"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "encounter": {
+     "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "onsetDateTime": "2023-07-14T01:00:00+00:00",
+  "recordedDate": "2023-07-14T02:10:00+00:00",
+  "note": [
+      {
+          "text": "Pasien mengalami lemah pada separuh anggota tubuh"
+      }
+  ]
+
+}
+
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "problem-list-item",
+                  "display": "Problem List Item",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "20022000",
+              "display": "Weakness of one side of body",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "6d44d119-f68c-43a4-bb24-a897fa94e17b",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T12:44:42.403392+00:00",
+      "versionId": "MTcyNDg0OTA4MjQwMzM5MjAwMA"
+  },
+  "note": [
+      {
+          "text": "Pasien mengalami lemah pada separuh anggota tubuh"
+      }
+  ],
+  "onsetDateTime": "2023-07-14T01:00:00+00:00",
+  "recordedDate": "2023-07-14T02:10:00+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
+
