@@ -1,0 +1,394 @@
+{
+  "resourceType": "MedicationDispense",
+  "contained": [
+      {
+          "resourceType": "Medication",
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "id": "123456789",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://sys-ids.kemkes.go.id/kfa",
+                      "code": "93018284",
+                      "display": "Retinol Palmitate 200.000 IU Kapsul Lunak (Umum)"
+                  }
+              ]
+          },
+          "status": "active",
+          "manufacturer": {
+              "reference": "Organization/{{Org_id}}"
+          },
+          "form": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                      "code": "BS020",
+                      "display": "Kapsul Lunak"
+                  }
+              ]
+          },
+          "ingredient": [
+              {
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://sys-ids.kemkes.go.id/kfa",
+                              "code": "91000355",
+                              "display": "RETINOL"
+                          }
+                      ]
+                  },
+                  "isActive": true,
+                  "strength": {
+                      "numerator": {
+                          "value": 2000,
+                          "system": "http://unitsofmeasure.org",
+                          "code": "[IU]"
+                      },
+                      "denominator": {
+                          "value": 1,
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "code": "CAP"
+                      }
+                  }
+              }
+          ],
+          "batch": {
+              "lotNumber": "1625042A",
+              "expirationDate": "2017-07-22T17:00:00+00:00"
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                              "code": "NC",
+                              "display": "Non-compound"
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+              "code": "outpatient",
+              "display": "Outpatient"
+          }
+      ]
+  },
+  "medicationReference": {
+      "reference": "#123456789",
+      "display": "{{Medication_Name}}"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "context": {
+      "reference": "Encounter/{{Encounter_TumbuhKembang_uuid}}"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Performer_id}}",
+              "display": "{{Performer_name}}"
+          }
+      }
+  ],
+  "location": {
+      "reference": "Location/{{Apotek_id}}",
+      "display": "{{Apotek_name}}"
+  },
+  "authorizingPrescription": [
+      {
+          "reference": "MedicationRequest/{{MedicationRequest_uuid}}"
+      }
+  ],
+  "quantity": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "code": "CAP",
+      "value": 1
+  },
+  "whenPrepared": "2017-09-15T03:45:00+00:00",
+  "whenHandedOver": "2017-09-15T03:45:00+00:00",
+  "dosageInstruction": [
+      {
+          "sequence": 1,
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "421769005",
+                          "display": "Follow directions"
+                      }
+                  ]
+              }
+          ],
+          "patientInstruction": "Retinol Palmitate 2000 IU single dose",
+          "timing": {
+              "repeat": {
+                  "count": 1
+              }
+          },
+          "route": {
+              "coding": [
+                  {
+                      "system": "http://www.whocc.no/atc",
+                      "code": "O",
+                      "display": "Oral"
+                  }
+              ]
+          },
+          "doseAndRate": [
+              {
+                  "type": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                              "code": "ordered",
+                              "display": "Ordered"
+                          }
+                      ]
+                  },
+                  "doseQuantity": {
+                      "value": 1,
+                      "unit": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "code": "CAP"
+                  }
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "authorizingPrescription": [
+      {
+          "reference": "MedicationRequest/87184648-4bfe-4a5b-bf9b-14b8c94e0e16"
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "outpatient",
+              "display": "Outpatient",
+              "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
+          }
+      ]
+  },
+  "contained": [
+      {
+          "batch": {
+              "expirationDate": "2017-07-22T17:00:00+00:00",
+              "lotNumber": "1625042A"
+          },
+          "code": {
+              "coding": [
+                  {
+                      "code": "93018284",
+                      "display": "Retinol Palmitate 200.000 IU Kapsul Lunak (Umum)",
+                      "system": "http://sys-ids.kemkes.go.id/kfa"
+                  }
+              ]
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "NC",
+                              "display": "Non-compound",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "form": {
+              "coding": [
+                  {
+                      "code": "BS020",
+                      "display": "Kapsul Lunak",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form"
+                  }
+              ]
+          },
+          "id": "123456789",
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/8529d474-30e0-4fee-81a4-7a5234003a1b",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "ingredient": [
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000355",
+                              "display": "RETINOL",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "CAP",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "[IU]",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 2000
+                      }
+                  }
+              }
+          ],
+          "manufacturer": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "resourceType": "Medication",
+          "status": "active"
+      }
+  ],
+  "context": {
+      "reference": "Encounter/0cf2b255-98f1-438f-9d0a-74af7adbbc80"
+  },
+  "dosageInstruction": [
+      {
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "code": "421769005",
+                          "display": "Follow directions",
+                          "system": "http://snomed.info/sct"
+                      }
+                  ]
+              }
+          ],
+          "doseAndRate": [
+              {
+                  "doseQuantity": {
+                      "code": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "unit": "CAP",
+                      "value": 1
+                  },
+                  "type": {
+                      "coding": [
+                          {
+                              "code": "ordered",
+                              "display": "Ordered",
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "patientInstruction": "Retinol Palmitate 2000 IU single dose",
+          "route": {
+              "coding": [
+                  {
+                      "code": "O",
+                      "display": "Oral",
+                      "system": "http://www.whocc.no/atc"
+                  }
+              ]
+          },
+          "sequence": 1,
+          "timing": {
+              "repeat": {
+                  "count": 1
+              }
+          }
+      }
+  ],
+  "id": "cd6bc3d7-c83b-4619-a32d-4ed35d715a84",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "location": {
+      "display": "Apotek Sentral",
+      "reference": "Location/7ffd75c8-1c70-4728-a083-5167be2aef8d"
+  },
+  "medicationReference": {
+      "display": "",
+      "reference": "#123456789"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-28T07:55:09.076410+00:00",
+      "versionId": "MTcyNDgzMTcwOTA3NjQxMDAwMA"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 2",
+              "reference": "Practitioner/10006926841"
+          }
+      }
+  ],
+  "quantity": {
+      "code": "CAP",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "value": 1
+  },
+  "resourceType": "MedicationDispense",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  },
+  "whenHandedOver": "2017-09-15T03:45:00+00:00",
+  "whenPrepared": "2017-09-15T03:45:00+00:00"
+}

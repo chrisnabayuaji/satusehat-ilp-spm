@@ -1,0 +1,418 @@
+{
+  "resourceType": "MedicationRequest",
+  "contained": [
+      {
+          "resourceType": "Medication",
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "id": "123456789",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://sys-ids.kemkes.go.id/kfa",
+                      "code": "92000809",
+                      "display": "Retinol Palmitate 200.000 IU Kapsul Lunak"
+                  }
+              ]
+          },
+          "status": "active",
+          "manufacturer": {
+              "reference": "Organization/{{Org_id}}"
+          },
+          "form": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                      "code": "BS020",
+                      "display": "Kapsul Lunak"
+                  }
+              ]
+          },
+          "ingredient": [
+              {
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://sys-ids.kemkes.go.id/kfa",
+                              "code": "91000355",
+                              "display": "RETINOL"
+                          }
+                      ]
+                  },
+                  "isActive": true,
+                  "strength": {
+                      "numerator": {
+                          "value": 2000,
+                          "system": "http://unitsofmeasure.org",
+                          "code": "[IU]"
+                      },
+                      "denominator": {
+                          "value": 1,
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "code": "CAP"
+                      }
+                  }
+              }
+          ],
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                              "code": "NC",
+                              "display": "Non-compound"
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "status": "completed",
+  "intent": "order",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                  "code": "outpatient",
+                  "display": "Outpatient"
+              }
+          ]
+      }
+  ],
+  "priority": "routine",
+  "medicationReference": {
+      "reference": "#123456789",
+      "display": "{{Medication_Name}}"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_TumbuhKembang_uuid}}"
+  },
+  "authoredOn": "2017-09-15T03:20:00+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "courseOfTherapyType": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+          }
+      ]
+  },
+  "dosageInstruction": [
+      {
+          "sequence": 1,
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "421769005",
+                          "display": "Follow directions"
+                      }
+                  ]
+              }
+          ],
+          "patientInstruction": "diminum 1x saja",
+          "timing": {
+              "repeat": {
+                  "count": 1
+              }
+          },
+          "route": {
+              "coding": [
+                  {
+                      "system": "http://www.whocc.no/atc",
+                      "code": "O",
+                      "display": "Oral"
+                  }
+              ]
+          },
+          "doseAndRate": [
+              {
+                  "type": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                              "code": "ordered",
+                              "display": "Ordered"
+                          }
+                      ]
+                  },
+                  "doseQuantity": {
+                      "value": 1,
+                      "unit": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "code": "CAP"
+                  }
+              }
+          ]
+      }
+  ],
+  "dispenseRequest": {
+      "dispenseInterval": {
+          "value": 1,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+      },
+      "validityPeriod": {
+          "start": "2017-09-15T03:20:00+00:00",
+          "end": "2017-09-15T03:20:00+00:00"
+      },
+      "numberOfRepeatsAllowed": 0,
+      "quantity": {
+          "value": 1,
+          "unit": "CAP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "code": "CAP"
+      },
+      "performer": {
+          "reference": "Organization/{{Org_id}}"
+      }
+  }
+}
+
+{
+  "authoredOn": "2017-09-15T03:20:00+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "outpatient",
+                  "display": "Outpatient",
+                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+              }
+          ]
+      }
+  ],
+  "contained": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "92000809",
+                      "display": "Retinol Palmitate 200.000 IU Kapsul Lunak",
+                      "system": "http://sys-ids.kemkes.go.id/kfa"
+                  }
+              ]
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "NC",
+                              "display": "Non-compound",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "form": {
+              "coding": [
+                  {
+                      "code": "BS020",
+                      "display": "Kapsul Lunak",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form"
+                  }
+              ]
+          },
+          "id": "123456789",
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/8529d474-30e0-4fee-81a4-7a5234003a1b",
+                  "use": "official",
+                  "value": "123456789"
+              }
+          ],
+          "ingredient": [
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000355",
+                              "display": "RETINOL",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "CAP",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "[IU]",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 2000
+                      }
+                  }
+              }
+          ],
+          "manufacturer": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "resourceType": "Medication",
+          "status": "active"
+      }
+  ],
+  "courseOfTherapyType": {
+      "coding": [
+          {
+              "code": "acute",
+              "display": "Short course (acute) therapy",
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+          }
+      ]
+  },
+  "dispenseRequest": {
+      "dispenseInterval": {
+          "code": "d",
+          "system": "http://unitsofmeasure.org",
+          "unit": "days",
+          "value": 1
+      },
+      "numberOfRepeatsAllowed": 0,
+      "performer": {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      },
+      "quantity": {
+          "code": "CAP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "unit": "CAP",
+          "value": 1
+      },
+      "validityPeriod": {
+          "end": "2017-09-15T03:20:00+00:00",
+          "start": "2017-09-15T03:20:00+00:00"
+      }
+  },
+  "dosageInstruction": [
+      {
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "code": "421769005",
+                          "display": "Follow directions",
+                          "system": "http://snomed.info/sct"
+                      }
+                  ]
+              }
+          ],
+          "doseAndRate": [
+              {
+                  "doseQuantity": {
+                      "code": "CAP",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "unit": "CAP",
+                      "value": 1
+                  },
+                  "type": {
+                      "coding": [
+                          {
+                              "code": "ordered",
+                              "display": "Ordered",
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "patientInstruction": "diminum 1x saja",
+          "route": {
+              "coding": [
+                  {
+                      "code": "O",
+                      "display": "Oral",
+                      "system": "http://www.whocc.no/atc"
+                  }
+              ]
+          },
+          "sequence": 1,
+          "timing": {
+              "repeat": {
+                  "count": 1
+              }
+          }
+      }
+  ],
+  "encounter": {
+      "reference": "Encounter/0cf2b255-98f1-438f-9d0a-74af7adbbc80"
+  },
+  "id": "87184648-4bfe-4a5b-bf9b-14b8c94e0e16",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "123456788-1"
+      }
+  ],
+  "intent": "order",
+  "medicationReference": {
+      "display": "",
+      "reference": "#123456789"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-28T07:54:12.779554+00:00",
+      "versionId": "MTcyNDgzMTY1Mjc3OTU1NDAwMA"
+  },
+  "priority": "routine",
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "MedicationRequest",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}
