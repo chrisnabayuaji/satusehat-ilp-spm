@@ -1,0 +1,226 @@
+{
+  "resourceType": "Encounter",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P202400056"
+      },
+      {
+          "use": "temp",
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "P20240005"
+      }
+  ],
+  "status": "arrived",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2023-07-14T00:00:12+00:00"
+  },
+  "hospitalization": {
+      "admitSource": {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                  "code": "EHA000002",
+                  "display": "Datang sendiri"
+              }
+          ]
+      }
+  },
+  "location": [
+      {
+          "location": {
+              "display": "{{Poli_paru_name}}",
+              "reference": "Location/{{Poli_paru_id}}"
+          },
+          "period": {
+              "start": "2023-06-14T07:00:00+00:00"
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass",
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient",
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass",
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2023-06-14T00:00:12+00:00"
+          }
+      }
+  ],
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "hospitalization": {
+      "admitSource": {
+          "coding": [
+              {
+                  "code": "EHA000002",
+                  "display": "Datang sendiri",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+              }
+          ]
+      }
+  },
+  "id": "0e05ddfb-e3fe-4995-8295-f4c9640956c8",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P202400056"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "temp",
+          "value": "P20240005"
+      }
+  ],
+  "location": [
+      {
+          "extension": [
+              {
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass"
+              }
+          ],
+          "location": {
+              "display": "Poli Paru",
+              "reference": "Location/838e7dcc-e2e8-45d0-975f-adf19c662c9d"
+          },
+          "period": {
+              "start": "2023-06-14T07:00:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T12:36:42.287157+00:00",
+      "versionId": "MTcyNDg0ODYwMjI4NzE1NzAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "start": "2023-07-14T00:00:12+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "arrived",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2023-06-14T00:00:12+00:00"
+          },
+          "status": "arrived"
+      }
+  ],
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  }
+}
