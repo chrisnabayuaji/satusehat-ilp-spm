@@ -1,0 +1,194 @@
+{
+  "resourceType": "Encounter",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "O12345"
+      }
+  ],
+  "status": "arrived",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "EMER",
+      "display": "emergency"
+  },
+  "subject": {
+      "reference": "Patient/{{Maternal_patient_id}}",
+      "display": "{{Maternal_patient_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2023-06-22T07:00:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "display": "{{Bed_location_name}}",
+              "reference": "Location/{{Bed_bayi_location_id}}"
+          },
+          "period": {
+              "start": "2023-06-22T07:00:00+00:00"
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass",
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient",
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass",
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2023-06-22T07:00:00+00:00"
+          }
+      }
+  ],
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "EMER",
+      "display": "emergency",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "id": "3dd53ac7-f742-479a-a781-7901490f56b8",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O12345"
+      }
+  ],
+  "location": [
+      {
+          "extension": [
+              {
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass"
+              }
+          ],
+          "location": {
+              "display": "Kepodang",
+              "reference": "Location/b2671401-6934-4992-a22a-f85806fbd467"
+          },
+          "period": {
+              "start": "2023-06-22T07:00:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T10:30:14.891024+00:00",
+      "versionId": "MTcyNDg0MTAxNDg5MTAyNDAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "start": "2023-06-22T07:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "arrived",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2023-06-22T07:00:00+00:00"
+          },
+          "status": "arrived"
+      }
+  ],
+  "subject": {
+      "display": "Patient - Mother (Teresa Lee)",
+      "reference": "Patient/P02029555437"
+  }
+}
