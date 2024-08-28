@@ -1,0 +1,142 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0001",
+  "status": "completed",
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+ "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "authored": "2023-07-14T01:00:00+00:00",
+  "author": {
+      "reference": "Practitioner/{{Practitioner_ID}}"
+  },
+  "source": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "item": [
+     {
+         "linkId": "1",
+         "text": " Klasifikasi Kasus Terduga TB",
+         "item": [
+             {
+                 "linkId": "1.1",
+                 "text": "Kriteria Terduga TB",
+                 "answer": [
+                     {
+                         "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                              "code": "QRI000001",
+                              "display": "Terduga TBC SO"
+                         }
+                     }
+                 ]
+             },
+             {
+                 "linkId": "1.2",
+                 "text": "Klasifikasi tuberkulosis berdasarkan riwayat pengobatan",
+                 "answer": [
+                     {
+                         "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/prev-tb-treatment",
+                              "code": "relapse",
+                              "display": "Kasus Kambuh"
+                         }
+                     }
+                 ]
+             },
+             {
+                 "linkId": "1.4",
+                 "text": "Klasifikasi terduga tuberkulosis berdasarkan lokasi anatomis",
+                 "answer": [
+                     {
+                         "valueCoding": {
+                              "system": "http://snomed.info/sct",
+                             "code": "154283005",
+                             "display": "Pulmonary tuberculosis"
+                         }
+                     }
+                 ]
+             }
+         ]
+     }
+ ]
+}
+
+{
+  "author": {
+      "reference": "Practitioner/10009880728"
+  },
+  "authored": "2023-07-14T01:00:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "654baf21-8dcf-4bb2-b30b-dcc7c0592ee0",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "item": [
+      {
+          "item": [
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "QRI000001",
+                              "display": "Terduga TBC SO",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                          }
+                      }
+                  ],
+                  "linkId": "1.1",
+                  "text": "Kriteria Terduga TB"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "relapse",
+                              "display": "Kasus Kambuh",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/prev-tb-treatment"
+                          }
+                      }
+                  ],
+                  "linkId": "1.2",
+                  "text": "Klasifikasi tuberkulosis berdasarkan riwayat pengobatan"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "154283005",
+                              "display": "Pulmonary tuberculosis",
+                              "system": "http://snomed.info/sct"
+                          }
+                      }
+                  ],
+                  "linkId": "1.4",
+                  "text": "Klasifikasi terduga tuberkulosis berdasarkan lokasi anatomis"
+              }
+          ],
+          "linkId": "1",
+          "text": " Klasifikasi Kasus Terduga TB"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-28T12:54:02.469898+00:00",
+      "versionId": "MTcyNDg0OTY0MjQ2OTg5ODAwMA"
+  },
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0001",
+  "resourceType": "QuestionnaireResponse",
+  "source": {
+      "reference": "Patient/P02029555482"
+  },
+  "status": "completed",
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  }
+}
