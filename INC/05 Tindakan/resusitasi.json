@@ -1,0 +1,157 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "373110003",
+              "display": "Emergency procedure"
+          }
+      ],
+      "text": "Emergency procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "93.93",
+              "display": "Nonmechanical methods of resuscitation"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add",
+      "display": "Tindakan Resusitasi Alexa Rose pada tanggal 2 Oktober 2015"
+  },
+  "performedPeriod": {
+      "start": "2015-10-02T03:20:00+00:00",
+      "end": "2015-10-02T03:30:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia"
+              }
+          ]
+      }
+  ],
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "123851003",
+                  "display": "Mouth region structure"
+              },
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "45206002",
+                  "display": "Nasal structure"
+              }
+          ]
+      }
+  ],
+  "note": [
+      {
+          "text": "Pemberian resusitasi neonatus melalui mulut dan hidung."
+      }
+  ]
+}
+
+{
+  "bodySite": [
+      {
+          "coding": [
+              {
+                  "code": "123851003",
+                  "display": "Mouth region structure",
+                  "system": "http://snomed.info/sct"
+              },
+              {
+                  "code": "45206002",
+                  "display": "Nasal structure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "373110003",
+              "display": "Emergency procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Emergency procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "93.93",
+              "display": "Nonmechanical methods of resuscitation",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Tindakan Resusitasi Alexa Rose pada tanggal 2 Oktober 2015",
+      "reference": "Encounter/aca8e81b-185c-4144-8451-107c808f1add"
+  },
+  "id": "5d6eda65-e5bf-48ed-a8e8-65aad3542d70",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:49:38.621757+00:00",
+      "versionId": "MTcyNDgxNjk3ODYyMTc1NzAwMA"
+  },
+  "note": [
+      {
+          "text": "Pemberian resusitasi neonatus melalui mulut dan hidung."
+      }
+  ],
+  "performedPeriod": {
+      "end": "2015-10-02T03:30:00+00:00",
+      "start": "2015-10-02T03:20:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "P21.1",
+                  "display": "Mild and moderate birth asphyxia",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029553997"
+  }
+}

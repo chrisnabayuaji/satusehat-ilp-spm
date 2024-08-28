@@ -1,0 +1,137 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "277132007",
+              "display": "Therapeutic procedure"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "73.5",
+              "display": "Manually assisted delivery"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Ibu_ID}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_INC_uuid}}",
+      "display": "Tindakan Persalinan {{Patient_Ibu_name}} pada tanggal 2 Oktober 2015"
+  },
+  "performedPeriod": {
+      "start": "2015-10-02T00:10:00+00:00",
+      "end": "2015-10-02T03:35:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      },
+      {
+          "actor": {
+              "reference": "Practitioner/{{Performer_id}}",
+              "display": "{{Performer_name}}"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "Z34.0",
+                  "display": "Supervision of normal first pregnancy"
+              }
+          ]
+      }
+  ],
+  "note": [
+      {
+          "text": "Persalinan Normal"
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "277132007",
+              "display": "Therapeutic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Therapeutic procedure"
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "73.5",
+              "display": "Manually assisted delivery",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Tindakan Persalinan Diana Rose pada tanggal 2 Oktober 2015",
+      "reference": "Encounter/fe998466-1bca-4b14-90e1-47b167bf8c7c"
+  },
+  "id": "09df9657-ca39-4580-861d-393ece0432e4",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-28T03:49:11.651208+00:00",
+      "versionId": "MTcyNDgxNjk1MTY1MTIwODAwMA"
+  },
+  "note": [
+      {
+          "text": "Persalinan Normal"
+      }
+  ],
+  "performedPeriod": {
+      "end": "2015-10-02T03:35:00+00:00",
+      "start": "2015-10-02T00:10:00+00:00"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      },
+      {
+          "actor": {
+              "display": "Practitioner 2",
+              "reference": "Practitioner/10006926841"
+          }
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "Z34.0",
+                  "display": "Supervision of normal first pregnancy",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029552358"
+  }
+}
