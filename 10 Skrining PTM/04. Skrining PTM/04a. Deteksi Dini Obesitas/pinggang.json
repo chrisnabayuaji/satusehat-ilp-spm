@@ -1,0 +1,175 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "276361009",
+              "display": "Waist circumference"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T00:26:20+00:00",
+  "issued": "2024-04-24T00:26:20+00:00",
+  "valueQuantity": {
+      "value": 103,
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org",
+      "code": "cm"
+  },
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                  "code": "N",
+                  "display": "Normal"
+              }
+          ]
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "value": 79.9,
+              "unit": "cm",
+              "system": "http://unitsofmeasure.org",
+              "code": "cm"
+          },
+          "type": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                      "code": "normal",
+                      "display": "Normal Range"
+                  }
+              ]
+          },
+          "text": "Normal"
+      },
+      {
+          "low": {
+              "value": 80,
+              "unit": "cm",
+              "system": "http://unitsofmeasure.org",
+              "code": "cm"
+          },
+          "text": "Central Obesity"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "276361009",
+              "display": "Waist circumference",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T00:26:20+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "2ea1a1c1-fb97-4bd5-bb2a-4d0e2a7272d1",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "N",
+                  "display": "Normal",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+          ]
+      }
+  ],
+  "issued": "2024-04-24T00:26:20+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:04:57.005724+00:00",
+      "versionId": "MTcyNDkxNTA5NzAwNTcyNDAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "code": "cm",
+              "system": "http://unitsofmeasure.org",
+              "unit": "cm",
+              "value": 79.9
+          },
+          "text": "Normal",
+          "type": {
+              "coding": [
+                  {
+                      "code": "normal",
+                      "display": "Normal Range",
+                      "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+                  }
+              ]
+          }
+      },
+      {
+          "low": {
+              "code": "cm",
+              "system": "http://unitsofmeasure.org",
+              "unit": "cm",
+              "value": 80
+          },
+          "text": "Central Obesity"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "cm",
+      "system": "http://unitsofmeasure.org",
+      "unit": "cm",
+      "value": 103
+  }
+}

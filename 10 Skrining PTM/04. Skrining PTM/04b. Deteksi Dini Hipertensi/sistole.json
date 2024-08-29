@@ -1,0 +1,95 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_Ibu_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T00:27:45+00:00",
+  "issued": "2024-04-24T00:27:45+00:00",
+  "valueQuantity": {
+      "value": 160,
+      "unit": "mmHg",
+      "system": "http://unitsofmeasure.org",
+      "code": "mm[Hg]"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "8480-6",
+              "display": "Systolic blood pressure",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T00:27:45+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "70594d5d-9fd8-4dba-b827-8bc3118079da",
+  "identifier": [],
+  "issued": "2024-04-24T00:27:45+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:06:10.728882+00:00",
+      "versionId": "MTcyNDkxNTE3MDcyODg4MjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Diana Rose",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "mm[Hg]",
+      "system": "http://unitsofmeasure.org",
+      "unit": "mmHg",
+      "value": 160
+  }
+}

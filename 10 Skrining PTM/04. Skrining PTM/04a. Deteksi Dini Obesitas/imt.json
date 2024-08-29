@@ -1,0 +1,285 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-01-05T07:45:00+00:00",
+  "issued": "2024-01-05T07:45:00+00:00",
+  "valueQuantity": {
+      "value": 17, //{{IMT_calc}},
+      "unit": "kg/m^2",
+      "system": "http://unitsofmeasure.org",
+      "code": "kg/m2"
+  },
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "248342006",
+                  "display": "Underweight"
+              }
+          ]
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "value": 16.9,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "text": "Sangat Kurus"
+      },
+      {
+          "low": {
+              "value": 17,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "high": {
+              "value": 18.4,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "text": "Kurus"
+      },
+      {
+          "low": {
+              "value": 18.5,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "high": {
+              "value": 25,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "type": {
+              "coding": [
+                  {
+                      "system": "https://www.hl7.org/fhir/R4/codesystem-referencerange-meaning.html",
+                      "code": "normal",
+                      "display": "Normal Range"
+                  }
+              ]
+          },
+          "text": "Normal"
+      },
+      {
+          "low": {
+              "value": 25.1,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "high": {
+              "value": 27,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "text": "Gemuk (Overweight)"
+      },
+      {
+          "low": {
+              "value": 27.1,
+              "unit": "kg/m^2",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg/m2"
+          },
+          "text": "Obese"
+      }
+  ],
+  "derivedFrom": [
+      {
+          "reference": "Observation/{{Observation_TB}}",
+          "display": "Body Height"
+      },
+      {
+          "reference": "Observation/{{Observation_BB}}",
+          "display": "Body Weight"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "derivedFrom": [
+      {
+          "display": "Body Height",
+          "reference": "Observation/b11559cc-83c5-4e37-bf5c-31c01aa584ff"
+      },
+      {
+          "display": "Body Weight",
+          "reference": "Observation/750697a7-da11-4547-8a19-914122e8cdda"
+      }
+  ],
+  "effectiveDateTime": "2024-01-05T07:45:00+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "7bed6a6f-f506-41f8-b9ac-06b439d29223",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "248342006",
+                  "display": "Underweight",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "issued": "2024-01-05T07:45:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:04:12.664151+00:00",
+      "versionId": "MTcyNDkxNTA1MjY2NDE1MTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 16.9
+          },
+          "text": "Sangat Kurus"
+      },
+      {
+          "high": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 18.4
+          },
+          "low": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 17
+          },
+          "text": "Kurus"
+      },
+      {
+          "high": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 25
+          },
+          "low": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 18.5
+          },
+          "text": "Normal",
+          "type": {
+              "coding": [
+                  {
+                      "code": "normal",
+                      "display": "Normal Range",
+                      "system": "https://www.hl7.org/fhir/R4/codesystem-referencerange-meaning.html"
+                  }
+              ]
+          }
+      },
+      {
+          "high": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 27
+          },
+          "low": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 25.1
+          },
+          "text": "Gemuk (Overweight)"
+      },
+      {
+          "low": {
+              "code": "kg/m2",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg/m^2",
+              "value": 27.1
+          },
+          "text": "Obese"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "kg/m2",
+      "system": "http://unitsofmeasure.org",
+      "unit": "kg/m^2",
+      "value": 17
+  }
+}

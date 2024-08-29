@@ -1,0 +1,250 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0013",
+  "status": "completed",
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "authored": "2024-04-24T01:23:00+00:00",
+  "author": {
+      "reference": "Practitioner/{{Practitioner_ID}}"
+  },
+  "source": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "item": [
+      {
+          "linkId": "4",
+          "text": "Deteksi dini PPOK (Khusus usia >40 tahun dan merokok)",
+          "item": [
+              {
+                  "linkId": "4.1",
+                  "text": "Apakah peserta pernah merokok?",
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.2",
+                  "text": "Berapa rata-rata jumlah batang rokok per hari",
+                  "answer": [
+                      {
+                          "valueInteger": 10
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.3",
+                  "text": "Lama merokok dalam tahun",
+                  "answer": [
+                      {
+                          "valueQuantity": {
+                              "value": 5,
+                              "code": "a",
+                              "system": "http://unitsofmeasure.org",
+                              "unit": "a"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.4",
+                  "text": "Status merokok",
+                  "answer": [
+                      {
+                          "valueReference": {
+                              "reference": "Observation/{{Observation_merokok}}"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.5",
+                  "text": "Apakah peserta pernah merasa napas pendek ketika peserta berjalan lebih cepat pada jalan yang datar atau pada jalan yang sedikit menanjak?",
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.6",
+                  "text": "Apakah peserta biasanya mempunyai dahak yang berasal dari paru atau kesulitan mengeluarkan dahak saat peserta sedang tidak menderita selesma/flu?",
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.7",
+                  "text": "Apakah peserta biasanya batuk saat peserta sedang tidak menderita selesma/flu?",
+                  "answer": [
+                      {
+                          "valueBoolean": false
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.8",
+                  "text": "Apakah Dokter atau tenaga medis lainnya pernah meminta peserta untuk melakukan pemeriksaan spirometri atau peak flow meter (meniup ke dalam suatu alat) untuk mengetahui fungsi paru peserta?",
+                  "answer": [
+                      {
+                          "valueBoolean": false
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.9",
+                  "text": "Hasil Kuesioner PUMA",
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "system": "http://snomed.info/sct",
+                              "code": "723505004",
+                              "display": "Low risk"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "author": {
+      "reference": "Practitioner/10009880728"
+  },
+  "authored": "2024-04-24T01:23:00+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "ffd36f01-6af8-4ea5-b0c5-6c271750aec6",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "item": [
+      {
+          "item": [
+              {
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ],
+                  "linkId": "4.1",
+                  "text": "Apakah peserta pernah merokok?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueInteger": 10
+                      }
+                  ],
+                  "linkId": "4.2",
+                  "text": "Berapa rata-rata jumlah batang rokok per hari"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueQuantity": {
+                              "code": "a",
+                              "system": "http://unitsofmeasure.org",
+                              "unit": "a",
+                              "value": 5
+                          }
+                      }
+                  ],
+                  "linkId": "4.3",
+                  "text": "Lama merokok dalam tahun"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueReference": {
+                              "reference": "Observation/818f6dec-33a7-4815-9643-30c227a3827c"
+                          }
+                      }
+                  ],
+                  "linkId": "4.4",
+                  "text": "Status merokok"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ],
+                  "linkId": "4.5",
+                  "text": "Apakah peserta pernah merasa napas pendek ketika peserta berjalan lebih cepat pada jalan yang datar atau pada jalan yang sedikit menanjak?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueBoolean": true
+                      }
+                  ],
+                  "linkId": "4.6",
+                  "text": "Apakah peserta biasanya mempunyai dahak yang berasal dari paru atau kesulitan mengeluarkan dahak saat peserta sedang tidak menderita selesma/flu?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueBoolean": false
+                      }
+                  ],
+                  "linkId": "4.7",
+                  "text": "Apakah peserta biasanya batuk saat peserta sedang tidak menderita selesma/flu?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueBoolean": false
+                      }
+                  ],
+                  "linkId": "4.8",
+                  "text": "Apakah Dokter atau tenaga medis lainnya pernah meminta peserta untuk melakukan pemeriksaan spirometri atau peak flow meter (meniup ke dalam suatu alat) untuk mengetahui fungsi paru peserta?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "723505004",
+                              "display": "Low risk",
+                              "system": "http://snomed.info/sct"
+                          }
+                      }
+                  ],
+                  "linkId": "4.9",
+                  "text": "Hasil Kuesioner PUMA"
+              }
+          ],
+          "linkId": "4",
+          "text": "Deteksi dini PPOK (Khusus usia >40 tahun dan merokok)"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:14:17.392778+00:00",
+      "versionId": "MTcyNDkxNTY1NzM5Mjc3ODAwMA"
+  },
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0013",
+  "resourceType": "QuestionnaireResponse",
+  "source": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

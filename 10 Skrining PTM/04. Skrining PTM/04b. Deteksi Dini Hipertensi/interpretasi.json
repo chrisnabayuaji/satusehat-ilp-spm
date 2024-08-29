@@ -1,0 +1,199 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "268607006",
+              "display": "Hypertension risk level"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-01-05T07:45:00+00:00",
+  "issued": "2024-01-05T07:45:00+00:00",
+  "valueRatio": {
+      "numerator": {
+          "value": {{TD_Systolic}},
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+      },
+      "denominator": {
+          "value": {{TD_Diastolic}},
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+      }
+  },
+  "derivedFrom": [
+      {
+          "reference": "Observation/{{Observation_Systolic}}",
+          "display": "Systolic Blood Pressure"
+      },
+      {
+          "reference": "Observation/{{Observation_Diastolic}}",
+          "display": "Diastolic Blood Pressure"
+      }
+  ],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "827068008",
+                  "display": "Stage 2 hypertension"
+              }
+          ]
+      }
+  ],
+  "referenceRange": [
+      {
+          "text": "Tekanan Darah Optimal: < 120/80 mmHg"
+      },
+      {
+          "text": "Tekanan Darah Normal: 120/80 s.d. 129/84 mmHg"
+      },
+      {
+          "text": "Tekanan Darah Normal Tinggi: 130/85 s.d. 139/89 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 1: 140/90 s.d. 159/99 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 2: 160/100 s.d. 179/109 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 3: >= 180/110 mmHg"
+      },
+      {
+          "text": "Hipertensi Sistolik Terisolasi: Sistolik >= 140 mmHg, Diastolik <= 90 mmHg"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "vital-signs",
+                  "display": "Vital Signs",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "268607006",
+              "display": "Hypertension risk level",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "derivedFrom": [
+      {
+          "display": "Systolic Blood Pressure",
+          "reference": "Observation/70594d5d-9fd8-4dba-b827-8bc3118079da"
+      },
+      {
+          "display": "Diastolic Blood Pressure",
+          "reference": "Observation/e41fb215-a08f-4161-a3bc-dd0f3af5cea5"
+      }
+  ],
+  "effectiveDateTime": "2024-01-05T07:45:00+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "ef9f6fe5-3356-46da-8547-0480c337d806",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "827068008",
+                  "display": "Stage 2 hypertension",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "issued": "2024-01-05T07:45:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:09:07.709072+00:00",
+      "versionId": "MTcyNDkxNTM0NzcwOTA3MjAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "referenceRange": [
+      {
+          "text": "Tekanan Darah Optimal: < 120/80 mmHg"
+      },
+      {
+          "text": "Tekanan Darah Normal: 120/80 s.d. 129/84 mmHg"
+      },
+      {
+          "text": "Tekanan Darah Normal Tinggi: 130/85 s.d. 139/89 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 1: 140/90 s.d. 159/99 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 2: 160/100 s.d. 179/109 mmHg"
+      },
+      {
+          "text": "Hipertensi Derajat 3: >= 180/110 mmHg"
+      },
+      {
+          "text": "Hipertensi Sistolik Terisolasi: Sistolik >= 140 mmHg, Diastolik <= 90 mmHg"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueRatio": {
+      "denominator": {
+          "code": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "unit": "mmHg",
+          "value": 100
+      },
+      "numerator": {
+          "code": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "unit": "mmHg",
+          "value": 160
+      }
+  }
+}
