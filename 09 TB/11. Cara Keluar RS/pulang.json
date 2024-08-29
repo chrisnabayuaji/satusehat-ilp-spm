@@ -1,0 +1,314 @@
+{
+  "resourceType": "Encounter",
+  "id": "{{Encounter_tb_uuid}}",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P20240005"
+      },
+      {
+          "use": "temp",
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "P20240005"
+      }
+  ],
+  "status": "finished",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/9fc12784-e912-497c-baaf-5481d6bbee9b"
+      },
+      {
+          "reference": "EpisodeOfCare/f3492f79-9dca-4f04-9946-15839f355db5"
+      }
+  ],
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2023-08-31T00:00:00+00:00",
+      "end": "2023-08-31T00:00:00+00:00"
+  },
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                  "code": "home",
+                  "display": "Home"
+              }
+          ]
+      }
+  },
+  "location": [
+      {
+          "location": {
+              "display": "{{Poli_paru_name}}",
+              "reference": "Location/{{Poli_paru_id}}"
+          },
+          "period": {
+              "start": "2023-08-31T00:00:00+00:00",
+              "end": "2023-08-31T00:00:00+00:00"
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass",
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient",
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass",
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "diagnosis": [
+      {
+          "condition": {
+              "reference": "Condition/c984453f-9382-4e7b-9625-9bc621645c6f",
+              "display": "Tuberculosis of lung, confirmed by culture only"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 1
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2023-07-14T00:00:00+00:00",
+              "end": "2023-07-14T00:10:00+00:00"
+          }
+      },
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2023-07-14T00:10:00+00:00",
+              "end": "2023-07-14T01:15:00+00:00"
+          }
+      },
+      {
+          "status": "finished",
+          "period": {
+              "start": "2023-07-14T01:15:00+00:00",
+              "end": "2023-07-14T01:15:00+00:00"
+          }
+      }
+  ],
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "diagnosis": [
+      {
+          "condition": {
+              "display": "Tuberculosis of lung, confirmed by culture only",
+              "reference": "Condition/c984453f-9382-4e7b-9625-9bc621645c6f"
+          },
+          "rank": 1,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      }
+  ],
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/9fc12784-e912-497c-baaf-5481d6bbee9b"
+      },
+      {
+          "reference": "EpisodeOfCare/f3492f79-9dca-4f04-9946-15839f355db5"
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "code": "home",
+                  "display": "Home",
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+              }
+          ]
+      }
+  },
+  "id": "0e05ddfb-e3fe-4995-8295-f4c9640956c8",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P20240005"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "temp",
+          "value": "P20240005"
+      }
+  ],
+  "location": [
+      {
+          "extension": [
+              {
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass"
+              }
+          ],
+          "location": {
+              "display": "Poli Paru",
+              "reference": "Location/838e7dcc-e2e8-45d0-975f-adf19c662c9d"
+          },
+          "period": {
+              "end": "2023-08-31T00:00:00+00:00",
+              "start": "2023-08-31T00:00:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T04:39:16.761448+00:00",
+      "versionId": "MTcyNDkwNjM1Njc2MTQ0ODAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "end": "2023-08-31T00:00:00+00:00",
+      "start": "2023-08-31T00:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2023-07-14T00:10:00+00:00",
+              "start": "2023-07-14T00:00:00+00:00"
+          },
+          "status": "arrived"
+      },
+      {
+          "period": {
+              "end": "2023-07-14T01:15:00+00:00",
+              "start": "2023-07-14T00:10:00+00:00"
+          },
+          "status": "in-progress"
+      },
+      {
+          "period": {
+              "end": "2023-07-14T01:15:00+00:00",
+              "start": "2023-07-14T01:15:00+00:00"
+          },
+          "status": "finished"
+      }
+  ],
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  }
+}
