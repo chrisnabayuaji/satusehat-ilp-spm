@@ -1,0 +1,158 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "2306412778"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "108252007",
+                  "display": "Laboratory procedure"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "11545-1",
+              "display": "Microscopic observation [Identifier] in Specimen by Acid fast stain"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "authoredOn": "2023-06-13T12:30:27+00:00",
+  "occurrenceDateTime": "2023-06-14T09:30:27+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "SRR000007",
+                  "display": "Pemeriksaan Diagnosis",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+              }
+          ]
+      }
+  ],
+  "supportingInfo": [
+      {
+          "reference": "QuestionnaireResponse/654baf21-8dcf-4bb2-b30b-dcc7c0592ee0"
+      }
+  ],
+  "note": [
+      {
+          "text": "Rujukan kasus TB SO"
+      }
+  ]
+}
+
+{
+  "authoredOn": "2023-06-13T12:30:27+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "108252007",
+                  "display": "Laboratory procedure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "11545-1",
+              "display": "Microscopic observation [Identifier] in Specimen by Acid fast stain",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "bb9a57de-dbb9-4a13-8a9a-95fc4cff7d68",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2306412778"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-29T02:17:20.454353+00:00",
+      "versionId": "MTcyNDg5Nzg0MDQ1NDM1MzAwMA"
+  },
+  "note": [
+      {
+          "text": "Rujukan kasus TB SO"
+      }
+  ],
+  "occurrenceDateTime": "2023-06-14T09:30:27+00:00",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "SRR000007",
+                  "display": "Pemeriksaan Diagnosis",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+              }
+          ]
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  },
+  "supportingInfo": [
+      {
+          "reference": "QuestionnaireResponse/654baf21-8dcf-4bb2-b30b-dcc7c0592ee0"
+      }
+  ]
+}

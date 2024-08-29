@@ -1,0 +1,136 @@
+{
+  "resourceType": "Specimen",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+          "value": "00001",
+          "assigner": {
+              "reference": "Organization/{{Org_id}}"
+          }
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "23/{{Org_id}}/1/0183"
+      }
+  ],
+  "status": "available",
+  "type": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "258450006",
+              "display": "Cerebrospinal fluid specimen"
+          }
+      ]
+  },
+  "collection": {
+      "collectedDateTime": "2023-06-14T08:15:00+00:00",
+      "extension": [
+          {
+              "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+              "valueReference": {
+                  "reference" : "Organization/{{Org_id}}"
+              }
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "request": [
+      {
+          "reference": "ServiceRequest/bb9a57de-dbb9-4a13-8a9a-95fc4cff7d68"
+      }
+  ],
+  "receivedTime": "2023-06-14T08:25:00+00:00",
+  "extension": [
+      {
+          "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+          "valueDateTime": "2023-06-14T08:25:00+00:00"
+      }
+  ],
+  "condition": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "710070002",
+                  "display": "Specimen unsatisfactory for evaluation due to broken container"
+              }
+          ],
+          "text": "Kontainer spesimen terbentur dalam perjalanan dari faskes ke lab"
+      }
+  ]
+}
+
+{
+  "collection": {
+      "collectedDateTime": "2023-06-14T08:15:00+00:00",
+      "extension": [
+          {
+              "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+              "valueReference": {
+                  "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+              }
+          }
+      ]
+  },
+  "condition": [
+      {
+          "coding": [
+              {
+                  "code": "710070002",
+                  "display": "Specimen unsatisfactory for evaluation due to broken container",
+                  "system": "http://snomed.info/sct"
+              }
+          ],
+          "text": "Kontainer spesimen terbentur dalam perjalanan dari faskes ke lab"
+      }
+  ],
+  "extension": [
+      {
+          "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+          "valueDateTime": "2023-06-14T08:25:00+00:00"
+      }
+  ],
+  "id": "2a01ba84-2b65-4e54-87d1-0c67f8748838",
+  "identifier": [
+      {
+          "assigner": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "system": "http://sys-ids.kemkes.go.id/specimen/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "23/8529d474-30e0-4fee-81a4-7a5234003a1b/1/0183"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T02:22:37.879468+00:00",
+      "versionId": "MTcyNDg5ODE1Nzg3OTQ2ODAwMA"
+  },
+  "receivedTime": "2023-06-14T08:25:00+00:00",
+  "request": [
+      {
+          "reference": "ServiceRequest/bb9a57de-dbb9-4a13-8a9a-95fc4cff7d68"
+      }
+  ],
+  "resourceType": "Specimen",
+  "status": "available",
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  },
+  "type": {
+      "coding": [
+          {
+              "code": "258450006",
+              "display": "Cerebrospinal fluid specimen",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
