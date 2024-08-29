@@ -1,0 +1,158 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "2306412778"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "108252007",
+                  "display": "Laboratory procedure"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "89371-9",
+              "display": "MTB complex DNA and rpoB RIF resistance mutation panel [Presence]"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}",
+      "display": "{{Patient_tb_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "authoredOn": "2023-06-13T12:30:27+00:00",
+  "occurrenceDateTime": "2023-06-14T09:30:27+00:00",
+  "requester": {
+      "reference": "Practitioner/N10000001",
+      "display": "Dokter Bronsig"
+  },
+  "performer": [
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                  "code": "SRR000008",
+                  "display": "Follow Up"
+              }
+          ],
+          "text": "3"
+      }
+  ],
+  "supportingInfo": [
+      {
+          "reference": "QuestionnaireResponse/654baf21-8dcf-4bb2-b30b-dcc7c0592ee0"
+      }
+  ],
+  "note": [
+      {
+          "text": "Pasien pernah mengalami tuberkulosis paru tahun 2014. Pasien didagnosis sebagai tuberkulosis paru kambuh."
+      }
+  ]
+}
+
+{
+  "authoredOn": "2023-06-13T12:30:27+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "108252007",
+                  "display": "Laboratory procedure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "89371-9",
+              "display": "MTB complex DNA and rpoB RIF resistance mutation panel [Presence]",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "c2188011-3274-415a-be12-7e976671e7b6",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "00001"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2306412778"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-29T02:34:35.274164+00:00",
+      "versionId": "MTcyNDg5ODg3NTI3NDE2NDAwMA"
+  },
+  "note": [
+      {
+          "text": "Pasien pernah mengalami tuberkulosis paru tahun 2014. Pasien didagnosis sebagai tuberkulosis paru kambuh."
+      }
+  ],
+  "occurrenceDateTime": "2023-06-14T09:30:27+00:00",
+  "performer": [
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "SRR000008",
+                  "display": "Follow Up",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+              }
+          ],
+          "text": "3"
+      }
+  ],
+  "requester": {
+      "display": "Dokter Bronsig",
+      "reference": "Practitioner/N10000001"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "display": "Budi Santoso",
+      "reference": "Patient/P02029555482"
+  },
+  "supportingInfo": [
+      {
+          "reference": "QuestionnaireResponse/654baf21-8dcf-4bb2-b30b-dcc7c0592ee0"
+      }
+  ]
+}
