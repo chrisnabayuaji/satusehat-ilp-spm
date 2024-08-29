@@ -1,0 +1,396 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0007",
+  "status": "completed",
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "authored": "2024-04-24T03:00:00+00:00",
+  "author": {
+      "reference": "Practitioner/10009880728",
+      "display": "Apoteker A"
+  },
+  "source": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "item": [
+      {
+          "linkId": "1",
+          "text": "Persyaratan Administrasi",
+          "item": [
+              {
+                  "linkId": "1.1",
+                  "text": "Apakah nama, umur, jenis kelamin, berat badan dan tinggi badan pasien sudah sesuai?",
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                              "code": "OV000052",
+                              "display": "Sesuai"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "1.2",
+                  "text": "Apakah nama, nomor ijin, alamat dan paraf dokter sudah sesuai?",
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                              "code": "OV000052",
+                              "display": "Sesuai"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "1.3",
+                  "text": "Apakah tanggal resep sudah sesuai?",
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                              "code": "OV000052",
+                              "display": "Sesuai"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "1.4",
+                  "text": "Apakah ruangan/unit asal resep sudah sesuai?",
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                              "code": "OV000052",
+                              "display": "Sesuai"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2",
+                  "text": "Persyaratan Farmasetik",
+                  "item": [
+                      {
+                          "linkId": "2.1",
+                          "text": "Apakah nama obat, bentuk dan kekuatan sediaan sudah sesuai?",
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                                      "code": "OV000052",
+                                      "display": "Sesuai"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "2.2",
+                          "text": "Apakah dosis dan jumlah obat sudah sesuai?",
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                                      "code": "OV000052",
+                                      "display": "Sesuai"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "2.3",
+                          "text": "Apakah stabilitas obat sudah sesuai?",
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                                      "code": "OV000052",
+                                      "display": "Sesuai"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "2.4",
+                          "text": "Apakah aturan dan cara penggunaan obat sudah sesuai?",
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                                      "code": "OV000052",
+                                      "display": "Sesuai"
+                                  }
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "linkId": "3",
+                  "text": "Persyaratan Klinis",
+                  "item": [
+                      {
+                          "linkId": "3.1",
+                          "text": "Apakah ketepatan indikasi, dosis, dan waktu penggunaan obat sudah sesuai?",
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                                      "code": "OV000052",
+                                      "display": "Sesuai"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "3.2",
+                          "text": "Apakah terdapat duplikasi pengobatan?",
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "3.3",
+                          "text": "Apakah terdapat alergi dan reaksi obat yang tidak dikehendaki (ROTD)?",
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "3.4",
+                          "text": "Apakah terdapat kontraindikasi pengobatan?",
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "3.5",
+                          "text": "Apakah terdapat dampak interaksi obat?",
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "author": {
+      "display": "Apoteker A",
+      "reference": "Practitioner/10009880728"
+  },
+  "authored": "2024-04-24T03:00:00+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "dc5a2025-dc7b-4bc0-8045-4d3a4d8502df",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "item": [
+      {
+          "item": [
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "OV000052",
+                              "display": "Sesuai",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                          }
+                      }
+                  ],
+                  "linkId": "1.1",
+                  "text": "Apakah nama, umur, jenis kelamin, berat badan dan tinggi badan pasien sudah sesuai?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "OV000052",
+                              "display": "Sesuai",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                          }
+                      }
+                  ],
+                  "linkId": "1.2",
+                  "text": "Apakah nama, nomor ijin, alamat dan paraf dokter sudah sesuai?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "OV000052",
+                              "display": "Sesuai",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                          }
+                      }
+                  ],
+                  "linkId": "1.3",
+                  "text": "Apakah tanggal resep sudah sesuai?"
+              },
+              {
+                  "answer": [
+                      {
+                          "valueCoding": {
+                              "code": "OV000052",
+                              "display": "Sesuai",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                          }
+                      }
+                  ],
+                  "linkId": "1.4",
+                  "text": "Apakah ruangan/unit asal resep sudah sesuai?"
+              },
+              {
+                  "item": [
+                      {
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "code": "OV000052",
+                                      "display": "Sesuai",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.1",
+                          "text": "Apakah nama obat, bentuk dan kekuatan sediaan sudah sesuai?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "code": "OV000052",
+                                      "display": "Sesuai",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.2",
+                          "text": "Apakah dosis dan jumlah obat sudah sesuai?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "code": "OV000052",
+                                      "display": "Sesuai",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.3",
+                          "text": "Apakah stabilitas obat sudah sesuai?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "code": "OV000052",
+                                      "display": "Sesuai",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.4",
+                          "text": "Apakah aturan dan cara penggunaan obat sudah sesuai?"
+                      }
+                  ],
+                  "linkId": "2",
+                  "text": "Persyaratan Farmasetik"
+              },
+              {
+                  "item": [
+                      {
+                          "answer": [
+                              {
+                                  "valueCoding": {
+                                      "code": "OV000052",
+                                      "display": "Sesuai",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.1",
+                          "text": "Apakah ketepatan indikasi, dosis, dan waktu penggunaan obat sudah sesuai?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ],
+                          "linkId": "3.2",
+                          "text": "Apakah terdapat duplikasi pengobatan?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ],
+                          "linkId": "3.3",
+                          "text": "Apakah terdapat alergi dan reaksi obat yang tidak dikehendaki (ROTD)?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ],
+                          "linkId": "3.4",
+                          "text": "Apakah terdapat kontraindikasi pengobatan?"
+                      },
+                      {
+                          "answer": [
+                              {
+                                  "valueBoolean": false
+                              }
+                          ],
+                          "linkId": "3.5",
+                          "text": "Apakah terdapat dampak interaksi obat?"
+                      }
+                  ],
+                  "linkId": "3",
+                  "text": "Persyaratan Klinis"
+              }
+          ],
+          "linkId": "1",
+          "text": "Persyaratan Administrasi"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T10:27:28.390429+00:00",
+      "versionId": "MTcyNDkyNzI0ODM5MDQyOTAwMA"
+  },
+  "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0007",
+  "resourceType": "QuestionnaireResponse",
+  "source": {
+      "reference": "Patient/P02029555482"
+  },
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

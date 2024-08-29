@@ -1,0 +1,432 @@
+{
+  "resourceType": "MedicationDispense",
+  "contained": [
+      {
+          "resourceType": "Medication",
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+                  "value": "{{Identifier_value}}"
+              }
+          ],
+          "id": "{{Identifier_value}}",
+          "status": "active",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://sys-ids.kemkes.go.id/kfa",
+                      "code": "92000344",
+                      "display": "Captopril 25 mg Tablet"
+                  }
+              ]
+          },
+          "form": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                      "code": "BS066",
+                      "display": "Tablet"
+                  }
+              ]
+          },
+          "batch": {
+              "lotNumber": "1625043A",
+              "expirationDate": "2025-08-22T14:27:00+00:00"
+          },
+          "ingredient": [
+              {
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://sys-ids.kemkes.go.id/kfa",
+                              "code": "91000340",
+                              "display": "Captopril"
+                          }
+                      ]
+                  },
+                  "isActive": true,
+                  "strength": {
+                      "numerator": {
+                          "system": "http://unitsofmeasure.org",
+                          "value": 25,
+                          "code": "mg"
+                      },
+                      "denominator": {
+                          "value": 1,
+                          "unit": "Tablet",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "code": "TAB"
+                      }
+                  }
+              }
+          ],
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                              "code": "NC",
+                              "display": "Non Compound"
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+          "use": "official",
+          "value": "{{Identifier_value}}"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+          "use": "official",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+              "code": "community",
+              "display": "Community"
+          }
+      ]
+  },
+  "medicationReference": {
+      "reference": "#{{Identifier_value}}",
+      "display": "Captopril 25mg"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "context": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "whenPrepared": "2024-04-24T04:40:00+00:00",
+  "whenHandedOver": "2024-04-24T04:52:00+00:00",
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/10010910332",
+              "display": "Apoteker A, SFarm"
+          }
+      }
+  ],
+  "dosageInstruction": [
+      {
+          "sequence": 1,
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "418577003",
+                          "display": "Take at regular intervals. Complete the prescribed course unless otherwise directed"
+                      }
+                  ]
+              },
+              {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "418693002",
+                          "display": "Swallowed whole, not chewed"
+                      }
+                  ]
+              }
+          ],
+          "patientInstruction": "Diminum setiap hari 1x1, minum selama 3 bulan dan kontrol, bila timbul gejala sakit kepala atau lemas setelah minum obat, hubungi SPGDT",
+          "timing": {
+              "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d",
+                  "when": [
+                      "PC"
+                  ]
+              }
+          },
+          "route": {
+              "coding": [
+                  {
+                      "system": "http://www.whocc.no/atc",
+                      "code": "O",
+                      "display": "Oral"
+                  }
+              ]
+          },
+          "doseAndRate": [
+              {
+                  "type": {
+                      "coding": [
+                          {
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                              "code": "ordered",
+                              "display": "Ordered"
+                          }
+                      ]
+                  },
+                  "doseQuantity": {
+                      "value": 1,
+                      "unit": "Tablet",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "code": "TAB"
+                  }
+              }
+          ]
+      }
+  ],
+  "authorizingPrescription": [
+      {
+          "reference": "MedicationRequest/{{Medication_Request}}"
+      }
+  ],
+  "quantity": {
+      "value": 30,
+      "unit": "Tablet",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "code": "TAB"
+  },
+  "daysSupply": {
+      "value": 30,
+      "unit": "days",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+  },
+  "receiver": [
+      {
+          "reference": "Patient/{{Patient_ptm_id}}"
+      }
+  ]
+}
+
+{
+  "authorizingPrescription": [
+      {
+          "reference": "MedicationRequest/6f59a5c3-2bb3-49d9-9d81-b1bb5daa4886"
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "community",
+              "display": "Community",
+              "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
+          }
+      ]
+  },
+  "contained": [
+      {
+          "batch": {
+              "expirationDate": "2025-08-22T14:27:00+00:00",
+              "lotNumber": "1625043A"
+          },
+          "code": {
+              "coding": [
+                  {
+                      "code": "92000344",
+                      "display": "Captopril 25 mg Tablet",
+                      "system": "http://sys-ids.kemkes.go.id/kfa"
+                  }
+              ]
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                  "valueCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "NC",
+                              "display": "Non Compound",
+                              "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "form": {
+              "coding": [
+                  {
+                      "code": "BS066",
+                      "display": "Tablet",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form"
+                  }
+              ]
+          },
+          "id": "2024082932952A896",
+          "identifier": [
+              {
+                  "system": "http://sys-ids.kemkes.go.id/medication/8529d474-30e0-4fee-81a4-7a5234003a1b",
+                  "value": "2024082932952A896"
+              }
+          ],
+          "ingredient": [
+              {
+                  "isActive": true,
+                  "itemCodeableConcept": {
+                      "coding": [
+                          {
+                              "code": "91000340",
+                              "display": "Captopril",
+                              "system": "http://sys-ids.kemkes.go.id/kfa"
+                          }
+                      ]
+                  },
+                  "strength": {
+                      "denominator": {
+                          "code": "TAB",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                          "unit": "Tablet",
+                          "value": 1
+                      },
+                      "numerator": {
+                          "code": "mg",
+                          "system": "http://unitsofmeasure.org",
+                          "value": 25
+                      }
+                  }
+              }
+          ],
+          "meta": {
+              "profile": [
+                  "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+              ]
+          },
+          "resourceType": "Medication",
+          "status": "active"
+      }
+  ],
+  "context": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "daysSupply": {
+      "code": "d",
+      "system": "http://unitsofmeasure.org",
+      "unit": "days",
+      "value": 30
+  },
+  "dosageInstruction": [
+      {
+          "additionalInstruction": [
+              {
+                  "coding": [
+                      {
+                          "code": "418577003",
+                          "display": "Take at regular intervals. Complete the prescribed course unless otherwise directed",
+                          "system": "http://snomed.info/sct"
+                      }
+                  ]
+              },
+              {
+                  "coding": [
+                      {
+                          "code": "418693002",
+                          "display": "Swallowed whole, not chewed",
+                          "system": "http://snomed.info/sct"
+                      }
+                  ]
+              }
+          ],
+          "doseAndRate": [
+              {
+                  "doseQuantity": {
+                      "code": "TAB",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "unit": "Tablet",
+                      "value": 1
+                  },
+                  "type": {
+                      "coding": [
+                          {
+                              "code": "ordered",
+                              "display": "Ordered",
+                              "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "patientInstruction": "Diminum setiap hari 1x1, minum selama 3 bulan dan kontrol, bila timbul gejala sakit kepala atau lemas setelah minum obat, hubungi SPGDT",
+          "route": {
+              "coding": [
+                  {
+                      "code": "O",
+                      "display": "Oral",
+                      "system": "http://www.whocc.no/atc"
+                  }
+              ]
+          },
+          "sequence": 1,
+          "timing": {
+              "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d",
+                  "when": [
+                      "PC"
+                  ]
+              }
+          }
+      }
+  ],
+  "id": "a7e93eab-1fbf-4d75-ae71-0b23844a13da",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "2024082932952A896"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/prescription-item/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "use": "official",
+          "value": "2024082932952A896"
+      }
+  ],
+  "medicationReference": {
+      "display": "Captopril 25mg",
+      "reference": "#2024082932952A896"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:28:24.736113+00:00",
+      "versionId": "MTcyNDkyNzMwNDczNjExMzAwMA"
+  },
+  "performer": [
+      {
+          "actor": {
+              "display": "Apoteker A, SFarm",
+              "reference": "Practitioner/10010910332"
+          }
+      }
+  ],
+  "quantity": {
+      "code": "TAB",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "unit": "Tablet",
+      "value": 30
+  },
+  "receiver": [
+      {
+          "reference": "Patient/P02029555482"
+      }
+  ],
+  "resourceType": "MedicationDispense",
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "whenHandedOver": "2024-04-24T04:52:00+00:00",
+  "whenPrepared": "2024-04-24T04:40:00+00:00"
+}
