@@ -1,0 +1,307 @@
+{
+  "resourceType": "Encounter",
+  "id": "f53e1a35-516d-4ef6-a5a0-7176652d8526",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "P02029382691"
+      }
+  ],
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/{{EpisodeOfCare_Neonatus_uuid}}"
+      }
+  ],
+  "status": "finished",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "IMP",
+      "display": "inpatient encounter"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2015-10-02T03:04:00+00:00",
+      "end": "2015-10-02T07:30:00+00:00"
+  },
+ "location": [
+      {
+          "location": {
+              "reference": "Location/{{Bed_bayi_location_id}}",
+              "display": "{{Bed_bayi_location_name}}"
+          },
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00",
+              "end": "2015-10-02T03:30:00+00:00"
+          }
+      },
+      {
+          "location": {
+              "reference": "Location/{{Bed_location_id}}",
+              "display": "{{Bed_location_name}}"
+          },
+          "period": {
+              "start": "2015-10-02T03:30:00+00:00",
+              "end": "2015-10-02T07:30:00+00:00"
+          }
+      }  
+  ],
+  "diagnosis": [
+      {
+          "condition": {
+              "reference": "Condition/04c8ce59-272a-431b-8e4a-f1b80a46d83f",
+              "display": "Mild and moderate birth asphyxia"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 1
+      },
+      {
+          "condition": {
+              "reference": "Condition/6d5356d9-2a2e-4086-895f-5da2db030319",
+              "display": "Exceptionally large baby"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 2
+      },
+  {
+          "condition": {
+              "reference": "Condition/d4ef4dba-23ce-4950-abe8-c86d2825c3bb",
+              "display": "Singleton, born in hospital"
+          },
+          "use": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                      "code": "DD",
+                      "display": "Discharge diagnosis"
+                  }
+              ]
+          },
+          "rank": 3
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2015-10-02T03:04:00+00:00",
+              "end": "2015-10-02T07:30:00+00:00"
+          }
+      },
+      {
+          "status": "finished",
+          "period": {
+              "start": "2015-10-02T07:30:00+00:00",
+              "end": "2015-10-02T07:30:00+00:00"
+          }
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                  "code": "home",
+                  "display": "Home"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali"
+      }
+  },
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "IMP",
+      "display": "inpatient encounter",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "diagnosis": [
+      {
+          "condition": {
+              "display": "Mild and moderate birth asphyxia",
+              "reference": "Condition/04c8ce59-272a-431b-8e4a-f1b80a46d83f"
+          },
+          "rank": 1,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      },
+      {
+          "condition": {
+              "display": "Exceptionally large baby",
+              "reference": "Condition/6d5356d9-2a2e-4086-895f-5da2db030319"
+          },
+          "rank": 2,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      },
+      {
+          "condition": {
+              "display": "Singleton, born in hospital",
+              "reference": "Condition/d4ef4dba-23ce-4950-abe8-c86d2825c3bb"
+          },
+          "rank": 3,
+          "use": {
+              "coding": [
+                  {
+                      "code": "DD",
+                      "display": "Discharge diagnosis",
+                      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                  }
+              ]
+          }
+      }
+  ],
+  "episodeOfCare": [
+      {
+          "reference": "EpisodeOfCare/bf65d773-7fcb-4b64-921b-3a091bb0e7f0"
+      }
+  ],
+  "hospitalization": {
+      "dischargeDisposition": {
+          "coding": [
+              {
+                  "code": "home",
+                  "display": "Home",
+                  "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+              }
+          ],
+          "text": "Anjuran dokter untuk pulang dan kontrol kembali"
+      }
+  },
+  "id": "f53e1a35-516d-4ef6-a5a0-7176652d8526",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "P02029382691"
+      }
+  ],
+  "location": [
+      {
+          "location": {
+              "display": "Kamar Bayi",
+              "reference": "Location/b2671401-6934-4992-a22a-f85806fbd467"
+          },
+          "period": {
+              "end": "2015-10-02T03:30:00+00:00",
+              "start": "2015-10-02T03:04:00+00:00"
+          }
+      },
+      {
+          "location": {
+              "display": "Kepodang",
+              "reference": "Location/5ed089dc-4c45-4641-9f33-24afdf1f7b7a"
+          },
+          "period": {
+              "end": "2015-10-02T07:30:00+00:00",
+              "start": "2015-10-02T03:30:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T12:49:35.866426+00:00",
+      "versionId": "MTcyNDkzNTc3NTg2NjQyNjAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "end": "2015-10-02T07:30:00+00:00",
+      "start": "2015-10-02T03:04:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "finished",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2015-10-02T07:30:00+00:00",
+              "start": "2015-10-02T03:04:00+00:00"
+          },
+          "status": "in-progress"
+      },
+      {
+          "period": {
+              "end": "2015-10-02T07:30:00+00:00",
+              "start": "2015-10-02T07:30:00+00:00"
+          },
+          "status": "finished"
+      }
+  ],
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029556930"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "72150-6",
+              "display": "Delivery location"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_Neonatus_uuid}}"
+  },
+  "effectiveDateTime": "2015-10-02T03:04:00+00:00",
+  "issued": "2015-10-02T03:04:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/organization-type",
+              "code": "102",
+              "display": "Pusat Kesehatan Masyarakat"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "72150-6",
+              "display": "Delivery location",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2015-10-02T03:04:00+00:00",
+  "encounter": {
+      "reference": "Encounter/af99b9a5-361a-4e86-bef7-4a39a74ea504"
+  },
+  "id": "8a350947-cec7-4886-bc71-713d58f9afea",
+  "identifier": [],
+  "issued": "2015-10-02T03:04:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T12:42:21.415408+00:00",
+      "versionId": "MTcyNDkzNTM0MTQxNTQwODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029556930"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "102",
+              "display": "Pusat Kesehatan Masyarakat",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/organization-type"
+          }
+      ]
+  }
+}
