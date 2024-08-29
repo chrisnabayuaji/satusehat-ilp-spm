@@ -1,0 +1,260 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T03:48:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi Dini Stroke",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000010",
+                      "display": "Deteksi Dini Stroke"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_Kolesterol}}",
+                  "display": "Permintaan Pemeriksaan Kolesterol Dalam Darah"
+              },
+              {
+                  "reference": "Specimen/{{Specimen_KolesterolPanel}}",
+                  "display": "Spesimen Darah Kolesterol Dalam Darah"
+              },
+              {
+                  "reference": "Observation/{{Observation_Kolesterol}}",
+                  "display": "Hasil Pemeriksaan Kolesterol Dalam Darah"
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_Kolesterol}}",
+                  "display": "Laporan Pemeriksaan Kolesterol Dalam Darah"
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_HDL}}",
+                  "display": "Permintaan Pemeriksaan Kolesterol HDL Dalam Darah"
+              },
+              {
+                  "reference": "Specimen/{{Specimen_KolesterolPanel}}",
+                  "display": "Spesimen Darah Kolesterol HDL Dalam Darah"
+              },
+              {
+                  "reference": "Observation/{{Observation_HDL}}",
+                  "display": "Hasil Pemeriksaan Kolesterol HDL Dalam Darah"
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_HDL}}",
+                  "display": "Laporan Pemeriksaan Kolesterol HDL Dalam Darah"
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_LDL}}",
+                  "display": "Permintaan Pemeriksaan Kolesterol LDL Dalam Darah"
+              },
+              {
+                  "reference": "Specimen/{{Specimen_KolesterolPanel}}",
+                  "display": "Spesimen Darah Kolesterol LDL Dalam Darah"
+              },
+              {
+                  "reference": "Observation/{{Observation_LDL}}",
+                  "display": "Hasil Pemeriksaan Kolesterol LDL Dalam Darah"
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_LDL}}",
+                  "display": "Laporan Pemeriksaan Kolesterol LDL Dalam Darah"
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_TG}}",
+                  "display": "Permintaan Pemeriksaan Trigliseride Dalam Darah"
+              },
+              {
+                  "reference": "Specimen/{{Specimen_KolesterolPanel}}",
+                  "display": "Spesimen Darah Trigliseride Dalam Darah"
+              },
+              {
+                  "reference": "Observation/{{Observation_TG}}",
+                  "display": "Hasil Pemeriksaan Trigliseride Dalam Darah"
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_TG}}",
+                  "display": "Laporan Pemeriksaan Trigliseride Dalam Darah"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "date": "2024-04-24T03:48:36+00:00",
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ],
+          "url": "http://example.org/fhir/extensions#documentStatus"
+      }
+  ],
+  "id": "3a8cbcef-3bec-4118-9b4e-e5287dde7cdf",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:52:38.930180+00:00",
+      "versionId": "MTcyNDkyODc1ODkzMDE4MDAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "COS000010",
+                      "display": "Deteksi Dini Stroke",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Permintaan Pemeriksaan Kolesterol Dalam Darah",
+                  "reference": "ServiceRequest/b87964d0-bd5d-453e-841b-29364a06a5d6"
+              },
+              {
+                  "display": "Spesimen Darah Kolesterol Dalam Darah",
+                  "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Kolesterol Dalam Darah",
+                  "reference": "Observation/8e3e5589-e4e6-432e-bdac-e569c49956ba"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Kolesterol Dalam Darah",
+                  "reference": "DiagnosticReport/8c18927f-5d7a-4746-b5f6-ece6b50bb55b"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Kolesterol HDL Dalam Darah",
+                  "reference": "ServiceRequest/f28d0999-1de7-4ba4-96fb-8a86715db7b1"
+              },
+              {
+                  "display": "Spesimen Darah Kolesterol HDL Dalam Darah",
+                  "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Kolesterol HDL Dalam Darah",
+                  "reference": "Observation/f2ca1722-6bc3-457c-90a9-45a338b7ba4c"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Kolesterol HDL Dalam Darah",
+                  "reference": "DiagnosticReport/e59b8fcf-946c-4085-a48e-4236d04f57bb"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Kolesterol LDL Dalam Darah",
+                  "reference": "ServiceRequest/c5b789d4-ef71-4a28-83b0-be08ae2daffa"
+              },
+              {
+                  "display": "Spesimen Darah Kolesterol LDL Dalam Darah",
+                  "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Kolesterol LDL Dalam Darah",
+                  "reference": "Observation/b8adaf87-9184-4a26-9162-634937263115"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Kolesterol LDL Dalam Darah",
+                  "reference": "DiagnosticReport/97959b7c-6da5-412a-ac71-85a682a9a818"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Trigliseride Dalam Darah",
+                  "reference": "ServiceRequest/fbefd088-42b9-46b7-8004-aaec3172b6f3"
+              },
+              {
+                  "display": "Spesimen Darah Trigliseride Dalam Darah",
+                  "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Trigliseride Dalam Darah",
+                  "reference": "Observation/36f9ae7e-0277-476d-b896-9e3c7e0fcd1e"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Trigliseride Dalam Darah",
+                  "reference": "DiagnosticReport/b20e57bc-0023-4046-935f-ed2c915aac8f"
+              }
+          ],
+          "title": "Deteksi Dini Stroke"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "title": "Form Skrining PTM",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000006",
+              "display": "Form Skrining PTM",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}

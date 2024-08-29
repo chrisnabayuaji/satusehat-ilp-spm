@@ -1,0 +1,149 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T03:48:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi Dini Gangguan Penglihatan",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000015",
+                      "display": "Deteksi Dini Gangguan Penglihatan"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "Observation/{{Observation_VisusOD}}",
+                  "display": "Hasil Pemeriksaan Tajam Penglihatan Mata Kanan Tanpa Koreksi Menggunakan Snellen "
+              },
+              {
+                  "reference": "Observation/{{Observation_VisusOS}}",
+                  "display": "Hasil Pemeriksaan Tajam Penglihatan Menggunakan Pinhole Mata Kanan "
+              }
+          ]
+      }
+  ]
+}
+
+
+{
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "date": "2024-04-24T03:48:36+00:00",
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ],
+          "url": "http://example.org/fhir/extensions#documentStatus"
+      }
+  ],
+  "id": "c3421e1a-1eda-4086-894d-7109b4d41b35",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:47:39.531699+00:00",
+      "versionId": "MTcyNDkyODQ1OTUzMTY5OTAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "COS000015",
+                      "display": "Deteksi Dini Gangguan Penglihatan",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Hasil Pemeriksaan Tajam Penglihatan Mata Kanan Tanpa Koreksi Menggunakan Snellen ",
+                  "reference": "Observation/e08817ab-bf83-4da5-aa27-43a372ef25af"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Tajam Penglihatan Menggunakan Pinhole Mata Kanan ",
+                  "reference": "Observation/25e359b0-eb80-4097-a7a0-2b9e97a9e2ad"
+              }
+          ],
+          "title": "Deteksi Dini Gangguan Penglihatan"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "title": "Form Skrining PTM",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000006",
+              "display": "Form Skrining PTM",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}

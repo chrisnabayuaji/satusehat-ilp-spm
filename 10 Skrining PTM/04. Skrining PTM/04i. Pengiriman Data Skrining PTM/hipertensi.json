@@ -1,0 +1,157 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T03:48:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi Dini Hipertensi",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000006",
+                      "display": "Deteksi Dini Hipertensi"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "Observation/{{Observation_Systolic}}",
+                  "display": "Hasil Pemeriksaan Tekanan Darah Sistolik "
+              },
+              {
+                  "reference": "Observation/{{Observation_Diastolic}}",
+                  "display": "Hasil Pemeriksaan Tekanan Darah Diastolik "
+              },
+              {
+                  "reference": "Observation/{{Interpretasi_TD}}",
+                  "display": "Hasil Pemeriksaan Interpretasi Tekanan Darah "
+              }
+          ]
+      }
+  ]
+}
+
+
+{
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "date": "2024-04-24T03:48:36+00:00",
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ],
+          "url": "http://example.org/fhir/extensions#documentStatus"
+      }
+  ],
+  "id": "ece101a4-0b12-496e-b563-b527f2c3121a",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:46:53.112689+00:00",
+      "versionId": "MTcyNDkyODQxMzExMjY4OTAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "COS000006",
+                      "display": "Deteksi Dini Hipertensi",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Hasil Pemeriksaan Tekanan Darah Sistolik ",
+                  "reference": "Observation/70594d5d-9fd8-4dba-b827-8bc3118079da"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Tekanan Darah Diastolik ",
+                  "reference": "Observation/e41fb215-a08f-4161-a3bc-dd0f3af5cea5"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Interpretasi Tekanan Darah ",
+                  "reference": "Observation/ef9f6fe5-3356-46da-8547-0480c337d806"
+              }
+          ],
+          "title": "Deteksi Dini Hipertensi"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "title": "Form Skrining PTM",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000006",
+              "display": "Form Skrining PTM",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}

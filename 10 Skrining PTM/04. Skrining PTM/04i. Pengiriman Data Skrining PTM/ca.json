@@ -1,0 +1,185 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T05:43:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi Dini Kanker",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000012",
+                      "display": "Deteksi Dini Kanker"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "Procedure/{{Procedure_Inspekulo}}",
+                  "display": "Prosedur Inspekulo Vagina "
+              },
+              {
+                  "reference": "Observation/{{Observation_Inspekulo}}",
+                  "display": "Hasil Pemeriksaan Inspekulo Vagina "
+              },
+              {
+                  "reference": "Procedure/{{Procedure_IVA}}",
+                  "display": "Prosedur Tes IVA "
+              },
+              {
+                  "reference": "Observation/{{Observation_IVA}}",
+                  "display": "Hasil Pemeriksaan Tes IVA "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_Cryo}}",
+                  "display": "Permintaan Pemeriksaan Cryotherapy "
+              },
+              {
+                  "reference": "ServiceRequest/{{Rujukan_Inspekulo}}",
+                  "display": "Permintaan Pemeriksaan Rujukan Pasien "
+              },
+              {
+                  "reference": "Procedure/{{Procedure_Cryo}}",
+                  "display": "Prosedur Cryotherapy "
+              },
+              {
+                  "reference": "ServiceRequest/{{Rujukan_Inspekulo}}",
+                  "display": "Permintaan Pemeriksaan Rujukan Inspekulo Pasien "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_HPV}}",
+                  "display": "Permintaan Pemeriksaan Virus HPV Dalam Serviks "
+              },
+              {
+                  "reference": "Specimen/{{Specimen_HPV}}",
+                  "display": "Spesimen Swab Serviks Virus HPV Dalam Serviks "
+              },
+              {
+                  "reference": "Observation/{{Observation_HPVDNA}}",
+                  "display": "Hasil Pemeriksaan Virus HPV Dalam Serviks "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_HPVDNA}}",
+                  "display": "Laporan Pemeriksaan Virus HPV Dalam Serviks "
+              },
+              {
+                  "reference": "Observation/{{Observation_SADANIS}}",
+                  "display": "Hasil Pemeriksaan Pemeriksaan SADANIS Payudara "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_USGMammae}}",
+                  "display": "Permintaan Pemeriksaan USG Payudara "
+              },
+              {
+                  "reference": "Observation/{{Observation_USGMammae}}",
+                  "display": "Hasil Pemeriksaan USG Payudara "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_USGMammae}}",
+                  "display": "Laporan Pemeriksaan USG Payudara "
+              }
+          ]
+      }
+  ]
+}
+
+
+{
+  "resourceType": "OperationOutcome",
+  "text": {
+      "status": "generated"
+  },
+  "issue": [
+      {
+          "severity": "error",
+          "code": "value",
+          "details": {
+              "text": "Wrong reference ID format: Procedure/{{Procedure_Inspekulo}} (RuleNumber: 10677)"
+          },
+          "expression": [
+              "Composition.section[0].entry"
+          ]
+      },
+      {
+          "severity": "error",
+          "code": "value",
+          "details": {
+              "text": "Wrong reference ID format: Procedure/{{Procedure_IVA}} (RuleNumber: 10677)"
+          },
+          "expression": [
+              "Composition.section[0].entry"
+          ]
+      },
+      {
+          "severity": "error",
+          "code": "value",
+          "details": {
+              "text": "Wrong reference ID format: ServiceRequest/{{Rujukan_Inspekulo}} (RuleNumber: 10677)"
+          },
+          "expression": [
+              "Composition.section[0].entry"
+          ]
+      },
+      {
+          "severity": "error",
+          "code": "value",
+          "details": {
+              "text": "Wrong reference ID format: Procedure/{{Procedure_Cryo}} (RuleNumber: 10677)"
+          },
+          "expression": [
+              "Composition.section[0].entry"
+          ]
+      },
+      {
+          "severity": "error",
+          "code": "value",
+          "details": {
+              "text": "Wrong reference ID format: ServiceRequest/{{Rujukan_Inspekulo}} (RuleNumber: 10677)"
+          },
+          "expression": [
+              "Composition.section[0].entry"
+          ]
+      }
+  ]
+}

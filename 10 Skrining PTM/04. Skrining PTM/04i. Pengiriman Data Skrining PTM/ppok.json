@@ -1,0 +1,141 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T03:48:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi dini PPOK",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000014",
+                      "display": "Deteksi dini PPOK"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "QuestionnaireResponse/{{QuestionnaireResponse_PUMA}}",
+                  "display": "Hasil Kuesioner Deteksi dini PPOK (Khusus usia >40 tahun dan merokok) "
+              }
+          ]
+      }
+  ]
+}
+
+
+{
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "date": "2024-04-24T03:48:36+00:00",
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ],
+          "url": "http://example.org/fhir/extensions#documentStatus"
+      }
+  ],
+  "id": "9d74968f-b29d-40b0-b341-008fa990e183",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:49:17.210547+00:00",
+      "versionId": "MTcyNDkyODU1NzIxMDU0NzAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "COS000014",
+                      "display": "Deteksi dini PPOK",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Hasil Kuesioner Deteksi dini PPOK (Khusus usia >40 tahun dan merokok) ",
+                  "reference": "QuestionnaireResponse/ffd36f01-6af8-4ea5-b0c5-6c271750aec6"
+              }
+          ],
+          "title": "Deteksi dini PPOK"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "title": "Form Skrining PTM",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000006",
+              "display": "Form Skrining PTM",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}

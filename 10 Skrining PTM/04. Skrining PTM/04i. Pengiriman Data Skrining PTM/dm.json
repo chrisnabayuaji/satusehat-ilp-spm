@@ -1,0 +1,261 @@
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "extension": [
+      {
+          "url": "http://example.org/fhir/extensions#documentStatus",
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ]
+      }
+  ],
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000006",
+              "display": "Form Skrining PTM"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "date": "2024-04-24T03:48:36+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Form Skrining PTM",
+  "section": [
+      {
+          "title": "Deteksi Dini Diabetes Melitus",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section",
+                      "code": "COS000009",
+                      "display": "Deteksi Dini Diabetes Melitus"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_GDS}}",
+                  "display": "Permintaan Pemeriksaan Gula Darah Sewaktu "
+              },
+              {
+                  "reference": "Specimen/{{Specimen_DiabetesPanel}}",
+                  "display": "Spesimen Darah Gula Darah Sewaktu "
+              },
+              {
+                  "reference": "Observation/{{Observation_GDS}}",
+                  "display": "Hasil Pemeriksaan Gula Darah Sewaktu "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_GDS}}",
+                  "display": "Laporan Pemeriksaan Gula Darah Sewaktu "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_GDP}}",
+                  "display": "Permintaan Pemeriksaan Gula Darah Puasa "
+              },
+              {
+                  "reference": "Specimen/{{Specimen_DiabetesPanel}}",
+                  "display": "Spesimen Darah Gula Darah Puasa "
+              },
+              {
+                  "reference": "Observation/{{Observation_GDP}}",
+                  "display": "Hasil Pemeriksaan Gula Darah Puasa "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_GDP}}",
+                  "display": "Laporan Pemeriksaan Gula Darah Puasa "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_G2PP}}",
+                  "display": "Permintaan Pemeriksaan Gula Darah 2 Jam Setelah Makan "
+              },
+              {
+                  "reference": "Specimen/{{Specimen_DiabetesPanel}}",
+                  "display": "Spesimen Darah Gula Darah 2 Jam Setelah Makan "
+              },
+              {
+                  "reference": "Observation/{{Observation_G2PP}}",
+                  "display": "Hasil Pemeriksaan Gula Darah 2 Jam Setelah Makan "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_G2PP}}",
+                  "display": "Laporan Pemeriksaan Gula Darah 2 Jam Setelah Makan "
+              },
+              {
+                  "reference": "ServiceRequest/{{ServiceRequest_Hba1c}}",
+                  "display": "Permintaan Pemeriksaan Rasio Hemoglobin A1c Dalam Darah "
+              },
+              {
+                  "reference": "Specimen/{{Specimen_DiabetesPanel}}",
+                  "display": "Spesimen Darah Rasio Hemoglobin A1c Dalam Darah "
+              },
+              {
+                  "reference": "Observation/{{Observation_Hba1c}}",
+                  "display": "Hasil Pemeriksaan Rasio Hemoglobin A1c Dalam Darah "
+              },
+              {
+                  "reference": "DiagnosticReport/{{DiagnosticReport_Hba1c}}",
+                  "display": "Laporan Pemeriksaan Rasio Hemoglobin A1c Dalam Darah "
+              }
+          ]
+      }
+  ]
+}
+
+
+{
+  "attester": [
+      {
+          "mode": "legal"
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "date": "2024-04-24T03:48:36+00:00",
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "statusCode",
+                  "valueCode": "final"
+              }
+          ],
+          "url": "http://example.org/fhir/extensions#documentStatus"
+      }
+  ],
+  "id": "dae08e45-dffd-4db2-9c2e-7ce1ebf6c722",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:51:49.298967+00:00",
+      "versionId": "MTcyNDkyODcwOTI5ODk2NzAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "COS000009",
+                      "display": "Deteksi Dini Diabetes Melitus",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/composition-section"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Permintaan Pemeriksaan Gula Darah Sewaktu ",
+                  "reference": "ServiceRequest/eff2b658-96f2-4f4e-a9b2-20e5c4cb0957"
+              },
+              {
+                  "display": "Spesimen Darah Gula Darah Sewaktu ",
+                  "reference": "Specimen/7798713c-f74d-4306-9f4a-1b65aaac9c90"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Gula Darah Sewaktu ",
+                  "reference": "Observation/e24b457c-883a-4733-bf23-c966451e08fc"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Gula Darah Sewaktu ",
+                  "reference": "DiagnosticReport/e6656d52-cb54-46c0-996f-f6e2e67163b5"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Gula Darah Puasa ",
+                  "reference": "ServiceRequest/d6d48bb2-a52a-4d23-a7a0-6a9d5a07e7f8"
+              },
+              {
+                  "display": "Spesimen Darah Gula Darah Puasa ",
+                  "reference": "Specimen/7798713c-f74d-4306-9f4a-1b65aaac9c90"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Gula Darah Puasa ",
+                  "reference": "Observation/46d55391-ff57-4a3d-9117-732b9b89b9dc"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Gula Darah Puasa ",
+                  "reference": "DiagnosticReport/7346bc02-e1b4-462d-a43a-e22cce25fa0b"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Gula Darah 2 Jam Setelah Makan ",
+                  "reference": "ServiceRequest/c3cc4277-8d3b-4fd9-bbef-93c5fe579d41"
+              },
+              {
+                  "display": "Spesimen Darah Gula Darah 2 Jam Setelah Makan ",
+                  "reference": "Specimen/7798713c-f74d-4306-9f4a-1b65aaac9c90"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Gula Darah 2 Jam Setelah Makan ",
+                  "reference": "Observation/cd5992d3-539b-4b07-937f-bcd2205fd660"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Gula Darah 2 Jam Setelah Makan ",
+                  "reference": "DiagnosticReport/e47891f4-88f9-4a6a-8d1d-00e10dd435e9"
+              },
+              {
+                  "display": "Permintaan Pemeriksaan Rasio Hemoglobin A1c Dalam Darah ",
+                  "reference": "ServiceRequest/4cf81f3c-539e-4c6d-81e0-ce7ea28f050c"
+              },
+              {
+                  "display": "Spesimen Darah Rasio Hemoglobin A1c Dalam Darah ",
+                  "reference": "Specimen/7798713c-f74d-4306-9f4a-1b65aaac9c90"
+              },
+              {
+                  "display": "Hasil Pemeriksaan Rasio Hemoglobin A1c Dalam Darah ",
+                  "reference": "Observation/5591dc7f-b2e2-4836-9294-cff6cfd69a22"
+              },
+              {
+                  "display": "Laporan Pemeriksaan Rasio Hemoglobin A1c Dalam Darah ",
+                  "reference": "DiagnosticReport/4f211659-b7c8-49c7-879d-3a1d53e15922"
+              }
+          ],
+          "title": "Deteksi Dini Diabetes Melitus"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "title": "Form Skrining PTM",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000006",
+              "display": "Form Skrining PTM",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}
