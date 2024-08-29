@@ -1,0 +1,101 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "social-history",
+                  "display": "Social History"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T00:20:40+00:00",
+  "issued": "2024-04-24T00:20:40+00:00",
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "8392000",
+              "display": "Non-smoker"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "social-history",
+                  "display": "Social History",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "72166-2",
+              "display": "Tobacco smoking status",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T00:20:40+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "14548301-6aca-4bca-b4c7-5388a11bb176",
+  "identifier": [],
+  "issued": "2024-04-24T00:20:40+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T05:03:08.837208+00:00",
+      "versionId": "MTcyNDkwNzc4ODgzNzIwODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "8392000",
+              "display": "Non-smoker",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "resourceType": "Encounter",
+  "id": "{{Encounter_ptm_uuid}}",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+          "value": "PD000017"
+      }
+  ],
+  "status": "in-progress",
+  "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "participant": [
+      {
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                      }
+                  ]
+              }
+          ],
+          "individual": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "period": {
+      "start": "2024-04-24T00:00:00+00:00"
+  },
+  "location": [
+      {
+          "location": {
+              "reference": "Location/{{Location_ptm_id}}",
+              "display": "{{Location_ptm_name}}"
+          },
+          "period": {
+              "start": "2024-04-24T00:00:00+00:00"
+          },
+          "extension": [
+              {
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass",
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient",
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass",
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "statusHistory": [
+      {
+          "status": "arrived",
+          "period": {
+              "start": "2024-04-24T00:00:00+00:00",
+              "end": "2024-04-24T00:15:00+00:00"
+          }
+      },
+      {
+          "status": "in-progress",
+          "period": {
+              "start": "2024-04-24T00:15:00+00:00"
+          }
+      }
+  ],
+  "serviceProvider": {
+      "reference": "Organization/{{Org_id}}"
+  }
+}
+
+{
+  "class": {
+      "code": "AMB",
+      "display": "ambulatory",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "id": "6c53b3ee-7612-4c94-baac-796af15bcebc",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/encounter/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "PD000017"
+      }
+  ],
+  "location": [
+      {
+          "extension": [
+              {
+                  "extension": [
+                      {
+                          "url": "value",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "reguler",
+                                      "display": "Kelas Reguler",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Outpatient"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "url": "upgradeClassIndicator",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "code": "kelas-tetap",
+                                      "display": "Kelas Tetap Perawatan",
+                                      "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass"
+              }
+          ],
+          "location": {
+              "display": "Poli PTM",
+              "reference": "Location/e25bac64-50bd-458e-9113-54fafb51b3d3"
+          },
+          "period": {
+              "start": "2024-04-24T00:00:00+00:00"
+          }
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T04:56:25.263406+00:00",
+      "versionId": "MTcyNDkwNzM4NTI2MzQwNjAwMA"
+  },
+  "participant": [
+      {
+          "individual": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          },
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "ATND",
+                          "display": "attender",
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "period": {
+      "start": "2024-04-24T00:00:00+00:00"
+  },
+  "resourceType": "Encounter",
+  "serviceProvider": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "status": "in-progress",
+  "statusHistory": [
+      {
+          "period": {
+              "end": "2024-04-24T00:15:00+00:00",
+              "start": "2024-04-24T00:00:00+00:00"
+          },
+          "status": "arrived"
+      },
+      {
+          "period": {
+              "start": "2024-04-24T00:15:00+00:00"
+          },
+          "status": "in-progress"
+      }
+  ],
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

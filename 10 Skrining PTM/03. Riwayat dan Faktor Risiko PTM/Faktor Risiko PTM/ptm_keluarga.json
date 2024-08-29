@@ -1,0 +1,89 @@
+{
+  "resourceType": "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                  "code": "problem-list-item",
+                  "display": "Problem List Item"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "160357008",
+              "display": "FH: Hypertension"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} tanggal 24 April 2024"
+  },
+  "recordedDate": "2024-04-24T00:19:15+00:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "problem-list-item",
+                  "display": "Problem List Item",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "160357008",
+              "display": "FH: Hypertension",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan Patient PTM tanggal 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "aed8ec49-aa12-4f2d-ad6f-efd461c2d62d",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-29T05:02:08.899672+00:00",
+      "versionId": "MTcyNDkwNzcyODg5OTY3MjAwMA"
+  },
+  "recordedDate": "2024-04-24T00:19:15+00:00",
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}
