@@ -1,0 +1,128 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "final",
+  "code": {
+      "coding": [
+          {
+              "code": "24601-7",
+              "display": "US Breast",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T02:10:10+00:00",
+  "issued": "2024-04-24T02:10:10+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/{{Observation_USGMammae}}"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_USGMammae}}"
+      }
+  ],
+  "imagingStudy": [
+      {
+          "reference": "ImagingStudy/{{ImagingStudy_USG}}"
+      }
+  ],
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "290084006",
+                  "display": "Breast normal"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/f9ceadde-a8bd-4c20-a6bd-6280b2843063"
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "24601-7",
+              "display": "US Breast",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "code": "290084006",
+                  "display": "Breast normal",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "effectiveDateTime": "2024-04-24T02:10:10+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "1d3e10a0-bf95-4067-8858-28f56a3dc43e",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/lab",
+          "value": "2024082985902A436"
+      }
+  ],
+  "imagingStudy": [
+      {
+          "reference": "ImagingStudy/53e83996-b099-4dbb-a122-755e9b7a8c5c"
+      }
+  ],
+  "issued": "2024-04-24T02:10:10+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:50:37.718328+00:00",
+      "versionId": "MTcyNDkxNzgzNzcxODMyODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/e9b27f89-a827-4095-bfdc-2f91023a100a"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "exam",
+                  "display": "Exam"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "13607009",
+              "display": "Manual examination of breast"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T02:05:55+00:00",
+  "issued": "2024-04-24T02:05:55+00:00",
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "290084006",
+              "display": "Breast normal"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "exam",
+                  "display": "Exam",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "13607009",
+              "display": "Manual examination of breast",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T02:05:55+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "89354105-f2cf-4d32-b20d-ba2378f80962",
+  "identifier": [],
+  "issued": "2024-04-24T02:05:55+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:38:30.230557+00:00",
+      "versionId": "MTcyNDkxNzExMDIzMDU1NzAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "290084006",
+              "display": "Breast normal",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
