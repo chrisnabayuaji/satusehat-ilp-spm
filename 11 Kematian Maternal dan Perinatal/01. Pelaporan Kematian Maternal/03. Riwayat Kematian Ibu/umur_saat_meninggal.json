@@ -1,0 +1,112 @@
+{
+  "resourceType" : "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code" : {
+      "coding" : [
+          {
+              "system" : "http://loinc.org",
+              "code" : "39016-1",
+              "display" : "Age at death"
+          }
+      ]
+  },
+  "subject" : {
+      "reference": "Patient/{{Maternal_patient_id}}",
+      "display": "{{Maternal_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_maternal_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T07:30:00+00:00",
+  "issued": "2023-06-22T07:30:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "valueQuantity" : {
+      "value" : 35,
+      "unit" : "years",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "a"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "39016-1",
+              "display": "Age at death",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-06-22T07:30:00+00:00",
+  "encounter": {
+      "reference": "Encounter/99530008-0d72-46e9-9b1f-f2cd99d795e9"
+  },
+  "id": "423821e7-aa26-44ab-b207-b986bac49d75",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2023-06-22T07:30:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T13:38:16.333737+00:00",
+      "versionId": "MTcyNDkzODY5NjMzMzczNzAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10006926841"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient - Mother (Teresa Lee)",
+      "reference": "Patient/P02029555437"
+  },
+  "valueQuantity": {
+      "code": "a",
+      "system": "http://unitsofmeasure.org",
+      "unit": "years",
+      "value": 35
+  }
+}

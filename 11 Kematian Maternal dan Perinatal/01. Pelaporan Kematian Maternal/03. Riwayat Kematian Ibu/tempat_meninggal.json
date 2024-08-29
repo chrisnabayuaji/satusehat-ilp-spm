@@ -1,0 +1,98 @@
+{
+  "resourceType" : "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status" : "final",
+  "code" : {
+      "coding" : [
+          {
+              "system" : "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+              "code" : "OC000028",
+              "display" : "Jenis Tempat Meninggal"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Maternal_patient_id}}",
+      "display": "{{Maternal_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_maternal_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T07:34:00+00:00",
+  "issued": "2023-06-22T07:34:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "valueCodeableConcept" : {
+      "coding" : [
+          {
+              "system" :"http://terminology.kemkes.go.id/CodeSystem/organization-type",
+              "code" : "OT000006",
+              "display" : "Rumah Sakit Pemerintah"
+          }
+      ],
+      "text" : "RS Pemerintah"
+  }
+}
+
+{
+  "code": {
+      "coding": [
+          {
+              "code": "OC000028",
+              "display": "Jenis Tempat Meninggal",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-06-22T07:34:00+00:00",
+  "encounter": {
+      "reference": "Encounter/99530008-0d72-46e9-9b1f-f2cd99d795e9"
+  },
+  "id": "cb647387-3130-4d02-88de-98a7215dd0fe",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2023-06-22T07:34:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T13:51:17.161499+00:00",
+      "versionId": "MTcyNDkzOTQ3NzE2MTQ5OTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10006926841"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient - Mother (Teresa Lee)",
+      "reference": "Patient/P02029555437"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "OT000006",
+              "display": "Rumah Sakit Pemerintah",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/organization-type"
+          }
+      ],
+      "text": "RS Pemerintah"
+  }
+}

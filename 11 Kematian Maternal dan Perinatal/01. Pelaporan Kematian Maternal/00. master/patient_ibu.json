@@ -1,0 +1,74 @@
+{
+  "resourceType": "Patient",
+  "identifier": [
+     {
+        "use": "official",
+        "system": "https://fhir.kemkes.go.id/id/nik",
+        "value": "2408272408270100"
+     }
+  ],
+  "active": true,
+  "name": [
+     {
+        "use": "official",
+        "text": "Patient - Mother (Teresa Lee)"
+     }
+  ],
+  "telecom": [
+     {
+        "system": "phone",
+        "value": "08123456789",
+        "use": "mobile"
+     }
+  ],
+  "gender": "female",
+  "birthDate": "1990-01-01",
+  "deceasedBoolean": false,
+  "maritalStatus": {
+     "coding": [
+        {
+           "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+           "code": "M",
+           "display": "Married"
+        }
+     ],
+     "text": "Married"
+  },
+  "multipleBirthInteger": 0,
+  "communication": [
+     {
+        "language": {
+           "coding": [
+              {
+                 "system": "urn:ietf:bcp:47",
+                 "code": "id-ID",
+                 "display": "Indonesian"
+              }
+           ],
+           "text": "Indonesian"
+        },
+        "preferred": true
+     }
+  ],
+  "extension": [
+     {
+        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/birthPlace",
+        "valueAddress": {
+           "city": "Bandung",
+           "country": "ID"
+        }
+     },
+     {
+        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenshipStatus",
+        "valueCode": "WNI"
+     }
+  ]
+}
+
+{
+  "success": true,
+  "message": "New Patient has been created successfully",
+  "data": {
+      "patient_id": "P02029557159"
+  }
+}
