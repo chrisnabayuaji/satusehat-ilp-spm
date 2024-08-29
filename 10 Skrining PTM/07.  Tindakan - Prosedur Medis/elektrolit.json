@@ -1,0 +1,100 @@
+{
+  "resourceType": "Procedure",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "277132007",
+              "display": "Therapeutic procedure"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/sid/icd-9-cm",
+              "code": "99.18",
+              "display": "Injection or infusion of electrolytes"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "performedDateTime": "2024-04-24T03:57:05+00:00",
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "location": {
+      "reference": "Location/{{Location_ptm_id}}"
+  }
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "277132007",
+              "display": "Therapeutic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "99.18",
+              "display": "Injection or infusion of electrolytes",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "ad6a28ff-9747-4f70-8256-0c5188dfb688",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A961"
+      }
+  ],
+  "location": {
+      "reference": "Location/e25bac64-50bd-458e-9113-54fafb51b3d3"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:21:53.139347+00:00",
+      "versionId": "MTcyNDkyNjkxMzEzOTM0NzAwMA"
+  },
+  "performedDateTime": "2024-04-24T03:57:05+00:00",
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

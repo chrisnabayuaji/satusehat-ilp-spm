@@ -1,0 +1,84 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+          "value": "{{Registration_ID}}"
+      }
+  ],
+  "status": "waitlist",
+  "statusHistory": [
+      {
+          "status": "waitlist",
+          "period": {
+              "start": "2024-04-24T08:45:00+00:00"
+          }
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+                  "code": "cancer",
+                  "display": "Cancer Management Care"
+              }
+          ]
+      }
+  ],
+  "patient": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "managingOrganization": {
+      "reference": "Organization/{{Org_id}}"
+  },
+  "period": {
+      "start": "2024-04-24T08:45:00+00:00"
+  }
+}
+
+{
+  "id": "9c7a3bd8-f582-4913-8632-c444a7de7788",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/episode-of-care/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082932952"
+      }
+  ],
+  "managingOrganization": {
+      "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:20:24.754749+00:00",
+      "versionId": "MTcyNDkyNjgyNDc1NDc0OTAwMA"
+  },
+  "patient": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "period": {
+      "start": "2024-04-24T08:45:00+00:00"
+  },
+  "resourceType": "EpisodeOfCare",
+  "status": "waitlist",
+  "statusHistory": [
+      {
+          "period": {
+              "start": "2024-04-24T08:45:00+00:00"
+          },
+          "status": "waitlist"
+      }
+  ],
+  "type": [
+      {
+          "coding": [
+              {
+                  "code": "cancer",
+                  "display": "Cancer Management Care",
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type"
+              }
+          ]
+      }
+  ]
+}
