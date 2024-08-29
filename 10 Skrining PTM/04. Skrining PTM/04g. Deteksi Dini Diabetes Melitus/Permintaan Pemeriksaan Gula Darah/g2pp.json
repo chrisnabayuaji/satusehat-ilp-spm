@@ -1,0 +1,110 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "108252007",
+                  "display": "Laboratory procedure"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "1521-4",
+              "display": "Glucose [Mass/volume] in Serum or Plasma --2 hours post meal"
+          }
+      ],
+      "text": "Panel Skrining Gula Darah PTM"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_id}}",
+      "display": "Permintaan Pemeriksaan Panel Skrining Gula Darah 24 April 2024 pukul 09:30 WIB"
+  },
+  "occurrenceDateTime": "2024-04-24T02:27:35+00:00",
+  "authoredOn": "2024-04-24T02:27:35+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ]
+}
+
+{
+  "authoredOn": "2024-04-24T02:27:35+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "108252007",
+                  "display": "Laboratory procedure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "1521-4",
+              "display": "Glucose [Mass/volume] in Serum or Plasma --2 hours post meal",
+              "system": "http://loinc.org"
+          }
+      ],
+      "text": "Panel Skrining Gula Darah PTM"
+  },
+  "encounter": {
+      "display": "Permintaan Pemeriksaan Panel Skrining Gula Darah 24 April 2024 pukul 09:30 WIB",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "c3cc4277-8d3b-4fd9-bbef-93c5fe579d41",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A993"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:55:33.921139+00:00",
+      "versionId": "MTcyNDkxODEzMzkyMTEzOTAwMA"
+  },
+  "occurrenceDateTime": "2024-04-24T02:27:35+00:00",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
