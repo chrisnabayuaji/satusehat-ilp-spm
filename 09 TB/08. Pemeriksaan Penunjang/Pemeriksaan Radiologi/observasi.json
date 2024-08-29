@@ -1,0 +1,152 @@
+{
+  "resourceType": "Observation",
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/37f40da2-3e49-46ac-8ad9-95d6b38c97ec"
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111112"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "imaging",
+                  "display": "Imaging"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "24648-8",
+              "display": "XR Chest PA upright"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "effectiveDateTime": "2023-07-14T00:45:00+00:00",
+  "bodySite": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "51185008",
+              "display": "Chest"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "707307002",
+              "display": "Tuberculosis screening chest X-ray abnormal"
+          }
+      ]
+  },
+  "derivedFrom": [
+      {
+          "reference": "ImagingStudy/fc8e4882-d8af-440e-b41e-98c2897cd24a"
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/37f40da2-3e49-46ac-8ad9-95d6b38c97ec"
+      }
+  ],
+  "bodySite": {
+      "coding": [
+          {
+              "code": "51185008",
+              "display": "Chest",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "imaging",
+                  "display": "Imaging",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "24648-8",
+              "display": "XR Chest PA upright",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "derivedFrom": [
+      {
+          "reference": "ImagingStudy/fc8e4882-d8af-440e-b41e-98c2897cd24a"
+      }
+  ],
+  "effectiveDateTime": "2023-07-14T00:45:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "0b4b677d-688a-4ce6-9c4f-2fb923d8897e",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111112"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T04:14:31.706365+00:00",
+      "versionId": "MTcyNDkwNDg3MTcwNjM2NTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "707307002",
+              "display": "Tuberculosis screening chest X-ray abnormal",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

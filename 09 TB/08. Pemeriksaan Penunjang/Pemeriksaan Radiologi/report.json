@@ -1,0 +1,162 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/rad",
+          "use": "official",
+          "value": "5234342"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/{{Org_id}}",
+          "value": "2403102478375540"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/37f40da2-3e49-46ac-8ad9-95d6b38c97ec"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                  "code": "RAD",
+                  "display": "Radiology"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "24648-8",
+              "display": "XR Chest PA upright"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_tb_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_tb_uuid}}"
+  },
+  "effectiveDateTime": "2022-11-14T19:25:00+00:00",
+  "issued": "2022-11-14T19:25:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/0b4b677d-688a-4ce6-9c4f-2fb923d8897e"
+      }
+  ],
+  "imagingStudy": [
+      {
+          "reference": "ImagingStudy/fc8e4882-d8af-440e-b41e-98c2897cd24a"
+      }
+  ],
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "707307002",
+                  "display": "Tuberculosis screening chest X-ray abnormal"
+              }
+          ]
+      }
+  ],
+  "conclusion": "Gambaran TB paru dengan infiltrat bertambah"
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/37f40da2-3e49-46ac-8ad9-95d6b38c97ec"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "RAD",
+                  "display": "Radiology",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "24648-8",
+              "display": "XR Chest PA upright",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "conclusion": "Gambaran TB paru dengan infiltrat bertambah",
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "code": "707307002",
+                  "display": "Tuberculosis screening chest X-ray abnormal",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "effectiveDateTime": "2022-11-14T19:25:00+00:00",
+  "encounter": {
+      "reference": "Encounter/0e05ddfb-e3fe-4995-8295-f4c9640956c8"
+  },
+  "id": "3c16a153-fedb-4dec-9bc7-19db373d5e4e",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/rad",
+          "use": "official",
+          "value": "5234342"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/sitb/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2403102478375540"
+      }
+  ],
+  "imagingStudy": [
+      {
+          "reference": "ImagingStudy/fc8e4882-d8af-440e-b41e-98c2897cd24a"
+      }
+  ],
+  "issued": "2022-11-14T19:25:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T04:16:21.619341+00:00",
+      "versionId": "MTcyNDkwNDk4MTYxOTM0MTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/0b4b677d-688a-4ce6-9c4f-2fb923d8897e"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
