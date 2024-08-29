@@ -1,0 +1,100 @@
+{
+  "resourceType": "Procedure",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "409073007",
+              "display": "Education"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "183063000",
+              "display": "Low salt diet education"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "performedDateTime": "2024-04-24T04:01:20+00:00",
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ],
+  "location": {
+      "reference": "Location/{{Location_ptm_id}}"
+  }
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "409073007",
+              "display": "Education",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "183063000",
+              "display": "Low salt diet education",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "a884dd2a-6d8d-4ceb-83b6-34ecf92f0f52",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082932952A437"
+      }
+  ],
+  "location": {
+      "reference": "Location/e25bac64-50bd-458e-9113-54fafb51b3d3"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-29T10:54:46.837265+00:00",
+      "versionId": "MTcyNDkyODg4NjgzNzI2NTAwMA"
+  },
+  "performedDateTime": "2024-04-24T04:01:20+00:00",
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

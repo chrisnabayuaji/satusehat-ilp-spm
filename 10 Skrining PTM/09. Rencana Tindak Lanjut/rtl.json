@@ -1,0 +1,166 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "306098008",
+                  "display": "Self-referral"
+              }
+          ]
+      },
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "11429006",
+                  "display": "Consultation"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "185389009",
+              "display": "Follow-up visit"
+          }
+      ],
+      "text": "Kontrol rutin hipertensi"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} di hari 24 April 2024"
+  },
+  "occurrenceDateTime": "2024-04-24T04:04:10+00:00",
+  "authoredOn": "2024-04-24T04:04:10+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10",
+                  "display": "Essential (primary) Hypertension"
+              }
+          ],
+          "text": "Kontrol rutin bulanan"
+      }
+  ],
+  "locationReference": [
+      {
+          "reference": "Location/{{Location_ptm_id}}",
+          "display": "{{Location_ptm_name}}"
+      }
+  ],
+  "patientInstruction": "Kontrol setelah 1 bulan minum obat anti hipertensi. Dalam keadaan darurat dapat menghubungi hotlineFasyankesdi nomor 14045"
+}
+
+{
+  "authoredOn": "2024-04-24T04:04:10+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "306098008",
+                  "display": "Self-referral",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      },
+      {
+          "coding": [
+              {
+                  "code": "11429006",
+                  "display": "Consultation",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "185389009",
+              "display": "Follow-up visit",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Kontrol rutin hipertensi"
+  },
+  "encounter": {
+      "display": "Kunjungan Patient PTM di hari 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "9402d056-ccee-4436-a363-b0799ff9edfe",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082932952A924"
+      }
+  ],
+  "intent": "original-order",
+  "locationReference": [
+      {
+          "display": "Poli PTM",
+          "reference": "Location/e25bac64-50bd-458e-9113-54fafb51b3d3"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T10:56:13.862443+00:00",
+      "versionId": "MTcyNDkyODk3Mzg2MjQ0MzAwMA"
+  },
+  "occurrenceDateTime": "2024-04-24T04:04:10+00:00",
+  "patientInstruction": "Kontrol setelah 1 bulan minum obat anti hipertensi. Dalam keadaan darurat dapat menghubungi hotlineFasyankesdi nomor 14045",
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "I10",
+                  "display": "Essential (primary) Hypertension",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ],
+          "text": "Kontrol rutin bulanan"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
