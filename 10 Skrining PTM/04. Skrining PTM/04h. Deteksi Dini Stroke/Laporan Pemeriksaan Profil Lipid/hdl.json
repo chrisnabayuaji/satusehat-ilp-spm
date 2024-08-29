@@ -1,0 +1,150 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                  "code": "CH",
+                  "display": "Chemistry"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "2085-9",
+              "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T03:02:25+00:00",
+  "issued": "2024-04-24T03:02:25+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/{{Observation_HDL}}"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/{{Specimen_KolesterolPanel}}"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_HDL}}"
+      }
+  ],
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                  "code": "N",
+                  "display": "Normal"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/f28d0999-1de7-4ba4-96fb-8a86715db7b1"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "CH",
+                  "display": "Chemistry",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "2085-9",
+              "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "code": "N",
+                  "display": "Normal",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+          ]
+      }
+  ],
+  "effectiveDateTime": "2024-04-24T03:02:25+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "e59b8fcf-946c-4085-a48e-4236d04f57bb",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/lab",
+          "value": "2024082932952A002"
+      }
+  ],
+  "issued": "2024-04-24T03:02:25+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T10:43:46.285078+00:00",
+      "versionId": "MTcyNDkyODIyNjI4NTA3ODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/f2ca1722-6bc3-457c-90a9-45a338b7ba4c"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}

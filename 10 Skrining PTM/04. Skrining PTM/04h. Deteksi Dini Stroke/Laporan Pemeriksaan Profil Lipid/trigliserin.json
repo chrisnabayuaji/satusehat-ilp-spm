@@ -1,0 +1,150 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                  "code": "CH",
+                  "display": "Chemistry"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "2571-8",
+              "display": "Triglyceride [Mass/volume] in Serum or Plasma"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T03:05:15+00:00",
+  "issued": "2024-04-24T03:05:15+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/{{Observation_TG}}"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/{{Specimen_KolesterolPanel}}"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_TG}}"
+      }
+  ],
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                  "code": "N",
+                  "display": "Normal"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/fbefd088-42b9-46b7-8004-aaec3172b6f3"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "CH",
+                  "display": "Chemistry",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "2571-8",
+              "display": "Triglyceride [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "code": "N",
+                  "display": "Normal",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+          ]
+      }
+  ],
+  "effectiveDateTime": "2024-04-24T03:05:15+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "b20e57bc-0023-4046-935f-ed2c915aac8f",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/lab",
+          "value": "2024082932952A437"
+      }
+  ],
+  "issued": "2024-04-24T03:05:15+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T10:44:50.509849+00:00",
+      "versionId": "MTcyNDkyODI5MDUwOTg0OTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/36f9ae7e-0277-476d-b896-9e3c7e0fcd1e"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
