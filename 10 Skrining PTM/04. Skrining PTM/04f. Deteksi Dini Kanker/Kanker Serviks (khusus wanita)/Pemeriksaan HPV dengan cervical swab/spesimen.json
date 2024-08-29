@@ -1,0 +1,88 @@
+{
+  "resourceType": "Specimen",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "available",
+  "type": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "258524009",
+              "display": "Cervical swab"
+          }
+      ]
+  },
+  "collection": {
+      "method": {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "129323009",
+                  "display": "Scraping - action"
+              }
+          ]
+      },
+      "collectedDateTime": "2024-04-24T01:56:00+00:00"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "request": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_HPV}}"
+      }
+  ],
+  "receivedTime": "2024-04-24T01:56:00+00:00"
+}
+
+{
+  "collection": {
+      "collectedDateTime": "2024-04-24T01:56:00+00:00",
+      "method": {
+          "coding": [
+              {
+                  "code": "129323009",
+                  "display": "Scraping - action",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  },
+  "id": "d26b1af4-62ac-4594-8646-a2aa52b1ec87",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A646"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:26:50.971784+00:00",
+      "versionId": "MTcyNDkxNjQxMDk3MTc4NDAwMA"
+  },
+  "receivedTime": "2024-04-24T01:56:00+00:00",
+  "request": [
+      {
+          "reference": "ServiceRequest/68d1c5ca-085b-497c-a43e-a83f606222a1"
+      }
+  ],
+  "resourceType": "Specimen",
+  "status": "available",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "type": {
+      "coding": [
+          {
+              "code": "258524009",
+              "display": "Cervical swab",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

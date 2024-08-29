@@ -1,0 +1,61 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "277132007",
+                  "display": "Therapeutic Procedure"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "26782000",
+              "display": "Cryotherapy"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "occurrenceDateTime": "2024-04-24T02:00:15+00:00",
+  "authoredOn": "2024-04-24T02:00:15+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "Z13.9",
+                  "display": "Special screening examination, unspecified"
+              }
+          ]
+      }
+  ]
+}

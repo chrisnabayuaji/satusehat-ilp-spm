@@ -1,0 +1,119 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "exam",
+                  "display": "Exam"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "247301006",
+              "display": "Finding of ability to hear whisper"
+          }
+      ]
+  },
+  "bodySite": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "25577004",
+              "display": "Right ear structure"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T01:18:45+00:00",
+  "issued": "2024-04-24T01:18:45+00:00",
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "275727004",
+              "display": "Hearing test normal"
+          }
+      ]
+  }
+}
+
+{
+  "bodySite": {
+      "coding": [
+          {
+              "code": "25577004",
+              "display": "Right ear structure",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "exam",
+                  "display": "Exam",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "247301006",
+              "display": "Finding of ability to hear whisper",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T01:18:45+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "e1c2f826-a65e-4b9e-bcac-152c1ce9e3a6",
+  "identifier": [],
+  "issued": "2024-04-24T01:18:45+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:15:35.316685+00:00",
+      "versionId": "MTcyNDkxNTczNTMxNjY4NTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "275727004",
+              "display": "Hearing test normal",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

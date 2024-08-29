@@ -1,0 +1,93 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "103693007",
+              "display": "Diagnostic procedure"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "251422004",
+              "display": "Acetic acid test reaction"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_id}} pada tanggal 24 April 2024"
+  },
+  "performedDateTime": "2024-04-24T01:48:30+00:00",
+  "recorder": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "103693007",
+              "display": "Diagnostic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "251422004",
+              "display": "Acetic acid test reaction",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan P02029555482 pada tanggal 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "49375f20-0ba9-4259-ae3d-b16f286f9ead",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:24:01.509377+00:00",
+      "versionId": "MTcyNDkxNjI0MTUwOTM3NzAwMA"
+  },
+  "performedDateTime": "2024-04-24T01:48:30+00:00",
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "recorder": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "103693007",
+              "display": "Diagnostic procedure"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "451024007",
+              "display": "Inspection of vagina using vaginal speculum"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Kunjungan {{Patient_ptm_name}} pada tanggal 24 April 2024"
+  },
+  "performedDateTime": "2024-04-24T01:45:40+00:00",
+  "recorder": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "actor": {
+              "reference": "Practitioner/{{Practitioner_ID}}",
+              "display": "{{Practitioner_name}}"
+          }
+      }
+  ]
+}
+
+{
+  "category": {
+      "coding": [
+          {
+              "code": "103693007",
+              "display": "Diagnostic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "451024007",
+              "display": "Inspection of vagina using vaginal speculum",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "display": "Kunjungan Patient PTM pada tanggal 24 April 2024",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "773f7c54-4e0c-43b5-8cf4-6cce3f17525b",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:20:57.434738+00:00",
+      "versionId": "MTcyNDkxNjA1NzQzNDczODAwMA"
+  },
+  "performedDateTime": "2024-04-24T01:45:40+00:00",
+  "performer": [
+      {
+          "actor": {
+              "display": "Practitioner 1",
+              "reference": "Practitioner/10009880728"
+          }
+      }
+  ],
+  "recorder": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "Procedure",
+  "status": "completed",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  }
+}

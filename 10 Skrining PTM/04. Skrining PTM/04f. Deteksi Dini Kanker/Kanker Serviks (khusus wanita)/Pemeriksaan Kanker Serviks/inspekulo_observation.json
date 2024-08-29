@@ -1,0 +1,101 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "exam",
+                  "display": "Exam"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "451024007",
+              "display": "Inspection of vagina using vaginal speculum"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T01:47:05+00:00",
+  "issued": "2024-04-24T01:47:05+00:00",
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "395100000",
+              "display": "No evidence of cancer found"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "exam",
+                  "display": "Exam",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "451024007",
+              "display": "Inspection of vagina using vaginal speculum",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T01:47:05+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "7dbebe39-c92a-4529-9046-c3ee3203787f",
+  "identifier": [],
+  "issued": "2024-04-24T01:47:05+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:22:22.748078+00:00",
+      "versionId": "MTcyNDkxNjE0Mjc0ODA3ODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "395100000",
+              "display": "No evidence of cancer found",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

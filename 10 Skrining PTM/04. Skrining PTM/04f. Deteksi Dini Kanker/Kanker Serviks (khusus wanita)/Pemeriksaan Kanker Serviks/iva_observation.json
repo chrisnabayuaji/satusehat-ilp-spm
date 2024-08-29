@@ -1,0 +1,101 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "exam",
+                  "display": "Exam"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/examination",
+              "code": "X099241",
+              "display": "Tes IVA"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T01:49:55+00:00",
+  "issued": "2024-04-24T01:49:55+00:00",
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "300557001",
+              "display": "Aceto-white reaction positive"
+          }
+      ]
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "exam",
+                  "display": "Exam",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "X099241",
+              "display": "Tes IVA",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/examination"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T01:49:55+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "6486f17e-7fb6-4fe2-bc4e-722e720896ea",
+  "identifier": [],
+  "issued": "2024-04-24T01:49:55+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:24:54.564065+00:00",
+      "versionId": "MTcyNDkxNjI5NDU2NDA2NTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "300557001",
+              "display": "Aceto-white reaction positive",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

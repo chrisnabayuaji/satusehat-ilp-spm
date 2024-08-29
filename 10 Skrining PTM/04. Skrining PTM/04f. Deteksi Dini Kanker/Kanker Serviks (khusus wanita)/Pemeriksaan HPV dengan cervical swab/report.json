@@ -1,0 +1,150 @@
+{
+  "resourceType": "DiagnosticReport",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                  "code": "MB",
+                  "display": "Microbiology"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "44550-2",
+              "display": "Human papilloma virus DNA [Presence] in Cervix by Probe"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T01:58:50+00:00",
+  "issued": "2024-04-24T01:58:50+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "result": [
+      {
+          "reference": "Observation/{{Observation_HPVDNA}}"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/{{Specimen_HPV}}"
+      }
+  ],
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_HPV}}"
+      }
+  ],
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                  "code": "N",
+                  "display": "Normal"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/68d1c5ca-085b-497c-a43e-a83f606222a1"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "MB",
+                  "display": "Microbiology",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "44550-2",
+              "display": "Human papilloma virus DNA [Presence] in Cervix by Probe",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "conclusionCode": [
+      {
+          "coding": [
+              {
+                  "code": "N",
+                  "display": "Normal",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+          ]
+      }
+  ],
+  "effectiveDateTime": "2024-04-24T01:58:50+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "33ecba3b-7586-4466-b9be-6f931ca06787",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/diagnostic/8529d474-30e0-4fee-81a4-7a5234003a1b/lab",
+          "value": "2024082985902A599"
+      }
+  ],
+  "issued": "2024-04-24T01:58:50+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:28:53.269389+00:00",
+      "versionId": "MTcyNDkxNjUzMzI2OTM4OTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+      {
+          "reference": "Observation/1fcd5d7a-0611-4566-8053-fbe9dff243ad"
+      }
+  ],
+  "specimen": [
+      {
+          "reference": "Specimen/d26b1af4-62ac-4594-8646-a2aa52b1ec87"
+      }
+  ],
+  "status": "final",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}

@@ -1,0 +1,117 @@
+{
+	"resourceType": "Observation",
+	"basedOn": [
+		{
+			"reference": "ServiceRequest/{{ServiceRequest_HPV}}"
+		}
+	],
+	"status": "final",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "laboratory",
+					"display": "Laboratory"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "44550-2",
+				"display": "Human papilloma virus DNA [Presence] in Cervix by Probe"
+			}
+		]
+	},
+	"performer": [
+		{
+			"reference": "Practitioner/{{Practitioner_ID}}"
+		}
+	],
+	"subject": {
+		"reference": "Patient/{{Patient_ptm_id}}",
+		"display": "{{Patient_ptm_name}}"
+	},
+	"encounter": {
+		"reference": "Encounter/{{Encounter_ptm_uuid}}"
+	},
+	"effectiveDateTime": "2024-04-24T01:57:25+00:00",
+	"issued": "2024-04-24T01:57:25+00:00",
+	"specimen": {
+		"reference": "Specimen/{{Specimen_HPV}}"
+	},
+	"valueCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "787724008",
+				"display": "Human papillomavirus deoxyribonucleic acid not detected"
+			}
+		]
+	}
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/68d1c5ca-085b-497c-a43e-a83f606222a1"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "laboratory",
+                  "display": "Laboratory",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "44550-2",
+              "display": "Human papilloma virus DNA [Presence] in Cervix by Probe",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T01:57:25+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "1fcd5d7a-0611-4566-8053-fbe9dff243ad",
+  "identifier": [],
+  "issued": "2024-04-24T01:57:25+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:28:10.934409+00:00",
+      "versionId": "MTcyNDkxNjQ5MDkzNDQwOTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "specimen": {
+      "reference": "Specimen/d26b1af4-62ac-4594-8646-a2aa52b1ec87"
+  },
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "787724008",
+              "display": "Human papillomavirus deoxyribonucleic acid not detected",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}

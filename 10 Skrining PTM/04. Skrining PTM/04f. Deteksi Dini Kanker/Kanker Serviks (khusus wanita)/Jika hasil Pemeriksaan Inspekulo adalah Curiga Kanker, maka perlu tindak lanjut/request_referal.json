@@ -1,0 +1,140 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "3457005",
+                  "display": "Patient referral"
+              }
+          ]
+      },
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "11429006",
+                  "display": "Consultation"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "3457005",
+              "display": "Patient referral"
+          }
+      ],
+      "text": "Rujukan diduga Kanker Cervix menggunakan ambulance"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "occurrenceDateTime": "2024-04-24T02:04:30+00:00",
+  "authoredOn": "2024-04-24T02:04:30+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "text": " IVA Positif, perlu ada pemeriksaan tindaklanjut"
+      }
+  ]
+}
+
+{
+  "authoredOn": "2024-04-24T02:04:30+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "3457005",
+                  "display": "Patient referral",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      },
+      {
+          "coding": [
+              {
+                  "code": "11429006",
+                  "display": "Consultation",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "3457005",
+              "display": "Patient referral",
+              "system": "http://snomed.info/sct"
+          }
+      ],
+      "text": "Rujukan diduga Kanker Cervix menggunakan ambulance"
+  },
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "9938e0c2-d110-49b5-9bbe-5756d009485a",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A198"
+      },
+      {
+          "system": "http://sys-ids.kemkes.go.id/referral-number",
+          "value": "2000001077"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:35:39.503793+00:00",
+      "versionId": "MTcyNDkxNjkzOTUwMzc5MzAwMA"
+  },
+  "occurrenceDateTime": "2024-04-24T02:04:30+00:00",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "text": " IVA Positif, perlu ada pemeriksaan tindaklanjut"
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "routine",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "108252007",
+                  "display": "Laboratory procedure"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "44550-2",
+              "display": "Human papilloma virus DNA [Presence] in Cervix by Probe"
+          }
+      ],
+      "text": "Panel Skrining Kanker Cervix PTM"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}",
+      "display": "Permintaan Pemeriksaan Panel Skrining Kanker Cervix 24 April 2024 pukul 09:30 WIB"
+  },
+  "occurrenceDateTime": "2024-04-24T01:51:20+00:00",
+  "authoredOn": "2024-04-24T01:51:20+00:00",
+  "requester": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}",
+          "display": "{{Performer_name}}"
+      }
+  ],
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "Z13.9",
+                  "display": "Special screening examination, unspecified"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "authoredOn": "2024-04-24T01:51:20+00:00",
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "108252007",
+                  "display": "Laboratory procedure",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "44550-2",
+              "display": "Human papilloma virus DNA [Presence] in Cervix by Probe",
+              "system": "http://loinc.org"
+          }
+      ],
+      "text": "Panel Skrining Kanker Cervix PTM"
+  },
+  "encounter": {
+      "display": "Permintaan Pemeriksaan Panel Skrining Kanker Cervix 24 April 2024 pukul 09:30 WIB",
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "68d1c5ca-085b-497c-a43e-a83f606222a1",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/servicerequest/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A578"
+      }
+  ],
+  "intent": "original-order",
+  "meta": {
+      "lastUpdated": "2024-08-29T07:25:59.578129+00:00",
+      "versionId": "MTcyNDkxNjM1OTU3ODEyOTAwMA"
+  },
+  "occurrenceDateTime": "2024-04-24T01:51:20+00:00",
+  "performer": [
+      {
+          "display": "Practitioner 2",
+          "reference": "Practitioner/10006926841"
+      }
+  ],
+  "priority": "routine",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "Z13.9",
+                  "display": "Special screening examination, unspecified",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "requester": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}

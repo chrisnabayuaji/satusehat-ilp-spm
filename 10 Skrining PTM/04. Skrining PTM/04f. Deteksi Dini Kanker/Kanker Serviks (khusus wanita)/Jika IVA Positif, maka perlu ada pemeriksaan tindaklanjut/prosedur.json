@@ -1,0 +1,132 @@
+{
+  "resourceType": "Procedure",
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Cryo}}"
+      }
+  ],
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "not-done",
+  "statusReason": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "413311005",
+              "display": "Patient non-compliant - declined intervention / support"
+          }
+      ]
+  },
+  "category": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "277132007",
+              "display": "Therapeutic procedure"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "26782000",
+              "display": "Cryotherapy"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "performedDateTime": "2024-04-24T02:01:40+00:00",
+  "recorder": {
+      "reference": "Practitioner/{{Practitioner_ID}}"
+  },
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C53.9",
+                  "display": "Malignant neoplasm: Cervix uteri, unspecified"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/6239e847-445a-4bc2-8aec-50dc3f812634"
+      }
+  ],
+  "category": {
+      "coding": [
+          {
+              "code": "277132007",
+              "display": "Therapeutic procedure",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "26782000",
+              "display": "Cryotherapy",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "da413326-7567-4ebc-97af-83ec40949159",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/procedure/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A529"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:31:48.290184+00:00",
+      "versionId": "MTcyNDkxNjcwODI5MDE4NDAwMA"
+  },
+  "performedDateTime": "2024-04-24T02:01:40+00:00",
+  "reasonCode": [
+      {
+          "coding": [
+              {
+                  "code": "C53.9",
+                  "display": "Malignant neoplasm: Cervix uteri, unspecified",
+                  "system": "http://hl7.org/fhir/sid/icd-10"
+              }
+          ]
+      }
+  ],
+  "recorder": {
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "Procedure",
+  "status": "not-done",
+  "statusReason": {
+      "coding": [
+          {
+              "code": "413311005",
+              "display": "Patient non-compliant - declined intervention / support",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/P02029555482"
+  }
+}
