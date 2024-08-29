@@ -1,0 +1,193 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "Laboratory"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "specimen": {
+      "reference": "Specimen/{{Specimen_DiabetesPanel}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T02:37:55+00:00",
+  "issued": "2024-04-24T02:37:55+00:00",
+  "valueQuantity": {
+      "value": 5.55,
+      "unit": "%",
+      "system": "http://unitsofmeasure.org",
+      "code": "%"
+  },
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "714628002",
+                  "display": "Prediabetes"
+              }
+          ]
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "value": 5.6,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+          },
+          "text": "Normal"
+      },
+      {
+          "low": {
+              "value": 5.7,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+          },
+          "high": {
+              "value": 6.4,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+          },
+          "text": "Pre-diabetes"
+      },
+      {
+          "low": {
+              "value": 6.5,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+          },
+          "text": "Diabetes"
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "laboratory",
+                  "display": "Laboratory",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T02:37:55+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "5591dc7f-b2e2-4836-9294-cff6cfd69a22",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "714628002",
+                  "display": "Prediabetes",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  ],
+  "issued": "2024-04-24T02:37:55+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T08:00:47.062798+00:00",
+      "versionId": "MTcyNDkxODQ0NzA2Mjc5ODAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "code": "%",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%",
+              "value": 5.6
+          },
+          "text": "Normal"
+      },
+      {
+          "high": {
+              "code": "%",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%",
+              "value": 6.4
+          },
+          "low": {
+              "code": "%",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%",
+              "value": 5.7
+          },
+          "text": "Pre-diabetes"
+      },
+      {
+          "low": {
+              "code": "%",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%",
+              "value": 6.5
+          },
+          "text": "Diabetes"
+      }
+  ],
+  "resourceType": "Observation",
+  "specimen": {
+      "reference": "Specimen/7798713c-f74d-4306-9f4a-1b65aaac9c90"
+  },
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "%",
+      "system": "http://unitsofmeasure.org",
+      "unit": "%",
+      "value": 5.55
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "resourceType": "Specimen",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "available",
+  "type": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "119297000",
+              "display": "Blood specimen"
+          }
+      ]
+  },
+  "collection": {
+      "method": {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory"
+              }
+          ]
+      },
+      "collectedDateTime": "2024-04-24T02:32:15+00:00"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "request": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_GDS}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_GDP}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_G2PP}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Hba1c}}"
+      }
+  ],
+  "receivedTime": "2024-04-24T02:32:15+00:00"
+}
+
+{
+  "collection": {
+      "collectedDateTime": "2024-04-24T02:32:15+00:00",
+      "method": {
+          "coding": [
+              {
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  },
+  "id": "7798713c-f74d-4306-9f4a-1b65aaac9c90",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082985902A332"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T07:57:43.206581+00:00",
+      "versionId": "MTcyNDkxODI2MzIwNjU4MTAwMA"
+  },
+  "receivedTime": "2024-04-24T02:32:15+00:00",
+  "request": [
+      {
+          "reference": "ServiceRequest/eff2b658-96f2-4f4e-a9b2-20e5c4cb0957"
+      },
+      {
+          "reference": "ServiceRequest/d6d48bb2-a52a-4d23-a7a0-6a9d5a07e7f8"
+      },
+      {
+          "reference": "ServiceRequest/c3cc4277-8d3b-4fd9-bbef-93c5fe579d41"
+      },
+      {
+          "reference": "ServiceRequest/4cf81f3c-539e-4c6d-81e0-ce7ea28f050c"
+      }
+  ],
+  "resourceType": "Specimen",
+  "status": "available",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "type": {
+      "coding": [
+          {
+              "code": "119297000",
+              "display": "Blood specimen",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
