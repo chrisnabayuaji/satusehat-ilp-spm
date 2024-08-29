@@ -1,0 +1,203 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Kolesterol}}"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "Laboratory"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+          }
+      ]
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}"
+      }
+  ],
+  "specimen": {
+      "reference": "Specimen/{{Specimen_KolesterolPanel}}"
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_ptm_uuid}}"
+  },
+  "effectiveDateTime": "2024-04-24T02:55:20+00:00",
+  "issued": "2024-04-24T02:55:20+00:00",
+  "valueQuantity": {
+      "value": 177.771,
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/dL"
+  },
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                  "code": "N",
+                  "display": "Normal"
+              }
+          ]
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "value": 199,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+          },
+          "text": "Normal"
+      },
+      {
+          "low": {
+              "value": 200,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+          },
+          "high": {
+              "value": 239,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+          },
+          "text": "Sedikit Tinggi (Borderline)"
+      },
+      {
+          "low": {
+              "value": 240,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+          },
+          "text": "Tinggi"
+      }
+  ]
+}
+
+{
+  "basedOn": [
+      {
+          "reference": "ServiceRequest/b87964d0-bd5d-453e-841b-29364a06a5d6"
+      }
+  ],
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "laboratory",
+                  "display": "Laboratory",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "2093-3",
+              "display": "Cholesterol [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2024-04-24T02:55:20+00:00",
+  "encounter": {
+      "reference": "Encounter/6c53b3ee-7612-4c94-baac-796af15bcebc"
+  },
+  "id": "8e3e5589-e4e6-432e-bdac-e569c49956ba",
+  "identifier": [],
+  "interpretation": [
+      {
+          "coding": [
+              {
+                  "code": "N",
+                  "display": "Normal",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+          ]
+      }
+  ],
+  "issued": "2024-04-24T02:55:20+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T10:38:05.676625+00:00",
+      "versionId": "MTcyNDkyNzg4NTY3NjYyNTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "referenceRange": [
+      {
+          "high": {
+              "code": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mg/dL",
+              "value": 199
+          },
+          "text": "Normal"
+      },
+      {
+          "high": {
+              "code": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mg/dL",
+              "value": 239
+          },
+          "low": {
+              "code": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mg/dL",
+              "value": 200
+          },
+          "text": "Sedikit Tinggi (Borderline)"
+      },
+      {
+          "low": {
+              "code": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mg/dL",
+              "value": 240
+          },
+          "text": "Tinggi"
+      }
+  ],
+  "resourceType": "Observation",
+  "specimen": {
+      "reference": "Specimen/0a74dfa1-43ca-4480-afff-aaa5059f7b31"
+  },
+  "status": "final",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "valueQuantity": {
+      "code": "mg/dL",
+      "system": "http://unitsofmeasure.org",
+      "unit": "mg/dL",
+      "value": 177.771
+  }
+}

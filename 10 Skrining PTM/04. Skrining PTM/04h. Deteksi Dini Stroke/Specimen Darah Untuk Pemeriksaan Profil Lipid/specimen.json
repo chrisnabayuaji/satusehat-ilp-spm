@@ -1,0 +1,142 @@
+{
+  "resourceType": "Specimen",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+          "value": "{{Identifier_value}}"
+      }
+  ],
+  "status": "available",
+  "type": {
+      "coding": [
+          {
+              "system": "http://snomed.info/sct",
+              "code": "119297000",
+              "display": "Blood specimen"
+          }
+      ]
+  },
+  "collection": {
+      "method": {
+          "coding": [
+              {
+                  "system": "http://snomed.info/sct",
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory"
+              }
+          ]
+      },
+      "collectedDateTime": "2024-04-24T02:53:55+00:00"
+  },
+  "container": [
+      {
+          "type": {
+              "coding": [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "702296009",
+                      "display": "Non-evacuated blood collection tube, sodium citrate"
+                  },
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "702298005",
+                      "display": "Non-evacuated blood collection tube, K3EDTA"
+                  }
+              ]
+          }
+      }
+  ],
+  "subject": {
+      "reference": "Patient/{{Patient_ptm_id}}",
+      "display": "{{Patient_ptm_name}}"
+  },
+  "request": [
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_Kolesterol}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_HDL}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_LDL}}"
+      },
+      {
+          "reference": "ServiceRequest/{{ServiceRequest_TG}}"
+      }
+  ],
+  "receivedTime": "2024-04-24T02:53:55+00:00"
+}
+
+{
+  "collection": {
+      "collectedDateTime": "2024-04-24T02:53:55+00:00",
+      "method": {
+          "coding": [
+              {
+                  "code": "82078001",
+                  "display": "Collection of blood specimen for laboratory",
+                  "system": "http://snomed.info/sct"
+              }
+          ]
+      }
+  },
+  "container": [
+      {
+          "type": {
+              "coding": [
+                  {
+                      "code": "702296009",
+                      "display": "Non-evacuated blood collection tube, sodium citrate",
+                      "system": "http://snomed.info/sct"
+                  },
+                  {
+                      "code": "702298005",
+                      "display": "Non-evacuated blood collection tube, K3EDTA",
+                      "system": "http://snomed.info/sct"
+                  }
+              ]
+          }
+      }
+  ],
+  "id": "0a74dfa1-43ca-4480-afff-aaa5059f7b31",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/specimen/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "2024082932952A824"
+      }
+  ],
+  "meta": {
+      "lastUpdated": "2024-08-29T10:37:16.138113+00:00",
+      "versionId": "MTcyNDkyNzgzNjEzODExMzAwMA"
+  },
+  "receivedTime": "2024-04-24T02:53:55+00:00",
+  "request": [
+      {
+          "reference": "ServiceRequest/b87964d0-bd5d-453e-841b-29364a06a5d6"
+      },
+      {
+          "reference": "ServiceRequest/f28d0999-1de7-4ba4-96fb-8a86715db7b1"
+      },
+      {
+          "reference": "ServiceRequest/c5b789d4-ef71-4a28-83b0-be08ae2daffa"
+      },
+      {
+          "reference": "ServiceRequest/fbefd088-42b9-46b7-8004-aaec3172b6f3"
+      }
+  ],
+  "resourceType": "Specimen",
+  "status": "available",
+  "subject": {
+      "display": "Patient PTM",
+      "reference": "Patient/P02029555482"
+  },
+  "type": {
+      "coding": [
+          {
+              "code": "119297000",
+              "display": "Blood specimen",
+              "system": "http://snomed.info/sct"
+          }
+      ]
+  }
+}
