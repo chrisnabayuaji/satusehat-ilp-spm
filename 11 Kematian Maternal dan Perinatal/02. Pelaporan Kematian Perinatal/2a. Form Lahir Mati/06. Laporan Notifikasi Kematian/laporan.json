@@ -1,0 +1,460 @@
+{
+  "resourceType": "Composition",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
+      "value": "2361720003"
+  },
+  "status": "preliminary",
+  "contained": [
+      {
+          "resourceType": "Location",
+          "id": "987654321",
+          "name": "Puskesmas SATUSEHAT",
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.kemkes.go.id/CodeSystem/location-type",
+                          "code": "LT000005",
+                          "display": "Alamat Mati"
+                      }
+                  ]
+              },
+              {
+                  "coding": [
+                      {
+                          "system": "http://terminology.kemkes.go.id/CodeSystem/location-type",
+                          "code": "LT000002",
+                          "display": "Tempat Meninggal Faskes"
+                      }
+                  ]
+              }
+          ],
+          "managingOrganization": {
+              "reference": "Organization/{{Org_id}}"
+          },
+          "address": {
+              "use": "work",
+              "line": [
+                  "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+              ],
+              "city": "Jakarta",
+              "postalCode": "12950",
+              "country": "ID",
+              "extension": [
+                  {
+                      "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                      "extension": [
+                          {
+                              "url": "province",
+                              "valueCode": "10"
+                          },
+                          {
+                              "url": "city",
+                              "valueCode": "1010"
+                          },
+                          {
+                              "url": "district",
+                              "valueCode": "1010101"
+                          },
+                          {
+                              "url": "village",
+                              "valueCode": "101010110"
+                          },
+                          {
+                              "url": "rt",
+                              "valueCode": "1"
+                          },
+                          {
+                              "url": "rw",
+                              "valueCode": "2"
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+  ],
+  "type": {
+      "coding": [
+          {
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type",
+              "code": "COM000002",
+              "display": "Formulir Informasi Kematian Perinatal Lahir Mati"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Lahir_mati_patient_id}}",
+      "display": "{{Lahir_mati_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_lahir_mati_uuid}}"
+  },
+  "date": "2023-06-22T14:30:00+00:00",
+  "author": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "title": "Notifikasi Kematian Perinatal",
+  "attester": [
+      {
+          "mode": "legal",
+          "party": {
+              "reference": "Organization/{{Org_id}}"
+          }
+      }
+  ],
+  "event": [
+      {
+          "code": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "445667001",
+                          "display": "Interim report"
+                      }
+                  ]
+              }
+          ],
+          "period": {
+              "start": "2023-06-20T14:30:00+00:00",
+              "end": "2023-06-21T14:29:59+00:00"
+          },
+          "detail": [
+              {
+                  "reference": "Practitioner/{{Practitioner_ID}}",
+                  "display": "{{Practitioner_name}}"
+              }
+          ]
+      }
+  ],
+  "section": [
+      {
+          "title": "Riwayat Kematian Bayi",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://loinc.org",
+                      "code": "64297-5",
+                      "display": "DeathInvestigation"
+                  }
+              ]
+          },
+          "focus": {
+              "reference": "Patient/{{Lahir_mati_patient_id}}",
+              "display": "{{Lahir_mati_patient_name}}"
+          },
+          "entry": [
+              {
+                  "display": "Tempat Meninggal Faskes",
+                  "reference": "#987654321"
+              },
+              {
+                  "display": "Jenis Kematian",
+                  "reference": "Observation/d39bdde0-ce79-4337-b56d-c4779bcef77b"
+              },
+              {
+                  "display": "Dugaan Sebab Kematian",
+                  "reference": "Observation/a425da86-115b-429c-bd41-3df9547cf90c"
+              },
+              {
+                  "display": "Tanggal dan Jam Meninggal",
+                  "reference": "Observation/cf3d5d96-dd2f-4349-a9bc-3a12178bd9d6"
+              },
+              {
+                  "display": "Jenis Tempat Meninggal",
+                  "reference": "Observation/0092b1a4-110b-43b4-b06d-1768bcf1356c"
+              },
+              {
+                  "display": "Kondisi Ibu yang dapat mempengaruhi janin",
+                  "reference": "Observation/1baddc81-66ff-466c-8964-9e2a543128eb"
+              }
+          ]
+      },
+      {
+          "title": "Riwayat Persalinan",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://loinc.org",
+                      "code": "15508-5",
+                      "display": "Labor and delivery records"
+                  }
+              ]
+          },
+          "focus": {
+              "reference": "Patient/{{Lahir_mati_patient_id}}",
+              "display": "{{Lahir_mati_patient_name}}"
+          },
+          "entry": [
+              {
+                  "display": "Kelainan Bawaan",
+                  "reference": "Observation/3245a7ac-dbcd-4baa-bbf2-286d82c9b75b"
+              },
+              {
+                  "display": "Berat Lahir",
+                  "reference": "Observation/a46a0595-e995-4816-aa4c-8bad476ee2c3"
+              }
+          ]
+      },
+      {
+          "title": "Riwayat Kehamilan",
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://loinc.org",
+                      "code": "57073-9",
+                      "display": "Prenatal records"
+                  }
+              ]
+          },
+          "focus": {
+              "reference": "Patient/{{Maternal_patient_id}}",
+              "display": "{{Maternal_patient_name}}"
+          },
+          "entry": [
+              {
+                  "display": "Jenis Kehamilan (Tunggal/ Kembar)",
+                  "reference": "Observation/e0c7fa0c-42cb-4e2b-96ca-fbad41892a5a"
+              }
+          ]
+      }
+  ]
+}
+
+{
+  "attester": [
+      {
+          "mode": "legal",
+          "party": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          }
+      }
+  ],
+  "author": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "contained": [
+      {
+          "address": {
+              "city": "Jakarta",
+              "country": "ID",
+              "extension": [
+                  {
+                      "extension": [
+                          {
+                              "url": "province",
+                              "valueCode": "10"
+                          },
+                          {
+                              "url": "city",
+                              "valueCode": "1010"
+                          },
+                          {
+                              "url": "district",
+                              "valueCode": "1010101"
+                          },
+                          {
+                              "url": "village",
+                              "valueCode": "101010110"
+                          },
+                          {
+                              "url": "rt",
+                              "valueCode": "1"
+                          },
+                          {
+                              "url": "rw",
+                              "valueCode": "2"
+                          }
+                      ],
+                      "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode"
+                  }
+              ],
+              "line": [
+                  "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+              ],
+              "postalCode": "12950",
+              "use": "work"
+          },
+          "id": "987654321",
+          "managingOrganization": {
+              "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+          },
+          "name": "Puskesmas SATUSEHAT",
+          "resourceType": "Location",
+          "type": [
+              {
+                  "coding": [
+                      {
+                          "code": "LT000005",
+                          "display": "Alamat Mati",
+                          "system": "http://terminology.kemkes.go.id/CodeSystem/location-type"
+                      }
+                  ]
+              },
+              {
+                  "coding": [
+                      {
+                          "code": "LT000002",
+                          "display": "Tempat Meninggal Faskes",
+                          "system": "http://terminology.kemkes.go.id/CodeSystem/location-type"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "date": "2023-06-22T14:30:00+00:00",
+  "encounter": {
+      "reference": "Encounter/b0892b49-d627-4789-9a41-946239a15442"
+  },
+  "event": [
+      {
+          "code": [
+              {
+                  "coding": [
+                      {
+                          "code": "445667001",
+                          "display": "Interim report",
+                          "system": "http://snomed.info/sct"
+                      }
+                  ]
+              }
+          ],
+          "detail": [
+              {
+                  "display": "Practitioner 1",
+                  "reference": "Practitioner/10009880728"
+              }
+          ],
+          "period": {
+              "end": "2023-06-21T14:29:59+00:00",
+              "start": "2023-06-20T14:30:00+00:00"
+          }
+      }
+  ],
+  "id": "5666d315-fbda-422f-a00c-89368d77f89a",
+  "identifier": {
+      "system": "http://sys-ids.kemkes.go.id/creator",
+      "value": "8529d474-30e0-4fee-81a4-7a5234003a1b"
+  },
+  "meta": {
+      "lastUpdated": "2024-08-30T02:59:27.425986+00:00",
+      "versionId": "MTcyNDk4Njc2NzQyNTk4NjAwMA"
+  },
+  "resourceType": "Composition",
+  "section": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "64297-5",
+                      "display": "DeathInvestigation",
+                      "system": "http://loinc.org"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Tempat Meninggal Faskes",
+                  "reference": "#987654321"
+              },
+              {
+                  "display": "Jenis Kematian",
+                  "reference": "Observation/d39bdde0-ce79-4337-b56d-c4779bcef77b"
+              },
+              {
+                  "display": "Dugaan Sebab Kematian",
+                  "reference": "Observation/a425da86-115b-429c-bd41-3df9547cf90c"
+              },
+              {
+                  "display": "Tanggal dan Jam Meninggal",
+                  "reference": "Observation/cf3d5d96-dd2f-4349-a9bc-3a12178bd9d6"
+              },
+              {
+                  "display": "Jenis Tempat Meninggal",
+                  "reference": "Observation/0092b1a4-110b-43b4-b06d-1768bcf1356c"
+              },
+              {
+                  "display": "Kondisi Ibu yang dapat mempengaruhi janin",
+                  "reference": "Observation/1baddc81-66ff-466c-8964-9e2a543128eb"
+              }
+          ],
+          "focus": {
+              "display": "Abele Rose 1",
+              "reference": "Patient/P02029558356"
+          },
+          "title": "Riwayat Kematian Bayi"
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "15508-5",
+                      "display": "Labor and delivery records",
+                      "system": "http://loinc.org"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Kelainan Bawaan",
+                  "reference": "Observation/3245a7ac-dbcd-4baa-bbf2-286d82c9b75b"
+              },
+              {
+                  "display": "Berat Lahir",
+                  "reference": "Observation/a46a0595-e995-4816-aa4c-8bad476ee2c3"
+              }
+          ],
+          "focus": {
+              "display": "Abele Rose 1",
+              "reference": "Patient/P02029558356"
+          },
+          "title": "Riwayat Persalinan"
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "57073-9",
+                      "display": "Prenatal records",
+                      "system": "http://loinc.org"
+                  }
+              ]
+          },
+          "entry": [
+              {
+                  "display": "Jenis Kehamilan (Tunggal/ Kembar)",
+                  "reference": "Observation/e0c7fa0c-42cb-4e2b-96ca-fbad41892a5a"
+              }
+          ],
+          "focus": {
+              "display": "Patient - Mother (Teresa Lee)",
+              "reference": "Patient/P02029555437"
+          },
+          "title": "Riwayat Kehamilan"
+      }
+  ],
+  "status": "preliminary",
+  "subject": {
+      "display": "Abele Rose 1",
+      "reference": "Patient/P02029558356"
+  },
+  "title": "Notifikasi Kematian Perinatal",
+  "type": {
+      "coding": [
+          {
+              "code": "COM000002",
+              "display": "Formulir Informasi Kematian Perinatal Lahir Mati",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/composition-type"
+          }
+      ]
+  }
+}
