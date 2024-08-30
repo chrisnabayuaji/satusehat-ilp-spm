@@ -1,0 +1,137 @@
+{
+  "entry": [
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Composition/072e3289-7815-4294-9cd9-31b56704e5c0/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Composition",
+              "resourceID": "072e3289-7815-4294-9cd9-31b56704e5c0"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/7342159f-1d92-4dc0-82c2-5b9221536416/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "7342159f-1d92-4dc0-82c2-5b9221536416"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/2208ddf7-3eaf-4696-a592-93071e3a0180/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "2208ddf7-3eaf-4696-a592-93071e3a0180"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/32266514-3d1b-4d8a-b9d5-12c8c240585b/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "32266514-3d1b-4d8a-b9d5-12c8c240585b"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/ebe6d2d8-c27a-4e51-849b-b479e5218c42/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "ebe6d2d8-c27a-4e51-849b-b479e5218c42"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/105e6f1d-3f47-4c86-ae15-0888caa4c5cf/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "105e6f1d-3f47-4c86-ae15-0888caa4c5cf"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/250e4030-da1d-46d0-a2c1-a41e31598df5/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "250e4030-da1d-46d0-a2c1-a41e31598df5"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/1fd91bd6-bcbb-470c-a588-f8923492aa23/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "1fd91bd6-bcbb-470c-a588-f8923492aa23"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/964f1cc9-5bfa-4aa7-9def-e3ee1f61d5a8/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "964f1cc9-5bfa-4aa7-9def-e3ee1f61d5a8"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/15c57880-cdce-4aec-a7a8-c7ba06a82efa/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "15c57880-cdce-4aec-a7a8-c7ba06a82efa"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Observation/528fbe02-d349-4507-9724-7c99050328d4/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Observation",
+              "resourceID": "528fbe02-d349-4507-9724-7c99050328d4"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Condition/912a389d-5109-431c-8829-1cf39cd6045b/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Condition",
+              "resourceID": "912a389d-5109-431c-8829-1cf39cd6045b"
+          }
+      },
+      {
+          "response": {
+              "etag": "W/\"MTcyNTAwMjE5Nzc0OTQ4OTAwMA\"",
+              "lastModified": "2024-08-30T07:16:37.749489+00:00",
+              "location": "https://api-satusehat-stg.dto.kemkes.go.id/fhir-r4/v1/Encounter/598a57e3-f62f-4fe6-9d36-2200ce4604c6/_history/MTcyNTAwMjE5Nzc0OTQ4OTAwMA",
+              "status": "201 Created",
+              "resourceType": "Encounter",
+              "resourceID": "598a57e3-f62f-4fe6-9d36-2200ce4604c6"
+          }
+      }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction-response",
+  "total": 13
+}

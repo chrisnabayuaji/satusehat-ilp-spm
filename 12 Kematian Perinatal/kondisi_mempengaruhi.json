@@ -1,0 +1,180 @@
+{
+  "resourceType": "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "104184-7",
+              "display": "Maternal condition that affected the fetus Mother"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Patient_Anak_ID}}",
+      "display": "{{Patient_Anak_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Lahir_hidup_encounter_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "issued": "2023-06-22T14:30:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "component": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id",
+                      "code": "TK000019",
+                      "display": "Kode group"
+                  }
+              ]
+          },
+          "valueCodeableConcept": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/icd-10-pm",
+                      "code": "M",
+                      "display": "Maternal condition"
+                  }
+              ]
+          }
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id",
+                      "code": "TK000020",
+                      "display": "Kode subgroup"
+                  }
+              ]
+          },
+          "valueCodeableConcept": {
+              "coding": [
+                  {
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/icd-10-pm",
+                      "code": "M5",
+                      "display": "No maternal condition identified"
+                  }
+              ]
+          }
+      }
+  ]
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "104184-7",
+              "display": "Maternal condition that affected the fetus Mother",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "component": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "TK000019",
+                      "display": "Kode group",
+                      "system": "http://terminology.kemkes.go.id"
+                  }
+              ]
+          },
+          "valueCodeableConcept": {
+              "coding": [
+                  {
+                      "code": "M",
+                      "display": "Maternal condition",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/icd-10-pm"
+                  }
+              ]
+          }
+      },
+      {
+          "code": {
+              "coding": [
+                  {
+                      "code": "TK000020",
+                      "display": "Kode subgroup",
+                      "system": "http://terminology.kemkes.go.id"
+                  }
+              ]
+          },
+          "valueCodeableConcept": {
+              "coding": [
+                  {
+                      "code": "M5",
+                      "display": "No maternal condition identified",
+                      "system": "http://terminology.kemkes.go.id/CodeSystem/icd-10-pm"
+                  }
+              ]
+          }
+      }
+  ],
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "encounter": {
+      "reference": "Encounter/1bda8f79-6884-4879-bc54-4a17f01a2d5f"
+  },
+  "id": "a3323d60-8936-4f4f-87ca-a512cc54449b",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2023-06-22T14:30:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-30T06:51:42.993228+00:00",
+      "versionId": "MTcyNTAwMDcwMjk5MzIyODAwMA"
+  },
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose",
+      "reference": "Patient/P02029556930"
+  }
+}

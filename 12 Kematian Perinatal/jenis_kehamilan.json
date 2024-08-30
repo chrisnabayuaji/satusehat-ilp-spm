@@ -1,0 +1,126 @@
+{
+    "resourceType": "Observation",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+            "value": "O111111"
+        }
+    ],
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "57722-1",
+                "display": "Birth plurality of Pregnancy"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_Anak_ID}}",
+        "display": "{{Patient_Anak_name}}"
+    },
+    "focus": [
+        {
+            "reference": "Patient/{{Patient_Ibu_ID}}",
+            "display": "{{Patient_Ibu_name}}"
+        }
+    ],
+    "encounter": {
+        "reference": "Encounter/{{Lahir_hidup_encounter_uuid}}"
+    },
+    "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+    "issued": "2023-06-22T14:30:00+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_ID}}",
+            "display": "{{Practitioner_name}}"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "237244005",
+                "display": "Single pregnancy"
+            }
+        ]
+    }
+}
+
+{
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "survey",
+                    "display": "Survey",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "57722-1",
+                "display": "Birth plurality of Pregnancy",
+                "system": "http://loinc.org"
+            }
+        ]
+    },
+    "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+    "encounter": {
+        "reference": "Encounter/1bda8f79-6884-4879-bc54-4a17f01a2d5f"
+    },
+    "focus": [
+        {
+            "display": "Diana Rose",
+            "reference": "Patient/P02029552358"
+        }
+    ],
+    "id": "e4f87ee4-be74-4a81-9f8d-fa20b230cab3",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+            "value": "O111111"
+        }
+    ],
+    "issued": "2023-06-22T14:30:00+00:00",
+    "meta": {
+        "lastUpdated": "2024-08-30T07:03:12.557478+00:00",
+        "versionId": "MTcyNTAwMTM5MjU1NzQ3ODAwMA"
+    },
+    "performer": [
+        {
+            "display": "Practitioner 1",
+            "reference": "Practitioner/10009880728"
+        }
+    ],
+    "resourceType": "Observation",
+    "status": "final",
+    "subject": {
+        "display": "Abele Rose",
+        "reference": "Patient/P02029556930"
+    },
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "code": "237244005",
+                "display": "Single pregnancy",
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    }
+}

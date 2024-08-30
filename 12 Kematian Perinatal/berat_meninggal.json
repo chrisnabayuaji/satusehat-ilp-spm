@@ -1,0 +1,108 @@
+{
+    "resourceType" : "Observation",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+            "value": "O111112"
+        }
+    ],
+    "status" : "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code" : {
+        "coding" : [
+            {
+                "system" : "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                "code" : "OC000030",
+                "display" : "Berat saat meninggal"
+            }
+        ]
+    },
+    "subject": {
+        "reference" : "Patient/{{Patient_Anak_ID}}",
+        "display": "{{Poli_anak_name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Lahir_hidup_encounter_uuid}}"
+    },
+    "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+    "issued": "2023-06-22T14:30:00+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_ID}}",
+            "display": "{{Practitioner_name}}"
+        }
+    ],
+    "valueQuantity" : {
+        "value" : 3000,
+        "unit" : "gram",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "g"
+    }
+}
+
+{
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "survey",
+                    "display": "Survey",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "OC000030",
+                "display": "Berat saat meninggal",
+                "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+            }
+        ]
+    },
+    "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+    "encounter": {
+        "reference": "Encounter/1bda8f79-6884-4879-bc54-4a17f01a2d5f"
+    },
+    "id": "1a103187-dacb-422c-ac25-ba9daf2c4bbf",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+            "value": "O111112"
+        }
+    ],
+    "issued": "2023-06-22T14:30:00+00:00",
+    "meta": {
+        "lastUpdated": "2024-08-30T06:57:47.492878+00:00",
+        "versionId": "MTcyNTAwMTA2NzQ5Mjg3ODAwMA"
+    },
+    "performer": [
+        {
+            "display": "Practitioner 1",
+            "reference": "Practitioner/10009880728"
+        }
+    ],
+    "resourceType": "Observation",
+    "status": "final",
+    "subject": {
+        "display": "Poli Anak",
+        "reference": "Patient/P02029556930"
+    },
+    "valueQuantity": {
+        "code": "g",
+        "system": "http://unitsofmeasure.org",
+        "unit": "gram",
+        "value": 3000
+    }
+}
