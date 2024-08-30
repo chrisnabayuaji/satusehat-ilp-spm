@@ -1,0 +1,97 @@
+{
+  "resourceType" : "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category" : [
+      {
+      "coding" : [
+      {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+      }
+      ]
+  }
+  ],
+  "code" : {
+  "coding" : [
+      {
+      "system": "http://hl7.org/fhir/sid/icd-10",
+      "code": "Z02.9",
+      "display": "Examination for administrative purposes, unspecified"
+      }
+  ]
+  },
+  "subject": {
+      "reference" : "Patient/{{Maternal_patient_id}}",
+      "display": "{{Maternal_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_maternal_uuid}}"
+  },
+  "onsetDateTime": "2023-06-22T07:39:00+00:00",
+  "recordedDate": "2023-06-22T07:39:00+00:00",
+  "recorder": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "Z02.9",
+              "display": "Examination for administrative purposes, unspecified",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/99530008-0d72-46e9-9b1f-f2cd99d795e9"
+  },
+  "id": "221a0539-99bd-4565-89aa-0f8e69022591",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-29T13:57:13.540488+00:00",
+      "versionId": "MTcyNDkzOTgzMzU0MDQ4ODAwMA"
+  },
+  "onsetDateTime": "2023-06-22T07:39:00+00:00",
+  "recordedDate": "2023-06-22T07:39:00+00:00",
+  "recorder": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Patient - Mother (Teresa Lee)",
+      "reference": "Patient/P02029555437"
+  }
+}

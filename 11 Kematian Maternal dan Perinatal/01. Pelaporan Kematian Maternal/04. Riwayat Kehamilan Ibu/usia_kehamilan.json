@@ -1,0 +1,122 @@
+{
+  "resourceType": "Observation",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "18185-9",
+              "display": "Gestational age"
+          },
+          {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B6.DE17",
+              "display": "Gestational age"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Maternal_patient_id}}",
+      "display": "{{Maternal_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_maternal_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T07:38:00+00:00",
+  "issued": "2023-06-22T07:38:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Performer_id}}"
+      },
+      {
+          "reference": "Organization/{{Org_id}}"
+      }
+  ],
+  "valueQuantity" : {
+      "value" : 32,
+      "unit" : "week",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "wk"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "18185-9",
+              "display": "Gestational age",
+              "system": "http://loinc.org"
+          },
+          {
+              "code": "ANC.B6.DE17",
+              "display": "Gestational age",
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-06-22T07:38:00+00:00",
+  "encounter": {
+      "reference": "Encounter/99530008-0d72-46e9-9b1f-f2cd99d795e9"
+  },
+  "id": "97027d51-124e-45b9-a6e1-b83d78289e01",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2023-06-22T07:38:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-29T13:53:28.367989+00:00",
+      "versionId": "MTcyNDkzOTYwODM2Nzk4OTAwMA"
+  },
+  "performer": [
+      {
+          "reference": "Practitioner/10006926841"
+      },
+      {
+          "reference": "Organization/8529d474-30e0-4fee-81a4-7a5234003a1b"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Patient - Mother (Teresa Lee)",
+      "reference": "Patient/P02029555437"
+  },
+  "valueQuantity": {
+      "code": "wk",
+      "system": "http://unitsofmeasure.org",
+      "unit": "week",
+      "value": 32
+  }
+}
