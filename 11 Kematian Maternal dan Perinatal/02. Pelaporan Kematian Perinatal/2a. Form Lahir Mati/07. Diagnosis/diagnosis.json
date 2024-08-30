@@ -1,0 +1,97 @@
+{
+  "resourceType" : "Condition",
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+          }
+      ]
+  },
+  "category" : [
+      {
+      "coding" : [
+      {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+      }
+      ]
+  }
+  ],
+  "code" : {
+  "coding" : [
+      {
+      "system": "http://hl7.org/fhir/sid/icd-10",
+      "code": "Z02.9",
+      "display": "Examination for administrative purposes, unspecified"
+      }
+  ]
+  },
+  "subject": {
+      "reference" : "Patient/{{Lahir_mati_patient_id}}",
+      "display": "{{Lahir_mati_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_lahir_mati_uuid}}"
+  },
+  "onsetDateTime": "2023-06-22T14:30:12+00:00",
+  "recordedDate": "2023-06-22T14:30:12+00:00",
+  "recorder": {
+      "reference": "Practitioner/{{Practitioner_ID}}",
+      "display": "{{Practitioner_name}}"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "encounter-diagnosis",
+                  "display": "Encounter Diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+          ]
+      }
+  ],
+  "clinicalStatus": {
+      "coding": [
+          {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+          }
+      ]
+  },
+  "code": {
+      "coding": [
+          {
+              "code": "Z02.9",
+              "display": "Examination for administrative purposes, unspecified",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+          }
+      ]
+  },
+  "encounter": {
+      "reference": "Encounter/b0892b49-d627-4789-9a41-946239a15442"
+  },
+  "id": "f4e54ee8-a5a5-4d3b-a893-3a7ffe7465fb",
+  "identifier": [],
+  "meta": {
+      "lastUpdated": "2024-08-30T03:03:18.104862+00:00",
+      "versionId": "MTcyNDk4Njk5ODEwNDg2MjAwMA"
+  },
+  "onsetDateTime": "2023-06-22T14:30:12+00:00",
+  "recordedDate": "2023-06-22T14:30:12+00:00",
+  "recorder": {
+      "display": "Practitioner 1",
+      "reference": "Practitioner/10009880728"
+  },
+  "resourceType": "Condition",
+  "subject": {
+      "display": "Abele Rose 1",
+      "reference": "Patient/P02029558356"
+  }
+}
