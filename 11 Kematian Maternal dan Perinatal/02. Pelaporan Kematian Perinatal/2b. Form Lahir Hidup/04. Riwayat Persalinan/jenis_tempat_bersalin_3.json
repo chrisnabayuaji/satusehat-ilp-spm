@@ -1,0 +1,116 @@
+{
+  "resourceType" : "Observation",
+  "identifier":  [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111115"
+      }
+  ],
+  "status" : "final",
+  "category":  [
+      {
+          "coding":  [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code" : {
+      "coding" : [
+          {
+              "system" : "http://terminology.kemkes.go.id/CodeSystem/clinical-term",
+              "code" : "OC000037",
+              "display" : "Jenis Tempat Bersalin"
+          }
+      ]
+  },
+  "subject": {
+      "reference" : "Patient/{{Lahir_hidup_patient_id}}",
+      "display": "{{Lahir_hidup_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Lahir_hidup_encounter_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "issued": "2023-06-22T14:30:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "valueCodeableConcept" : {
+      "coding" : [
+          {
+              "system" : "http://terminology.kemkes.go.id/CodeSystem/organization-type",
+              "code" : "OT000006",
+              "display" : "Rumah Sakit Pemerintah"
+          }
+      ],
+      "text" : "Rumah Sakit Pemerintah"
+  }
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "OC000037",
+              "display": "Jenis Tempat Bersalin",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-term"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "encounter": {
+      "reference": "Encounter/b0892b49-d627-4789-9a41-946239a15442"
+  },
+  "id": "ac6443b3-9786-470c-9f0f-739cb3820e0f",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111115"
+      }
+  ],
+  "issued": "2023-06-22T14:30:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-30T08:08:01.713712+00:00",
+      "versionId": "MTcyNTAwNTI4MTcxMzcxMjAwMA"
+  },
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose 1",
+      "reference": "Patient/P02029558356"
+  },
+  "valueCodeableConcept": {
+      "coding": [
+          {
+              "code": "OT000006",
+              "display": "Rumah Sakit Pemerintah",
+              "system": "http://terminology.kemkes.go.id/CodeSystem/organization-type"
+          }
+      ],
+      "text": "Rumah Sakit Pemerintah"
+  }
+}
