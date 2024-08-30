@@ -1,0 +1,98 @@
+{
+  "resourceType": "Observation",
+  "identifier":  [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/{{Org_id}}",
+          "value": "O111111"
+      }
+  ],
+  "status": "final",
+  "category": [
+      {
+          "coding": [
+              {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "Survey"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "81956-5",
+              "display": "Date and time of death [TimeStamp]"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/{{Lahir_mati_patient_id}}",
+      "display": "{{Lahir_mati_patient_name}}"
+  },
+  "encounter": {
+      "reference": "Encounter/{{Encounter_lahir_mati_uuid}}"
+  },
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "issued": "2023-06-22T14:30:00+00:00",
+  "performer": [
+      {
+          "reference": "Practitioner/{{Practitioner_ID}}",
+          "display": "{{Practitioner_name}}"
+      }
+  ],
+  "valueDateTime": "2023-06-22T13:40:00+00:00"
+}
+
+{
+  "category": [
+      {
+          "coding": [
+              {
+                  "code": "survey",
+                  "display": "Survey",
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+          ]
+      }
+  ],
+  "code": {
+      "coding": [
+          {
+              "code": "81956-5",
+              "display": "Date and time of death [TimeStamp]",
+              "system": "http://loinc.org"
+          }
+      ]
+  },
+  "effectiveDateTime": "2023-06-22T14:30:00+00:00",
+  "encounter": {
+      "reference": "Encounter/b0892b49-d627-4789-9a41-946239a15442"
+  },
+  "id": "cf3d5d96-dd2f-4349-a9bc-3a12178bd9d6",
+  "identifier": [
+      {
+          "system": "http://sys-ids.kemkes.go.id/observation/8529d474-30e0-4fee-81a4-7a5234003a1b",
+          "value": "O111111"
+      }
+  ],
+  "issued": "2023-06-22T14:30:00+00:00",
+  "meta": {
+      "lastUpdated": "2024-08-30T02:40:50.897230+00:00",
+      "versionId": "MTcyNDk4NTY1MDg5NzIzMDAwMA"
+  },
+  "performer": [
+      {
+          "display": "Practitioner 1",
+          "reference": "Practitioner/10009880728"
+      }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+      "display": "Abele Rose 1",
+      "reference": "Patient/P02029558356"
+  },
+  "valueDateTime": "2023-06-22T13:40:00+00:00"
+}
